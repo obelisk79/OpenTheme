@@ -1,0 +1,33 @@
+@mixin space0px {
+    margin: 0px;
+    padding: 0px;
+}
+
+@mixin space2px {
+    margin: 0px;
+    padding: 2px;
+}
+
+@mixin wide6px {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+@mixin noborder {
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+@mixin softborder {
+    border: 1px solid $standardBorder;
+    border-radius: 2px;
+}
+
+@mixin hardborder {
+    border: 1px solid $contrastBorder;
+    border-radius: 2px;
+}
+
+@mixin borderhover {
+    border: 1px solid $accentBorder;
+}

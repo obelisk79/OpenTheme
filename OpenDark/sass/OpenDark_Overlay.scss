@@ -1,0 +1,126 @@
+@import "./variablesDark.scss";
+@import "./_mixins.scss";
+
+* {
+    color: $main-txt;
+    alternate-background-color: rgba(28.6,31.4,34.1,48);
+  }
+  
+  QTabWidget::pane {
+    background-color: transparent;
+    border: transparent;
+  }
+  
+  /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
+  To customize for each overlay docking site, use the following selector
+  
+  Gui--OverlayTabWidget#OverlayLeft {}
+  */
+  
+  Gui--OverlayTabWidget {
+    qproperty-effectColor: rgba(33,37,41,96);
+    qproperty-effectBlurRadius: 4.0;
+    qproperty-effectOffsetX: 0.0;
+    qproperty-effectOffsetY: 0.0;
+    qproperty-effectWidth: 1;
+    qproperty-effectHeight: 1;
+    qproperty-enableEffect: 1;
+  }
+  
+  Gui--OverlayTabWidget::pane {
+    background-color: transparent;
+  }
+  
+  QHeaderView { background:transparent }
+  QHeaderView::section {
+    color: $main-txt;
+    background-color: rgba(10.2,11.8,13.3,48);
+    padding: 2px;
+    padding-left: 8px;
+    border: 1px solid $hardborder;
+  }
+  
+  Gui--OverlayToolButton {
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+  }
+  
+  Gui--OverlayToolButton::hover {
+    background: $main-bg;
+  }
+ 
+//   QListView::item
+//   QTreeView::item {
+//     background-color: #ff00ff;
+//   }
+  
+  QListView {
+    background-color: rgba(10.2,11.8,13.3,0.05);
+  }
+  
+  QListView::item,
+  QTreeView::item  {
+    margin: 3px 0px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: $contrast-bg;
+  }
+
+  QListView::item:hover,
+  QTreeView::item:hover  {
+    border: 1px solid $accent-border;
+    background-color: $accent-bg;
+  }
+
+  QListView::item:selected,
+  QTreeView::item:selected  {
+    border: 1px solid $accent-border;
+    background-color: $accent-border;
+  }
+  
+//   Gui--PropertyEditor--PropertyEditor {
+//     qproperty-groupTextColor:  $main-txt;
+//     qproperty-groupBackground: #ff00ff;
+//     qproperty-itemBackground: #00ff00;
+//   }
+  
+  Gui--CallTipsList::item {
+    background-color: #ff00ff; //rgba(100, 100, 100, 200);
+  }
+  
+  Gui--CallTipsList::item::selected {
+    background-color: rgb(94, 144, 250);
+  }
+  
+  /* Use the following selector to customize title bar for each side */
+  /*
+  Gui--OverlayTabWidget#OverlayBottom Gui--OverlayTitleBar,
+  Gui--OverlayTabWidget#OverlayBottom QSplitter Gui--OverlaySplitterHandle {
+    background-color: qlineargradient(
+      spread:pad, x1:0, y1:1, x2:0, y2:0,
+      stop:0 #80202020, stop:1 #00202020);
+  }
+  */
+  
+  Gui--OverlayTitleBar,
+  Gui--OverlaySplitterHandle {
+    background-color: rgba(10.2,11.8,13.3,168);
+  }
+  
+  QScrollArea#ClippingScrollArea,
+  QWidget#ClippingScrollAreaContents {
+    background-color: #ff00ff;
+  }
+  
+  QSint--ActionGroup QFrame[class="content"] {
+    background-color: $contrast-bg; /* Task Panel background color */
+  }
+  
+  QSint--ActionGroup QFrame[class="content"] > QWidget {
+    background-color: $main-bg; /* Task Panel background color */
+  }
+
+  QComboBox QAbstractItemView {
+    background-color: $contrast-bg;
+  }
