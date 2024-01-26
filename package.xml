@@ -13,9 +13,18 @@
   <preferencepack>
     <name>OpenDark</name>
     <description>An accessible and coordinated Dark theme for FreeCAD based on the wonderful Open-Color ui palette</description>
-    <tag>2023</tag>
+    <tag>2024</tag>
+    <tag>Theme</tag>
     <tag>dark</tag>
     <file>OpenDark.qss</file>
+  </preferencepack>
+   <preferencepack>
+    <name>OpenDark</name>
+    <description>An accessible and coordinated Light theme for FreeCAD based on the wonderful Open-Color ui palette</description>
+    <tag>2024</tag>
+    <tag>Theme</tag>
+    <tag>light</tag>
+    <file>OpenLight.qss</file>
   </preferencepack>
   <workbench>
     <name>QtNormalizer</name>
