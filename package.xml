@@ -5,7 +5,7 @@
  <date>2024.04.19</date>
  <description>An accessible and coordinated set of Light and Dark themes for FreeCAD</description>
  <maintainer email="nomail@freecad.org">Obelisk79</maintainer>
- <license file="LICENSE">LGPLv2</license>
+ <license file="LICENSE">LGPL-2.1-or-later</license>
  <url type="repository" branch="main">https://github.com/obelisk79/OpenTheme</url>
  <icon>resources/icons/openthemes.svg</icon>
 
