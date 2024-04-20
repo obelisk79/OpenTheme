@@ -1,4 +1,3 @@
-# OpenDark
 ![Colours](resources/icons/openthemes.png)
 
 # THIS THEME ADDON IS IN AN ALPHA STATE!
