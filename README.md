@@ -3,7 +3,7 @@
 
 # PLEASE REPORT ANY ISSUES DISCOVERED ON GITHUB
 
-OpenTheme Preference Pack source for [FreeCAD](https://www.freecad.org)
+OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
 
 This is an color-impaired accessible aesthetically pleasing theme for FreeCAD based on the [Open-Color Palette](https://github.com/yeun/open-color) that is WCAG/APCA compliant.
 
