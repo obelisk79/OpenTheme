@@ -1,0 +1,859 @@
+@import "./variablesDark.scss";
+@import "./_mixins.scss";
+@import "./_reset.scss";
+
+// normal, disabled, controls, hover, pressed
+QAbstractSpinBox {
+    max-height: 20px;
+    @include space2px;
+    background-color: $contrast-bg;
+    @include softborder;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding-left: 6px;
+    text-align: left;
+    &:hover {
+        border-color: $accent-border;
+    }
+    &:disabled {
+        color: $disabledtext;
+        border-color: $softborder;
+    }
+    &::up-button {
+        width: 12px;
+        subcontrol-origin: border;
+        subcontrol-position: top right;
+        top: 1px;
+        right: 1px;
+        background-color: $control-bg;
+        border: 1px solid $hardborder;
+        border-radius: 0px;
+        border-top-right-radius: 2px;
+        &:hover {
+            background-color: $softborder;
+            border: 1px solid $softborder;
+        }
+        &:pressed {
+            background-color: $accent-bg;
+            border: 1px solid $accent-bg;
+        }
+        &:disabled {
+            background-color: $softborder;
+            border: 1px solid $softborder;
+        }
+    }
+    &::down-button {
+        width: 12px;
+        subcontrol-origin: border;
+        subcontrol-position: bottom right;
+        bottom: 1px;
+        right: 1px;
+        background-color: $control-bg;
+        border: 1px solid $hardborder;
+        border-radius: 0px;
+        border-bottom-right-radius: 2px;
+        &:hover {
+            background-color: $softborder;
+            border: 1px solid $softborder;
+        }
+        &:pressed {
+            background-color: $accent-bg;
+            border: 1px solid $accent-bg;
+        }
+        &:disabled {
+            background-color: $softborder;
+            border: 1px solid $softborder;
+        }
+    }
+    &::up-arrow {
+        top: 1px;
+        image: url(qss:images_dark-light/light_up_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/light_up_arrow_disabled.svg);
+        }
+    }
+    &::down-arrow {
+        top: 1px;
+        image: url(qss:images_dark-light/light_down_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/light_down_arrow_disabled.svg);
+        }
+    }
+}
+
+QAbstractSpinBox > QLineEdit {
+    padding: 0px;
+    margin: 0px;
+}
+
+// normal, disabled, hover, checked are defined
+QCheckBox { 
+    background: transparent; 
+    @include space0px;
+    margin: 2px;
+    &:disabled {
+        color: $disabledtext;
+    }
+    &::indicator {
+        top: 1px;
+        color: $main-txt;
+        background-color: $contrast-bg;
+        padding: 1px;
+        width: 12px;
+        height: 12px;
+        @include hardborder;
+        &:disabled {
+            background-color: $softborder;
+        }
+        &:hover {
+            @include borderhover;
+        }
+        &:checked {
+            image:url(qss:images_dark-light/checkbox_light.svg); 
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+// normal, disabled, hover, pressed, controls are defined
+QComboBox {
+    background-color: $contrast-bg;
+    @include softborder;
+    @include space2px;
+    padding-left: 8px;
+    selection-background-color: $control-bg;
+    &:disabled {
+        color: $disabledtext;
+    }
+    &:hover {
+        border-color: $accent-border;
+    }
+    &::drop-down {
+        subcontrol-origin: border;
+        subcontrol-position: top right;
+        background-color: $hardborder;
+        border: 2px solid transparent;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        &:disabled {
+            background-color: $softborder;
+        }
+        &:hover {
+            background-color: $softborder;
+        }
+        &:pressed {
+            background-color: $accent-bg;
+        }
+    }
+    &::down-arrow {
+        image: url(qss:images_dark-light/light_down_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/light_down_arrow_disabled.svg);
+        }
+    }
+}
+
+// non-interactive element
+QDockWidget {
+    background: transparent;
+    @include space0px;
+    @include hardborder;
+    titlebar-close-icon: url(qss:images_dark-light/close_light.svg);
+    titlebar-normal-icon: url(qss:images_dark-light/light_detach.svg);
+    &::title {
+        margin: 4px;
+        text-align: center;
+    }
+}
+
+// non-interactive element
+QDialog {
+    background-color: $main-bg;
+    @include noborder;
+    @include space0px;
+    dialogbuttonbox-buttons-have-icons: 0;
+}
+
+// non-interactive element
+QGroupBox {
+    font-weight: bold;
+    border: 3px solid $hardborder;
+    margin: 10px;
+    padding-top: 10px;
+    margin-left: -20px;
+    margin-right: -20px;
+    &::title {
+            top: -10px;
+            margin-bottom: 4px;
+            margin-left: 16px;
+            subcontrol-position: top left;
+            padding-left: 4px;
+            padding-right: 12px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+    }
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        left: 6px;
+        border: 1px solid $hardborder;
+        border-radius: 2px;
+        &:checked {
+            image:url(qss:images_dark-light/checkbox_light.svg);
+        }
+    }
+}
+
+// needs refinement applied to property view, spreadsheet etc.
+QHeaderView::section {
+    background-color: $softborder;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid $contrast-bg;
+    border-right: 1px solid $contrast-bg;
+    padding: 4px;
+    padding-left: 12px;
+}
+
+// non-interactive element
+QLabel {
+    background-color: transparent;
+    text-align: right;
+    @include space0px;
+    &::label {
+        subcontrol-origin: center right;
+    }
+    &[haslink="true"] {
+        color: $selectedtab;
+    }
+}
+
+// normal, disabled, hover, focus
+QLineEdit {
+    background-color: $contrast-bg;
+    @include softborder;
+    @include space2px;
+    @include wide6px;
+    &:disabled {
+        color: $disabledtext;
+    }
+    &:hover {
+        @include borderhover;
+    }
+    &:focus {
+        @include borderhover;
+    }
+}
+
+QListView {
+    padding: 0px 8px 0px 8px;
+    background-color: $contrast-bg;
+    alternate-background-color: $contrast-bg;
+}
+
+QMainWindow {
+    @include space0px;
+    @include noborder;
+    &::separator {
+        border: 0px solid transparent;
+        background-color: $softborder;
+        &:hover {
+            background-color: $accent-bg;
+        }
+        &:vertical {
+            width: 4px;
+        }
+    }
+}
+
+//finished
+QMenu {
+    background-color: $contrast-bg;
+    @include softborder;
+    border-radius: 0px;
+    &::item {
+        color: $softtext;
+        padding: 4px;
+        padding-left: 10px;
+        padding-right: 28px;
+        @include noborder;
+    }
+
+    &::item:disabled {
+        color: $disabledtext;
+    }
+
+    &::item:selected {
+        color: $main-txt;
+        @include borderhover;
+        background-color: $accent-bg;
+    }
+
+    &::item:pressed {
+        color: $main-txt;
+        @include borderhover;
+        background-color: $accent-bg;
+    }
+
+    &::icon {
+        left: 6px;
+    }
+
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        left: 6px;
+        border: 1px solid $hardborder;
+        border-radius: 2px;
+        &:checked {
+            image:url(qss:images_dark-light/checkbox_light.svg);
+        }
+    }
+
+    &::right-arrow {
+        right: 8px;
+    }
+    &::separator {
+        height: 1px;
+        background-color: $softborder;
+        margin: 0px 10px;
+    }
+} 
+
+QMenuBar {
+    padding: 3px 0px 3px 0px;
+    color: $softtext;
+    background-color: $contrast-bg;
+    border-bottom: 1px solid $softborder;
+
+    &::item {
+        @include noborder;
+        padding: 1px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    &::item:pressed {
+        color: $main-txt;
+        background-color: $accent-bg;
+        @include borderhover;
+        border-radius: 2px;
+    }
+
+    &::item:selected {
+        color: $main-txt;
+        background-color: $accent-bg;
+        @include borderhover;
+        border-radius: 2px;
+    }
+}
+
+QPushButton {
+    min-width: 26px;
+    padding: 4px 4px 4px 4px;
+    border: 1px solid $contrast-bg;
+    background-color: $control-bg;
+    &:hover {
+        border:1px solid $accent-border;
+        background-color: $softborder;
+    }
+    &:focus {
+        border:1px solid $accent-border;
+        background-color: $softborder;
+    }
+    &:disabled {
+        color: $disabledtext;
+        background-color: $softborder;
+    }
+    &:pressed {
+        background-color: $accent-bg;
+    }
+}
+
+QRadioButton {
+    @include space0px;
+    margin: 2px;
+    &::indicator {
+        top: 1px;
+        height: 13px;
+        width: 13px;
+        @include hardborder;
+        border-radius: 7px;
+        background-color: $contrast-bg;
+    }
+    &::indicator:checked {
+        image:url(qss:images_dark-light/radiobutton_light.svg);
+    }
+}
+
+QScrollBar {
+    background-color: $contrast-bg;
+    margin: 0px;
+    &::handle {
+        background-color: $hardborder;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        &:hover {
+            background-color: $accent-bg;
+            border: 1px solid $accent-border
+        }
+        &:vertical {
+            margin: 16px 3px;
+            min-height: 12px;
+        }
+        &:horizontal{
+            margin: 3px 16px;
+            min-width: 8px;
+        }
+    }
+    &::sub-line {
+        &:vertical {
+            margin: 3px 0px 3px 1px; /* 1px to correctly fit the 10px width image */
+            border-image: url(qss:images_dark-light/light_up_arrow.svg);
+            height: 6px;
+            width: 10px;
+            subcontrol-position: top;
+            subcontrol-origin: margin;
+        }
+        &:horizontal:horizontal {
+            margin: 0px 3px 0px 3px; /* 1px to correctly fit the 10px width image */
+            border-image: url(qss:images_dark-light/light_left_arrow.svg);
+            width: 10px;
+            height: 7px;
+            subcontrol-position: left;
+            subcontrol-origin: margin;
+        }
+    }
+    &::add-line {
+        &:vertical {
+            margin: 3px 0px 3px 1px; /* 1px to correctly fit the 10px width image */
+            border-image: url(qss:images_dark-light/light_down_arrow.svg);
+            height: 6px;
+            width: 10px;
+            subcontrol-position: bottom;
+            subcontrol-origin: margin;  
+        }
+        &:horizontal {
+            margin: 0px 3px 0px 3px; /* 1px to correctly fit the 10px width image */
+            border-image: url(qss:images_dark-light/light_right_arrow.svg);
+            width: 10px;
+            height: 7px;
+            subcontrol-position: right;
+            subcontrol-origin: margin;
+        }
+    }
+}
+
+QSizeGrip {
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    image:url(qss:images_dark-light/light_sizegrip.svg);
+}
+
+QTabBar {
+    margin: 4px;
+    &::tab {
+        margin: 4px;
+        @include wide6px;
+        padding: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        min-width: 2em;
+        background-color: $hardborder;
+        border: 0px solid transparent;
+        border-radius: 4px;
+        &:hover {
+            background-color: $accent-bg;
+        }
+        &:selected {
+            background-color: $accent-border;
+        }
+    }
+    &::close-button {
+        margin-right: 6px;
+        subcontrol-origin: margin;
+        subcontrol-position: center right;
+        background-image: url(qss:images_dark-light/close_light.svg);
+        background-position: center center;
+        background-repeat: none;
+    }
+    &::scroller {
+       width: 60px;
+    }
+}
+
+QTabBar QToolButton { /* the scroll buttons are tool buttons */
+    border: 1px solid $hardborder;
+}
+
+QTableWidget {
+    background-color: $contrast-bg;
+    alternate-background-color: $contrast-bg;
+    gridline-color: $hardborder;
+}
+
+QTableView {
+    @extend QTableWidget;
+    &::item {
+        color: $main-txt;
+        &:selected {
+            background-color: $accent-border;
+        }
+        &:indeterminate {
+            background-color: #ff00ff;
+        }
+    }
+}
+
+QTreeView {
+    color: $main-txt;
+    background-color: $main-bg;
+    alternate-background-color: $main-bg;
+    @include noborder;
+    selection-color: $main-txt;
+    selection-background-color: $accent-bg;
+    show-decoration-selected: 0;
+    &::item {
+        margin: 2px 0px;
+        padding: 0px 3px;
+    }
+    &::item:selected {
+        color: $main-txt;
+        background-color: $accent-border;
+    }
+
+}
+
+QTreeView::branch  {
+    background: transparent;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_vline_OpenDark.svg) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_more_OpenDark.svg) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_end_OpenDark.svg) 0;
+}
+
+QTreeView::branch:closed:has-children:has-siblings  {
+    border-image: url(qss:images_dark-light/branch_more_closed_OpenDark.svg) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed  {
+    border-image: url(qss:images_dark-light/branch_end_closed_OpenDark.svg) 0;
+}
+
+QTreeView::branch:open:has-children:has-siblings  {
+    border-image: url(qss:images_dark-light/branch_more_open_OpenDark.svg) 0;
+}
+
+QTreeView::branch:open:has-children:!has-siblings  {
+    border-image: url(qss:images_dark-light/branch_end_open_OpenDark.svg) 0;
+}
+
+QTreeView QLineEdit {
+    padding: 0px;
+    margin: 0px;
+}
+
+QTextEdit {
+    background-color: $contrast-bg;
+    @include softborder;
+}
+
+QToolBar {
+    background-color: $main-bg;
+    padding: 2px;
+    border-bottom: 1px solid $softborder;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    QTabBar {
+        &::tab { 
+            margin-top: -1px;
+            padding-top: 6px;
+        }
+    }
+
+    QPushButton {
+        padding: 3px;
+    }
+
+    &::separator {
+        background-color: $hardborder;
+        &:vertical {
+            height: 1px;
+            margin: 4px 6px;
+        }
+        &:horizontal {
+            width: 1px;
+            margin: 6px 4px;
+        }
+    }
+}
+
+QToolBarExtension {
+    border: 1px solid transparent;
+    min-width: 16px;
+    background-color: transparent;
+    qproperty-icon: url(qss:images_dark-light/light_expand.svg);
+}
+
+QToolButton[popupMode="0"], QToolButton[popupMode="1"], QToolButton[popupMode="2"] {
+    /* Only for InstantPopup */
+    padding-right: -20px;
+    margin-right: -20px;
+}
+
+QToolButton {
+    margin: 0px 3px 0px 3px;
+    padding: 2px;
+    
+    @include noborder;
+    border-radius: 4px;
+    
+    &:hover {
+        margin: 0px 3px 0px 3px;
+        background: $control-bg;
+    }
+    
+    &:focus {
+        margin: 0px 3px 0px 3px;
+        border: 1px solid $accent-border;
+    }
+    
+    &:pressed {
+        margin: 0px 3px 0px 3px;
+        border: 1px solid $accent-border;
+        background-color: $accent-bg;
+    }
+    
+    &:checked {
+        background-color: $accent-bg;
+    }
+
+    &::menu-button {
+        border-bottom: 0px solid #ffffff;
+        border-radius: 2px;
+        width: 1.6ex;
+        padding: 0px;
+
+        border-radius: 2px;
+        border: 0px solid #ff00ff;
+        subcontrol-origin: margin;
+        subcontrol-position: right bottom;
+    }
+
+    &::menu-arrow {
+        width: 1.5ex;
+        height: 1.5ex;
+        subcontrol-origin: content;
+        subcontrol-position: right bottom;
+        background: transparent;
+    }
+
+    &::menu-indicator {
+        /* Exclude a shift for better image */
+        subcontrol-origin: padding;
+        /* Shift it a bit */
+    }
+}
+
+QToolBar > QToolButton#qt_toolbutton_menubutton {
+    padding-right: 2px;
+}
+
+QToolTip {
+    padding: 4px;
+    @include borderhover;
+    background-color: $accent-bg;
+}
+
+// Specialty styling
+QDialog QTreeWidget {
+    background-color: $contrast-bg;
+}
+
+QDialog#Gui__Dialog__DlgPreferences QGroupBox {
+    border-bottom: 0px;
+}
+
+QDialog#Gui__Dialog__DlgPreferences QListView {
+    padding: 10px 5px 10px 20px;
+    min-width: 120px;
+}
+
+QToolBar > Gui--WorkbenchComboBox QAbstractItemView {
+    min-width: 180px;
+}
+
+QWidget#wbList * {
+    background-color: transparent;
+}
+
+QWidget#wbList QPushButton {
+    @extend QPushButton;
+}
+
+/*==================================================================================================
+Tasks panel (custom FreeCAD class)
+==================================================================================================*/
+/* Action group */
+QFrame[class="panel"] {
+    background-color: transparent; /* temporal (transparent background) */
+}
+
+/* Panel header */
+QSint--ActionGroup QFrame[class="header"] {;
+    border-bottom: 3px solid $hardborder;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+QSint--ActionGroup QFrame[class="header"]:hover {
+    background-color: $softborder;
+    border-bottom: 3px solid $accent-border;
+}
+
+QSint--ActionGroup QToolButton[class="header"] {
+    color: $main-txt; /* Task Panel Header text color */
+    text-align: left;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel {
+    background-color: transparent;
+    background-image: url(qss:images_dark-light/light_down_arrow.svg);
+    background-repeat: none;
+    background-position: center center;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
+    background-color: transparent;
+    background-image: url(qss:images_dark-light/light_up_arrow.svg);
+    background-repeat: none;
+    background-position: center center;
+    padding: 0px;
+    margin: 0px;
+}
+
+QSint--ActionGroup QFrame[class="content"] QGroupBox > QCheckBox {
+    subcontrol-origin: border;
+    subcontrol-position: center left;
+}
+
+
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+    border: 0px solid transparent;
+    margin: 0px;
+    padding: 0px 0px 1px 0px;
+}
+
+QDialog#Gui__Dialog__DlgPreferences QComboBox {
+    max-height: 22px;
+}
+
+Gui--PropertyEditor--PropertyEditor {
+    gridline-color: $hardborder;  
+    qproperty-groupBackground: $control-bg;
+}
+
+/* Cells with values that can only be changed with "..." button (Attachment)
+/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+	background-color: $main-bg;
+	margin-left: 1px;
+    max-height: 20px;
+}
+
+Gui--OverlayToolButton {
+    background-color: transparent;
+    border: 0px solid transparent;
+    image: url(qss:overlay/close_opendark.svg);
+        &:hover {
+            background-color: transparent;
+            border: 0px solid transparent;
+            image: url(qss:overlay/closehover_opendark.svg);
+        }
+        &:pressed {
+            background-color: transparent;
+            border: 0px solid transparent;
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Transparent"] {
+    image: url(qss:overlay/transparent_opendark.svg);
+        &:hover {
+            image: url(qss:overlay/transparenthover_opendark.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Overlay"] {
+    image: url(qss:overlay/overlay_opendark.svg);
+        &:hover {
+            image: url(qss:overlay/overlayhover_opendark.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
+    image: url(qss:overlay/mode_opendark.svg);
+        &:hover {
+            image: url(qss:overlay/modehover_opendark.svg);
+        }
+}
+
+Gui--OverlaySplitterHandle Gui--OverlayToolButton,
+Gui--OverlayToolButton[objectName="OBTN Float"] {
+    image: url(qss:overlay/float_opendark.svg);
+        &:hover {
+            image: url(qss:overlay/floathover_opendark.svg);
+        }
+}
+
+QSint--ActionGroup QFrame[class="content"] QToolButton {
+    @extend QPushButton;
+}
+
+Gui--NotificationLabel {
+    background-color: $contrast-bg;
+    @include softborder;
+}
+
+QToolButton#buttonPauseUpdate { //this is the cancel cache update button in addon-manager
+    qproperty-icon: url(qss:images_dark-light/stop.png);
+}
+
+QTabWidget#TabBar > QTabBar {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+QTabWidget#TabBar > QTabBar::tab:top,
+QTabWidget#TabBar > QTabBar::tab:bottom {
+    margin: 0px 2px 4px 2px;
+    min-width: -1;
+}
+
+QWidget#Tabs {
+    margin: 0px;
+    margin-left: 6px;
+    padding-top: 0px;
+    background-color: transparent;
+    border: 0px solid transparent;
+}

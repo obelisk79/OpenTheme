@@ -1,0 +1,206 @@
+// Contains all elements of OpenLight which define images
+
+QAbstractSpinBox {
+    &::up-arrow {
+        image: url(qss:images_dark-light/dark_up_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/dark_up_arrow_disabled.svg);
+        }
+    }
+    &::down-arrow {
+        image: url(qss:images_dark-light/dark_down_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/dark_down_arrow_disabled.svg);
+        }
+    }
+}
+
+QCheckBox {
+    &::indicator {
+        &:checked {
+            image:url(qss:images_dark-light/check_dark.svg)
+        }
+    }
+}
+
+QComboBox {
+    &::down-arrow {
+        image: url(qss:images_dark-light/dark_down_arrow.svg);
+        &:disabled {
+            image: url(qss:images_dark-light/dark_down_arrow_disabled.svg);
+        }
+    }
+}
+
+QdockWidget {
+    titlebar-close-icon: url(qss:images_dark-light/close_dark.svg);
+    titlebar-normal-icon: url(qss:images_dark-light/light_dark.svg);
+}
+
+QGroupBox {
+    &::indicator j{
+        &:checked {
+            image:url(qss:images_dark-light/checkbox_dark.svg);
+        }
+    }
+}
+
+QList {
+    &::indicator {
+        &:checked {
+            image: url(qss:images_dark-light/check_dark.svg);
+            
+            &:disabled {
+                image: url(qss:images_dark-light/check_dark_disabled.svg);
+            }
+        }
+    }
+}
+
+QListView {
+    @extend QList;
+}
+
+QMenu {
+    &::indicator {
+        &:checked {
+            image:url(qss:images_dark-light/checkbox_dark.svg);
+        }
+    }
+}
+
+QRadioButton {
+    &::indicator {
+        &:checked {
+            image:url(qss:images_dark-light/radiobutton_dark.svg);
+        }
+    }
+}
+
+QScrollBar {
+    &::sub-line {
+        &:vertical {
+            border-image: url(qss:images_dark-light/dark_up_arrow.svg);
+        }
+        &:horizontal:horizontal {
+            border-image: url(qss:images_dark-light/dark_left_arrow.svg);
+        }
+    }
+    &::add-line {
+        &:vertical {
+            border-image: url(qss:images_dark-light/dark_down_arrow.svg);
+        }
+        &:horizontal {
+            border-image: url(qss:images_dark-light/dark_right_arrow.svg);
+        }
+    }
+}
+
+QSizeGrip {
+    image:url(qss:images_dark-light/dark_sizegrip.svg);
+}
+
+QTabBar {
+    &::close-button {
+        background-image: url(qss:images_dark-light/close_dark.svg);
+    }
+}
+
+QTree {
+    @extend QList;
+}
+
+
+QTreeView{
+    @extend QList;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_more_OpenLight.svg) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
+    border-image: url(qss:images_dark-light/branch_end_OpenLight.svg) 0;
+}
+
+QTreeView::branch:closed:has-children:has-siblings  {
+    border-image: none;
+    image: url(qss:images_dark-light/branch_more_closed_OpenLight.svg) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed  {
+    border-image: none;
+    image: url(qss:images_dark-light/branch_end_closed_OpenLight.svg) 0;
+}
+
+QTreeView::branch:open:has-children:has-siblings  {
+    border-image: url(qss:images_dark-light/branch_vline_open_OpenLight.svg) 0;
+    image: url(qss:images_dark-light/branch_more_open_OpenLight.svg) 0;
+}
+
+QTreeView::branch:open:has-children:!has-siblings  {
+    border-image: none;
+    image: url(qss:images_dark-light/branch_end_open_OpenLight.svg) 0;
+}
+
+QToolBarExtension {
+    qproperty-icon: url(qss:images_dark-light/dark_expand.svg);
+}
+
+QToolButton {
+    &::menu-arrow {
+        image: url(qss:images_dark-light/dark_more_arrow.svg);
+    }
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel {
+    background-image: url(qss:images_dark-light/dark_down_arrow.svg);
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
+    background-image: url(qss:images_dark-light/dark_up_arrow.svg);
+}
+
+Gui--OverlayToolButton {
+    image: url(qss:overlay/close_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/closehover_openlight.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Transparent"] {
+    image: url(qss:overlay/transparent_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/transparenthover_openlight.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Overlay"] {
+    image: url(qss:overlay/overlay_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/overlayhover_openlight.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
+    image: url(qss:overlay/mode_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/modehover_openlight.svg);
+        }
+}
+
+Gui--OverlaySplitterHandle Gui--OverlayToolButton,
+Gui--OverlayToolButton[objectName="OBTN Float"] {
+    image: url(qss:overlay/float_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/floathover_openlight.svg);
+        }
+}
+
+QToolButton#buttonPauseUpdate { //this is the cancel cache update button in addon-manager
+    qproperty-icon: url(qss:images_dark-light/stop.png);
+}
