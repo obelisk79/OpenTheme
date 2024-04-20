@@ -1,0 +1,504 @@
+@import "./variablesLight.scss";
+@import "./_mixins.scss";
+@import "./_reset.scss";
+@import "./_openStyle.scss";
+@import "./_openLightImages.scss";
+
+// normal, disabled, controls, hover, pressed
+QAbstractSpinBox {
+    background-color: $secondaryBackground;
+    @include softborder;
+    &:hover {
+        border-color: $accentBorder;
+    }
+    &:disabled {
+        color: $disabledText;
+        border-color: $standardBorder;
+    }
+    &::up-button {
+        background-color: $controlWidgetBackground;
+        border: 1px solid $contrastBorder;
+        &:hover {
+            background-color: $standardBorder;
+            border: 1px solid $standardBorder;
+        }
+        &:pressed {
+            background-color: $accentBackground;
+            border: 1px solid $accentBackground;
+        }
+        &:disabled {
+            background-color: $standardBorder;
+            border: 1px solid $standardBorder;
+        }
+    }
+    &::down-button {
+        background-color: $controlWidgetBackground;
+        border: 1px solid $contrastBorder;
+        &:hover {
+            background-color: $standardBorder;
+            border: 1px solid $standardBorder;
+        }
+        &:pressed {
+            background-color: $accentBackground;
+            border: 1px solid $accentBackground;
+        }
+        &:disabled {
+            background-color: $standardBorder;
+            border: 1px solid $standardBorder;
+        }
+    }
+}
+
+// normal, disabled, hover, checked are defined
+QCheckBox { 
+    background: transparent; 
+    &:disabled {
+        color: $disabledText;
+    }
+    &::indicator {
+        color: $primaryText;
+        background-color: $secondaryBackground;
+        @include hardborder;
+        &:disabled {
+            background-color: $standardBorder;
+        }
+        &:hover {
+            @include borderhover;
+        }
+    }
+}
+
+// normal, disabled, hover, pressed, controls are defined
+QComboBox {
+    background-color: $secondaryBackground;
+    @include softborder;
+    selection-background-color: $controlWidgetBackground;
+    &:disabled {
+        color: $disabledText;
+    }
+    &:hover {
+        border-color: $accentBorder;
+    }
+    &::drop-down {
+        background-color: $contrastBorder;
+        border: 2px solid transparent;
+        &:disabled {
+            background-color: $standardBorder;
+        }
+        &:hover {
+            background-color: $standardBorder;
+        }
+        &:pressed {
+            background-color: $accentBackground;
+        }
+    }
+}
+
+// non-interactive element
+QDockWidget {
+    background: $primaryBackground;
+    @include hardborder;
+}
+
+// non-interactive element
+QDialog {
+    background-color: $primaryBackground;
+    @include noborder;
+}
+
+// non-interactive element
+QGroupBox {
+    border: 3px solid $contrastBorder;
+    &::indicator {
+        border: 1px solid $contrastBorder;
+    }
+}
+
+// needs refinement applied to property view, spreadsheet etc.
+QHeaderView::section {
+    background-color: $standardBorder;
+    border-left: 1px solid $secondaryBackground;
+    border-right: 1px solid $secondaryBackground;
+}
+
+// non-interactive element
+QLabel {
+    background-color: transparent;
+    &[haslink="true"] {
+        color: $selectedElement;
+    }
+}
+
+// normal, disabled, hover, focus
+QLineEdit {
+    background-color: $secondaryBackground;
+    @include softborder;
+    &:disabled {
+        color: $disabledText;
+    }
+    &:hover {
+        @include borderhover;
+    }
+    &:focus {
+        @include borderhover;
+    }
+}
+
+QList {
+    font-weight:500;
+    background-color: $secondaryBackground;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    &::item {
+        border-radius: 2px;
+        border: 1px solid transparent;
+    }
+    &::item:hover {
+        background-color: $controlWidgetBackground;
+        border: 1px solid $accentBorder;
+        border-radius: 2px;
+    }
+    &::indicator {
+        background-color: transparent;
+        border: 1px solid $contrastBorder; 
+        border-radius: 2px;
+        &:disabled {
+            border: 1px solid $standardBorder;
+            border-radius: 2px
+        }
+    }
+}
+
+QListView {
+    background-color: $secondaryBackground;
+    alternate-background-color: $secondaryBackground;
+}
+
+QMainWindow {
+    &::separator {
+        border: 0px solid transparent;
+        background-color: $standardBorder;
+        &:hover {
+            color: $inverseText;
+            background-color: $accentBackground;
+        }
+    }
+}
+
+//finished
+QMenu {
+    background-color: $secondaryBackground;
+    @include softborder;
+    &::item {
+        color: $primaryText;
+        @include noborder;
+        border-radius: 0px;
+    }
+    &::item:disabled {
+        color: $disabledText;
+    }
+    &::item:selected {
+        //color: $inverseText;
+        @include borderhover;
+        background-color: $primaryBackground;
+    }
+    &::item:pressed {
+        color: $inverseText;
+        @include borderhover;
+        background-color: $accentBackground;
+    }
+    &::indicator {
+        border: 1px solid $contrastBorder;
+    }
+    &::separator {
+        background-color: $standardBorder;
+    }
+} 
+
+QMenuBar {
+    color: $secondaryText;
+    background-color: $secondaryBackground;
+    border-bottom: 1px solid $standardBorder;
+    &::item {
+        @include noborder;
+    }
+
+    &::item:pressed {
+        color: $inverseText;
+        background-color: $accentBackground;
+        @include borderhover;
+    }
+
+    &::item:selected {
+        color: $inverseText;
+        background-color: $accentBackground;
+        @include borderhover;
+    }
+}
+
+QPushButton {
+    border: 1px solid $contrastBorder;
+    background-color: $controlWidgetBackground;
+    &:hover {
+        border:1px solid $accentBorder;
+        background-color: $standardBorder;
+    }
+    &:focus {
+        border:1px solid $accentBorder;
+        background-color: $standardBorder;
+    }
+    &:disabled {
+        color: $disabledText;
+        background-color: $standardBorder;
+    }
+    &:pressed {
+        color: $inverseText;
+        background-color: $accentBackground;
+    }
+}
+
+QRadioButton {
+    @include space0px;
+    &::indicator {
+        @include hardborder;
+        background-color: $secondaryBackground;
+    }
+}
+
+QScrollBar {
+    background-color: $secondaryBackground;
+    &::handle {
+        background-color: $contrastBorder;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: $accentBackground;
+            border: 1px solid $accentBorder
+        }
+    }
+}
+
+QSizeGrip {
+    background: transparent;
+}
+
+QTabBar {
+    &::tab {
+        background-color: $controlWidgetBackground;
+        border: 1px solid $contrastBorder;
+        &:hover {
+            background-color: $standardBorder;
+            border: 1px solid $accentBorder;
+        }
+        &:selected {
+            color: $inverseText;
+            background-color: $selectedElement;
+            border: 1px solid $accentBorder;
+        }
+    }
+}
+
+QTabBar QToolButton { /* the scroll buttons are tool buttons */
+    border: 1px solid $contrastBorder;
+}
+
+QTableWidget {
+    background-color: $secondaryBackground;
+    alternate-background-color: $secondaryBackground;
+    gridline-color: $contrastBorder;
+}
+
+QTableView {
+    color:$primaryText;  /*Text in focused cell*/
+    @extend QTableWidget;
+    &::item {
+        &:selected {
+            background-color: $accentBorder;
+        }
+        &:indeterminate {
+            background-color: #ff00ff;
+        }
+    }
+}
+
+QTreeView {
+    color: $primaryText;
+    background-color: $primaryBackground;
+    alternate-background-color: $primaryBackground;
+    @include noborder;
+    selection-color: $inverseText;
+    selection-background-color: $accentBackground;
+    &::item:selected {
+        color: $inverseText;
+        background-color: $selectedElement;
+        border: 1px solid $accentBorder;
+    }
+}
+
+QTreeView::branch  {
+    background: transparent;
+}
+
+QTextEdit {
+    background-color: $secondaryBackground;
+    @include softborder;
+}
+
+QToolBar {
+    background-color: $primaryBackground;
+    border-bottom: 1px solid $standardBorder;
+    &::separator {
+        background-color: $contrastBorder;
+    }
+}
+
+QToolBarExtension {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+QToolButton {
+    @include noborder;
+     background-color: transparent;
+    &:hover {
+        background-color: $controlWidgetBackground;
+        border: 1px solid $accentBorder
+    }
+    &:focus {
+        border: 1px solid $accentBorder;
+    }
+    &:pressed {
+        color: $inverseText;
+        border: 1px solid $accentBorder;
+        background-color: $accentBackground;
+    }
+    &:checked {
+        color: $inverseText;
+        background-color: $selectedElement;
+        border: 1px solid $accentBorder;
+    }
+    &::menu-button {
+        width: 14px;
+        height: 14px;
+        border-bottom: 0px solid #ffffff;
+        border: 0px solid #00ff00;
+    }
+    &::menu-arrow {
+        background: transparent;
+    }
+    &:indeterminate {
+        background-color: #00ff00;
+    }
+}
+
+QToolTip {
+    color: $inverseText;
+    @include borderhover;
+    background-color: $tooltipBackground;
+}
+
+// Specialty styling
+QDialog QTreeWidget {
+    background-color: $secondaryBackground;
+}
+
+QWidget#wbList * {
+    background-color: transparent;
+}
+
+QWidget#wbList QPushButton {
+    @extend QPushButton;
+}
+
+/*==================================================================================================
+Tasks panel (custom FreeCAD class)
+==================================================================================================*/
+/* Action group */
+QFrame[class="panel"] {
+    background-color: transparent; /* temporal (transparent background) */
+}
+
+/* Panel header */
+QSint--ActionGroup QFrame[class="header"] {;
+    border-bottom: 3px solid $contrastBorder;
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="header"]:hover {
+    background-color: $standardBorder;
+    border-bottom: 3px solid $accentBorder;
+}
+
+QSint--ActionGroup QToolButton[class="header"] {
+    color: $primaryText; /* Task Panel Header text color */
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel {
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+    border: 0px solid transparent;
+}
+
+Gui--PropertyEditor--PropertyEditor {
+    gridline-color: $contrastBorder;  
+    qproperty-groupBackground: $controlWidgetBackground;
+}
+
+/* Cells with values that can only be changed with "..." button (Attachment)
+/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+	background-color: $primaryBackground;
+}
+
+Gui--OverlayToolButton {
+    background-color: transparent;
+    border: 0px solid transparent;
+        &:hover {
+            background-color: transparent;
+            border: 0px solid transparent;
+        }
+        &:pressed {
+            background-color: transparent;
+            border: 0px solid transparent;
+        }
+}
+
+QSint--ActionGroup QFrame[class="content"] QToolButton {
+    @extend QPushButton;
+}
+
+Gui--NotificationLabel {
+    background-color: $secondaryBackground;
+    @include softborder;
+}
+
+QTabWidget#TabBar > QTabBar {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+QWidget#Tabs {
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QWidget#Selector{
+    border-bottom: 1px solid transparent;
+}
+
+QWidget#Selector > QToolButton {
+    @extend QToolButton;
+    font-weight: 500;
+    background-color: $controlWidgetBackground;
+    border: 1px solid $contrastBorder;
+    &:hover {
+        background-color: $standardBorder;
+        border: 1px solid $accentBorder;
+    }
+}
