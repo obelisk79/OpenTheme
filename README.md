@@ -1,6 +1,6 @@
 ![Colours](resources/icons/openthemes.png)
 
-# THIS THEME ADDON IS IN AN ALPHA STATE!
+# THIS THEME ADDON IS IN A BETA STATE!
 # PLEASE REPORT BUGS/PROBLEMS ON [GITHUB](https://github.com/obelisk79/OpenTheme/issues)
 
 OpenLight/OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
