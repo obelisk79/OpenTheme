@@ -3,10 +3,11 @@
 # THIS THEME ADDON IS IN AN ALPHA STATE!
 # PLEASE REPORT ANY ISSUES DISCOVERED ON GITHUB
 
-OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
+OpenLight/OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
 
 This is a set of light and dark color-impaired accessible aesthetically pleasing themes (OpenLight and OpenDark) for FreeCAD based on the [Open-Color Palette](https://github.com/yeun/open-color) that is WCAG/APCA compliant.
 
+I have refactored this theme for improved maintainability using SCSS. New color variants can be created easily without having to re-style the entire spreadsheet. I compile the stylesheets using [QTSASS](https://github.com/spyder-ide/qtsass).
 
 ## Installation
 
