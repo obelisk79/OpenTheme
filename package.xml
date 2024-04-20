@@ -7,7 +7,7 @@
  <maintainer email="nomail@freecad.org">Obelisk79</maintainer>
  <license file="LICENSE">LGPLv2</license>
  <url type="repository" branch="main">https://github.com/obelisk79/OpenTheme</url>
- <icon>resources/icons/OpenDark.svg</icon>
+ <icon>resources/icons/openthemes.svg</icon>
 
 <content>
   <preferencepack>
