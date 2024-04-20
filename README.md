@@ -1,6 +1,7 @@
 # OpenDark
 ![Colours](resources/icons/openthemes.png)
 
+# THIS THEME ADDON IS IN AN ALPHA STATE!
 # PLEASE REPORT ANY ISSUES DISCOVERED ON GITHUB
 
 OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
