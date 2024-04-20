@@ -1,5 +1,5 @@
 # OpenDark
-![Colours](resources/icons/OpenDark.png)
+![Colours](resources/icons/openthemes.png)
 
 # PLEASE REPORT ANY ISSUES DISCOVERED ON GITHUB
 
