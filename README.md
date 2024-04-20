@@ -5,7 +5,7 @@
 
 OpenDark Theme Preference Pack for [FreeCAD](https://www.freecad.org)
 
-This is a set of light and dark color-impaired accessible aesthetically pleasing themes for FreeCAD based on the [Open-Color Palette](https://github.com/yeun/open-color) that is WCAG/APCA compliant.
+This is a set of light and dark color-impaired accessible aesthetically pleasing themes (OpenLight and OpenDark) for FreeCAD based on the [Open-Color Palette](https://github.com/yeun/open-color) that is WCAG/APCA compliant.
 
 
 ## Installation
