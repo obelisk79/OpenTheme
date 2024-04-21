@@ -195,8 +195,7 @@ QMenuBar {
     border-radius: 2px; }
 
 QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
-  min-width: 26px;
-  padding: 4px 4px 4px 4px; }
+  padding: 4px 20px; }
 
 QRadioButton {
   margin: 0px;
