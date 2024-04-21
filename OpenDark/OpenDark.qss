@@ -284,7 +284,6 @@ QToolBar {
     margin: 0;
     padding: 0; }
   QToolBar QTabBar::tab {
-    margin-top: -1px;
     padding-top: 6px; }
   QToolBar QPushButton, QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QToolBar QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#Selector > QToolButton, QToolBar QWidget#wbList QPushButton, QToolBar QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#wbList QToolButton, QWidget#wbList QToolBar QPushButton, QWidget#wbList QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolBar QToolButton {
     padding: 3px; }
@@ -410,6 +409,9 @@ QWidget#Selector {
 
 SpreadsheetGui--SheetTableView QLineEdit {
   min-width: 186px; }
+
+QTabBar#WbTabBar {
+  qproperty-drawBase: 0; }
 
 QAbstractSpinBox::up-arrow {
   image: url(qss:images_dark-light/light_up_arrow.svg); }
