@@ -206,11 +206,9 @@ QMenu {
 } 
 
 QMenuBar {
-    padding: 3px 0px 3px 0px;
+    spacing: 2px;
     &::item {
-        padding: 1px;
-        padding-left: 2px;
-        padding-right: 2px;
+        padding: 3px 6px;
     }
     &::item:pressed {
         border-radius: 2px;
