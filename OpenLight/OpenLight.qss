@@ -347,6 +347,15 @@ QDialog#Gui__Dialog__DlgPreferences QListView {
   padding: 10px 5px 10px 20px;
   min-width: 120px; }
 
+QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
+  show-decoration-selected: 1; }
+  QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item {
+    border: none;
+    border-radius: 0;
+    background-color: transparent; }
+    QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
+      border: none; }
+
 QToolBar > Gui--WorkbenchComboBox QAbstractItemView {
   min-width: 180px; }
 
@@ -912,3 +921,8 @@ QWidget#Selector > QToolButton {
   QWidget#Selector > QToolButton:hover {
     background-color: #a3a8ad;
     border: 1px solid #339af0; }
+
+QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
+  selection-background-color: #a5d8ff; }
+  QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
+    background-color: #a5d8ff; }
