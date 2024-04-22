@@ -335,7 +335,6 @@ QToolBar {
     }
     QTabBar {
         &::tab { 
-            margin-top: -1px;
             padding-top: 6px;
         }
     }
@@ -506,4 +505,8 @@ QWidget#Selector {
 
 SpreadsheetGui--SheetTableView QLineEdit {
     min-width: 186px;
+}
+
+QTabBar#WbTabBar {
+    qproperty-drawBase: 0;
 }
