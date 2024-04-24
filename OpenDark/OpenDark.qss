@@ -356,6 +356,7 @@ QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
       border: none; }
 
+
 QToolBar > Gui--WorkbenchComboBox QAbstractItemView {
   min-width: 180px; }
 
