@@ -206,6 +206,7 @@ QMenu {
 } 
 
 QMenuBar {
+    padding 3px 0px;
     spacing: 2px;
     &::item {
         padding: 3px 6px;
