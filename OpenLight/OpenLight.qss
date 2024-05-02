@@ -286,9 +286,6 @@ QToolBar {
 QToolBarExtension {
   min-width: 16px; }
 
-QToolButton[popupMode="0"], QWidget#Selector > QToolButton[popupMode="0"], QToolButton[popupMode="1"], QWidget#Selector > QToolButton[popupMode="1"], QToolButton[popupMode="2"], QWidget#Selector > QToolButton[popupMode="2"] {
-  /* Only for InstantPopup */ }
-
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
   padding: 2px;

@@ -64,20 +64,29 @@
   QTreeView::item  {
     margin: 3px 0px;
     border: 1px solid transparent;
+  }
+
+  QTreeView::item {
+    &, &:selected, &:hover {
+      background: none;
+      border: none;
+    }
+  }
+
+  #DocumentTreeItems::item {
+    border: 1px solid transparent;
     border-radius: 2px;
-    background-color: $secondaryBackground;
-  }
+    background-color: $primaryBackground;
 
-  QListView::item:hover,
-  QTreeView::item:hover  {
-    border: 1px solid $accentBorder;
-    background-color: $controlWidgetBackground;
-  }
+    &:hover {
+      border: 1px solid $accentBorder;
+      background-color: $controlWidgetBackground;
+    }
 
-  QListView::item:selected,
-  QTreeView::item:selected  {
-    border: 1px solid $accentBorder;
-    background-color: $accentBackground;
+    &:selected {
+      border: 1px solid $accentBorder;
+      background-color: $accentBackground;
+    }
   }
   
   Gui--PropertyEditor--PropertyEditor {
