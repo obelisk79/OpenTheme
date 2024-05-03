@@ -5,8 +5,8 @@
   border-radius: 2px;
   border-image: none;
   outline: 0;
-  color: #212529;
-  background-color: #ced4da;
+  color: #000000;
+  background-color: #dee2e6;
   dialogbuttonbox-buttons-have-icons: 0; }
 
 * {
@@ -16,11 +16,11 @@
   border-radius: 2px;
   border-image: none;
   outline: 0;
-  color: #212529;
-  background-color: #ced4da;
+  color: #000000;
+  background-color: #dee2e6;
   dialogbuttonbox-buttons-have-icons: 0; }
 
-QAbstractSpinBox {
+QAbstractSpinBox, QSpinBox {
   max-height: 20px;
   margin: 0px;
   padding: 2px;
@@ -28,7 +28,7 @@ QAbstractSpinBox {
   border-bottom-right-radius: 3px;
   padding-left: 6px;
   text-align: left; }
-  QAbstractSpinBox::up-button {
+  QAbstractSpinBox::up-button, QSpinBox::up-button {
     width: 12px;
     subcontrol-origin: border;
     subcontrol-position: top right;
@@ -36,7 +36,7 @@ QAbstractSpinBox {
     right: 1px;
     border-radius: 0px;
     border-top-right-radius: 2px; }
-  QAbstractSpinBox::down-button {
+  QAbstractSpinBox::down-button, QSpinBox::down-button {
     width: 12px;
     subcontrol-origin: border;
     subcontrol-position: bottom right;
@@ -44,12 +44,12 @@ QAbstractSpinBox {
     right: 1px;
     border-radius: 0px;
     border-bottom-right-radius: 2px; }
-  QAbstractSpinBox::up-arrow {
+  QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
     top: 1px; }
-  QAbstractSpinBox::down-arrow {
+  QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
     top: 1px; }
 
-QAbstractSpinBox > QLineEdit {
+QAbstractSpinBox > QLineEdit, QSpinBox > QLineEdit {
   padding: 0px;
   margin: 0px; }
 
@@ -184,6 +184,7 @@ QMenu {
     margin: 0px 10px; }
 
 QMenuBar {
+  padding: 3px 0px;
   spacing: 2px; }
   QMenuBar::item {
     padding: 3px 6px; }
@@ -295,9 +296,7 @@ QToolBarExtension {
   min-width: 16px; }
 
 QToolButton[popupMode="0"], QWidget#Selector > QToolButton[popupMode="0"], QToolButton[popupMode="1"], QWidget#Selector > QToolButton[popupMode="1"], QToolButton[popupMode="2"], QWidget#Selector > QToolButton[popupMode="2"] {
-  /* Only for InstantPopup */
-  padding-right: -20px;
-  margin-right: -20px; }
+  /* Only for InstantPopup */ }
 
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
@@ -386,7 +385,7 @@ QSint--ActionGroup QFrame[class="content"] QGroupBox > QCheckBox {
   subcontrol-origin: border;
   subcontrol-position: center left; }
 
-QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--ActionGroup QFrame[class="content"] QTreeView QSpinBox {
   margin: 0px;
   padding: 0px 0px 1px 0px; }
 
@@ -419,14 +418,14 @@ SpreadsheetGui--SheetTableView QLineEdit {
 QTabBar#WbTabBar {
   qproperty-drawBase: 0; }
 
-QAbstractSpinBox::up-arrow {
+QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
   image: url(qss:images_dark-light/dark_up_arrow.svg); }
-  QAbstractSpinBox::up-arrow:disabled {
+  QAbstractSpinBox::up-arrow:disabled, QSpinBox::up-arrow:disabled {
     image: url(qss:images_dark-light/dark_up_arrow_disabled.svg); }
 
-QAbstractSpinBox::down-arrow {
+QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
   image: url(qss:images_dark-light/dark_down_arrow.svg); }
-  QAbstractSpinBox::down-arrow:disabled {
+  QAbstractSpinBox::down-arrow:disabled, QSpinBox::down-arrow:disabled {
     image: url(qss:images_dark-light/dark_down_arrow_disabled.svg); }
 
 QCheckBox::indicator:checked {
@@ -540,80 +539,65 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
 QToolButton#buttonPauseUpdate, QWidget#Selector > QToolButton#buttonPauseUpdate {
   qproperty-icon: url(qss:images_dark-light/stop.png); }
 
-QAbstractSpinBox {
-  background-color: #dee2e6;
+QAbstractSpinBox, QSpinBox {
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
-  QAbstractSpinBox:hover {
-    border-color: #339af0; }
-  QAbstractSpinBox:disabled {
+  QAbstractSpinBox:hover, QSpinBox:hover {
+    border-color: #1c7ed6; }
+  QAbstractSpinBox:disabled, QSpinBox:disabled {
     color: #868e96;
     border-color: #a3a8ad; }
-  QAbstractSpinBox::up-button {
-    background-color: #adb5bd;
-    border: 1px solid #868e96; }
-    QAbstractSpinBox::up-button:hover {
-      background-color: #a3a8ad;
-      border: 1px solid #a3a8ad; }
-    QAbstractSpinBox::up-button:pressed {
-      background-color: #a5d8ff;
-      border: 1px solid #a5d8ff; }
-    QAbstractSpinBox::up-button:disabled {
-      background-color: #a3a8ad;
-      border: 1px solid #a3a8ad; }
-  QAbstractSpinBox::down-button {
-    background-color: #adb5bd;
-    border: 1px solid #868e96; }
-    QAbstractSpinBox::down-button:hover {
-      background-color: #a3a8ad;
-      border: 1px solid #a3a8ad; }
-    QAbstractSpinBox::down-button:pressed {
-      background-color: #a5d8ff;
-      border: 1px solid #a5d8ff; }
-    QAbstractSpinBox::down-button:disabled {
-      background-color: #a3a8ad;
-      border: 1px solid #a3a8ad; }
+  QAbstractSpinBox::up-button, QSpinBox::up-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-right: 3px solid transparent; }
+    QAbstractSpinBox::up-button:disabled, QSpinBox::up-button:disabled {
+      background-color: #a3a8ad; }
+  QAbstractSpinBox::down-button, QSpinBox::down-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-right: 3px solid transparent; }
+    QAbstractSpinBox::down-button:disabled, QSpinBox::down-button:disabled {
+      background-color: #a3a8ad; }
 
 QCheckBox {
   background: transparent; }
   QCheckBox:disabled {
     color: #868e96; }
   QCheckBox::indicator {
-    color: #212529;
-    background-color: #dee2e6;
+    color: #000000;
+    background-color: #f1f3f5;
     border: 1px solid #868e96;
     border-radius: 2px; }
     QCheckBox::indicator:disabled {
       background-color: #a3a8ad; }
     QCheckBox::indicator:hover {
-      border: 1px solid #339af0; }
+      border: 1px solid #1c7ed6; }
 
 QComboBox {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px;
-  selection-background-color: #adb5bd; }
+  selection-background-color: #ced4da; }
   QComboBox:disabled {
     color: #868e96; }
   QComboBox:hover {
-    border-color: #339af0; }
+    border-color: #1c7ed6; }
   QComboBox::drop-down {
-    background-color: #868e96;
-    border: 2px solid transparent; }
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-right: 5px solid transparent; }
     QComboBox::drop-down:disabled {
       background-color: #a3a8ad; }
-    QComboBox::drop-down:hover {
-      background-color: #a3a8ad; }
-    QComboBox::drop-down:pressed {
-      background-color: #a5d8ff; }
 
 QDockWidget {
-  background: #ced4da;
+  background: #dee2e6;
   border: 1px solid #868e96;
   border-radius: 2px; }
 
 QDialog {
-  background-color: #ced4da;
+  background-color: #dee2e6;
   border: 1px solid transparent;
   border-radius: 2px; }
 
@@ -624,8 +608,8 @@ QGroupBox {
 
 QHeaderView::section {
   background-color: #a3a8ad;
-  border-left: 1px solid #dee2e6;
-  border-right: 1px solid #dee2e6; }
+  border-left: 1px solid #f1f3f5;
+  border-right: 1px solid #f1f3f5; }
 
 QLabel {
   background-color: transparent; }
@@ -633,27 +617,27 @@ QLabel {
     color: #74c0fc; }
 
 QLineEdit {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
   QLineEdit:disabled {
     color: #868e96; }
   QLineEdit:hover {
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
   QLineEdit:focus {
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
 
 QList, QListView, QTree QListView, QTreeView, QTree {
   font-weight: 500;
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border-radius: 2px;
   border: 1px solid transparent; }
   QList::item, QListView::item, QTreeView::item, QTree::item {
     border-radius: 2px;
     border: 1px solid transparent; }
   QList::item:hover, QListView::item:hover, QTreeView::item:hover, QTree::item:hover {
-    background-color: #adb5bd;
-    border: 1px solid #339af0;
+    background-color: #ced4da;
+    border: 1px solid #1c7ed6;
     border-radius: 2px; }
   QList::indicator, QListView::indicator, QTreeView::indicator, QTree::indicator {
     background-color: transparent;
@@ -664,8 +648,8 @@ QList, QListView, QTree QListView, QTreeView, QTree {
       border-radius: 2px; }
 
 QListView {
-  background-color: #dee2e6;
-  alternate-background-color: #dee2e6; }
+  background-color: #f1f3f5;
+  alternate-background-color: #f1f3f5; }
 
 QMainWindow::separator {
   border: 0px solid transparent;
@@ -675,22 +659,22 @@ QMainWindow::separator {
     background-color: #a5d8ff; }
 
 QMenu {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
   QMenu::item {
-    color: #212529;
+    color: #000000;
     border: 1px solid transparent;
     border-radius: 2px;
     border-radius: 0px; }
   QMenu::item:disabled {
     color: #868e96; }
   QMenu::item:selected {
-    border: 1px solid #339af0;
-    background-color: #ced4da; }
+    border: 1px solid #1c7ed6;
+    background-color: #dee2e6; }
   QMenu::item:pressed {
     color: #000000;
-    border: 1px solid #339af0;
+    border: 1px solid #1c7ed6;
     background-color: #a5d8ff; }
   QMenu::indicator {
     border: 1px solid #868e96; }
@@ -699,7 +683,7 @@ QMenu {
 
 QMenuBar {
   color: #495057;
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border-bottom: 1px solid #a3a8ad; }
   QMenuBar::item {
     border: 1px solid transparent;
@@ -707,20 +691,20 @@ QMenuBar {
   QMenuBar::item:pressed {
     color: #000000;
     background-color: #a5d8ff;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
   QMenuBar::item:selected {
     color: #000000;
     background-color: #a5d8ff;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   border: 1px solid #868e96;
-  background-color: #adb5bd; }
+  background-color: #ced4da; }
   QPushButton:hover, QWidget#wbList QPushButton:hover, QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:hover, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:hover {
-    border: 1px solid #339af0;
+    border: 1px solid #1c7ed6;
     background-color: #a3a8ad; }
   QPushButton:focus, QWidget#wbList QPushButton:focus, QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:focus, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:focus {
-    border: 1px solid #339af0;
+    border: 1px solid #1c7ed6;
     background-color: #a3a8ad; }
   QPushButton:disabled, QWidget#wbList QPushButton:disabled, QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:disabled, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:disabled {
     color: #868e96;
@@ -735,52 +719,52 @@ QRadioButton {
   QRadioButton::indicator {
     border: 1px solid #868e96;
     border-radius: 2px;
-    background-color: #dee2e6; }
+    background-color: #f1f3f5; }
 
 QScrollBar {
-  background-color: #dee2e6; }
+  background-color: #f1f3f5; }
   QScrollBar::handle {
     background-color: #868e96;
     border: 1px solid transparent; }
     QScrollBar::handle:hover {
       background-color: #a5d8ff;
-      border: 1px solid #339af0; }
+      border: 1px solid #1c7ed6; }
 
 QSizeGrip {
   background: transparent; }
 
 QTabBar::tab {
-  background-color: #adb5bd;
+  background-color: #ced4da;
   border: 1px solid #868e96; }
   QTabBar::tab:hover {
-    background-color: #a3a8ad;
-    border: 1px solid #339af0; }
+    background-color: #a5d8ff;
+    border: 1px solid #1c7ed6; }
   QTabBar::tab:selected {
     color: #000000;
-    background-color: #74c0fc;
-    border: 1px solid #339af0; }
+    background-color: #a5d8ff;
+    border: 1px solid #1c7ed6; }
 
 QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
   /* the scroll buttons are tool buttons */
   border: 1px solid #868e96; }
 
 QTableWidget, QTableView {
-  background-color: #dee2e6;
-  alternate-background-color: #dee2e6;
+  background-color: #f1f3f5;
+  alternate-background-color: #f1f3f5;
   gridline-color: #868e96; }
 
 QTableView {
-  color: #212529;
+  color: #000000;
   /*Text in focused cell*/ }
   QTableView::item:selected {
-    background-color: #339af0; }
+    background-color: #1c7ed6; }
   QTableView::item:indeterminate {
     background-color: #ff00ff; }
 
 QTreeView {
-  color: #212529;
-  background-color: #ced4da;
-  alternate-background-color: #ced4da;
+  color: #000000;
+  background-color: #dee2e6;
+  alternate-background-color: #dee2e6;
   border: 1px solid transparent;
   border-radius: 2px;
   selection-color: #000000;
@@ -788,18 +772,18 @@ QTreeView {
   QTreeView::item:selected {
     color: #000000;
     background-color: #74c0fc;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
 
 QTreeView::branch {
   background: transparent; }
 
 QTextEdit {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
 
 QToolBar {
-  background-color: #ced4da;
+  background-color: #dee2e6;
   border-bottom: 1px solid #a3a8ad; }
   QToolBar::separator {
     background-color: #868e96; }
@@ -813,18 +797,18 @@ QToolButton, QWidget#Selector > QToolButton {
   border-radius: 2px;
   background-color: transparent; }
   QToolButton:hover, QWidget#Selector > QToolButton:hover {
-    background-color: #adb5bd;
-    border: 1px solid #339af0; }
+    background-color: #ced4da;
+    border: 1px solid #1c7ed6; }
   QToolButton:focus, QWidget#Selector > QToolButton:focus {
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
   QToolButton:pressed, QWidget#Selector > QToolButton:pressed {
     color: #000000;
-    border: 1px solid #339af0;
+    border: 1px solid #1c7ed6;
     background-color: #a5d8ff; }
   QToolButton:checked, QWidget#Selector > QToolButton:checked {
     color: #000000;
     background-color: #74c0fc;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
   QToolButton::menu-button, QWidget#Selector > QToolButton::menu-button {
     width: 14px;
     height: 14px;
@@ -837,11 +821,11 @@ QToolButton, QWidget#Selector > QToolButton {
 
 QToolTip {
   color: #000000;
-  border: 1px solid #339af0;
+  border: 1px solid #1c7ed6;
   background-color: #a5d8ff; }
 
 QDialog QTreeWidget {
-  background-color: #dee2e6; }
+  background-color: #f1f3f5; }
 
 QWidget#wbList * {
   background-color: transparent; }
@@ -861,10 +845,10 @@ QSint--ActionGroup QFrame[class="header"] {
 
 QSint--ActionGroup QFrame[class="header"]:hover {
   background-color: #a3a8ad;
-  border-bottom: 3px solid #339af0; }
+  border-bottom: 3px solid #1c7ed6; }
 
 QSint--ActionGroup QToolButton[class="header"], QSint--ActionGroup QWidget#Selector > QToolButton[class="header"] {
-  color: #212529;
+  color: #000000;
   /* Task Panel Header text color */ }
 
 QSint--ActionGroup QFrame[class="header"] QLabel {
@@ -873,17 +857,17 @@ QSint--ActionGroup QFrame[class="header"] QLabel {
 QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
   background-color: transparent; }
 
-QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--ActionGroup QFrame[class="content"] QTreeView QSpinBox {
   border: 0px solid transparent; }
 
 Gui--PropertyEditor--PropertyEditor {
   gridline-color: #868e96;
-  qproperty-groupBackground: #adb5bd; }
+  qproperty-groupBackground: #ced4da; }
 
 /* Cells with values that can only be changed with "..." button (Attachment)
 /* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
 Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
-  background-color: #ced4da; }
+  background-color: #dee2e6; }
 
 Gui--OverlayToolButton {
   background-color: transparent;
@@ -896,7 +880,7 @@ Gui--OverlayToolButton {
     border: 0px solid transparent; }
 
 Gui--NotificationLabel {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
 
@@ -913,11 +897,11 @@ QWidget#Selector {
 
 QWidget#Selector > QToolButton {
   font-weight: 500;
-  background-color: #adb5bd;
+  background-color: #ced4da;
   border: 1px solid #868e96; }
   QWidget#Selector > QToolButton:hover {
     background-color: #a3a8ad;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
 
 QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
   selection-background-color: #a5d8ff; }
