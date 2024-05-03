@@ -1,7 +1,7 @@
 * {
-  color: #212529;
-  background-color: #ced4da;
-  alternate-background-color: #dee2e6; }
+  color: #000000;
+  background-color: #dee2e6;
+  alternate-background-color: #f1f3f5; }
 
 QTabWidget::pane {
   background-color: transparent;
@@ -28,7 +28,7 @@ QHeaderView {
   background: transparent; }
 
 QHeaderView::section {
-  color: #212529;
+  color: #000000;
   background-color: #dee2e6;
   padding: 2px;
   padding-left: 8px;
@@ -40,10 +40,10 @@ Gui--OverlayToolButton {
   border: none; }
 
 Gui--OverlayToolButton::hover {
-  background: #ced4da; }
+  background: #dee2e6; }
 
 QListView {
-  background-color: #dee2e6; }
+  background-color: #f1f3f5; }
   QListView::indicator {
     border-radius: 2px;
     border-color: #868e96; }
@@ -53,33 +53,33 @@ QTreeView::item {
   margin: 3px 0px;
   border: 1px solid transparent;
   border-radius: 2px;
-  background-color: #dee2e6; }
+  background-color: #f1f3f5; }
 
 QListView::item:hover,
 QTreeView::item:hover {
-  border: 1px solid #339af0;
-  background-color: #adb5bd; }
+  border: 1px solid #1c7ed6;
+  background-color: #ced4da; }
 
 QListView::item:selected,
 QTreeView::item:selected {
-  border: 1px solid #339af0;
+  border: 1px solid #1c7ed6;
   background-color: #a5d8ff; }
 
 Gui--PropertyEditor--PropertyEditor {
-  qproperty-groupTextColor: #212529;
+  qproperty-groupTextColor: #000000;
   qproperty-groupBackground: #a3a8ad;
   qproperty-itemBackground: #00ff00; }
 
 Gui--CallTipsList::item {
-  background-color: #adb5bd; }
+  background-color: #dee2e6; }
 
 Gui--CallTipsList::item::selected {
   color: #000000;
   background-color: #a5d8ff;
-  border: 1px solid #339af0; }
+  border: 1px solid #1c7ed6; }
   Gui--CallTipsList::item::selected:hover {
     background-color: #a3a8ad;
-    border: 1px solid #339af0; }
+    border: 1px solid #1c7ed6; }
 
 /* Use the following selector to customize title bar for each side */
 /*
@@ -99,15 +99,15 @@ QWidget#ClippingScrollAreaContents {
   background-color: #ff00ff; }
 
 QSint--ActionGroup QFrame[class="content"] {
-  background-color: #dee2e6;
+  background-color: #f1f3f5;
   /* Task Panel background color */ }
 
 QSint--ActionGroup QFrame[class="content"] > QWidget {
-  background-color: #ced4da;
+  background-color: #dee2e6;
   /* Task Panel background color */ }
 
 QComboBox QAbstractItemView {
-  background-color: #dee2e6; }
+  background-color: #f1f3f5; }
 
 QTreeView::indicator {
   border: 1px solid #868e96; }
@@ -115,7 +115,9 @@ QTreeView::indicator {
 QTreeView::indicator:checked {
   image: url(qss:images_dark-light/check_dark.svg); }
 
-Gui--TreePanel QTreeView
-{
-  selection-background-color: #00ff00;
-}
+QCheckBox,
+QLabel {
+  background-color: transparent; }
+
+QCheckBox::indicator {
+  background-color: #ced4da; }
