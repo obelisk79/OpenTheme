@@ -136,7 +136,18 @@
   //   margin: 3px 6px 3px 6px; }
   
   QTreeView::indicator {
-    border: 1px solid $contrastBorder; }
+    border: 1px solid $contrastBorder; 
+  }
   
   QTreeView::indicator:checked {
-    image: url(qss:images_dark-light/check_dark.svg); }
+    image: url(qss:images_dark-light/check_dark.svg); 
+  }
+
+QCheckBox,
+QLabel {
+  background-color: transparent;
+}
+
+QCheckBox::indicator {
+  background-color: $controlWidgetBackground;
+}
