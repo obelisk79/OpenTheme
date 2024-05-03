@@ -206,7 +206,7 @@ QMenu {
 } 
 
 QMenuBar {
-    padding 3px 0px;
+    padding: 3px 0px;
     spacing: 2px;
     &::item {
         padding: 3px 6px;
@@ -357,8 +357,8 @@ QToolBarExtension {
 
 QToolButton[popupMode="0"], QToolButton[popupMode="1"], QToolButton[popupMode="2"] {
     /* Only for InstantPopup */
-    padding-right: -20px;
-    margin-right: -20px;
+    // padding-right: 20px;
+    // margin-right: 20px;
 }
 
 QToolButton {
