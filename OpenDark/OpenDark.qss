@@ -184,6 +184,7 @@ QMenu {
     margin: 0px 10px; }
 
 QMenuBar {
+  padding: 3px 0px;
   spacing: 2px; }
   QMenuBar::item {
     padding: 3px 6px; }
@@ -295,9 +296,7 @@ QToolBarExtension {
   min-width: 16px; }
 
 QToolButton[popupMode="0"], QWidget#Selector > QToolButton[popupMode="0"], QToolButton[popupMode="1"], QWidget#Selector > QToolButton[popupMode="1"], QToolButton[popupMode="2"], QWidget#Selector > QToolButton[popupMode="2"] {
-  /* Only for InstantPopup */
-  padding-right: -20px;
-  margin-right: -20px; }
+  /* Only for InstantPopup */ }
 
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
@@ -352,7 +351,6 @@ QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     background-color: transparent; }
     QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
       border: none; }
-
 
 QToolBar > Gui--WorkbenchComboBox QAbstractItemView {
   min-width: 180px; }
@@ -551,29 +549,17 @@ QAbstractSpinBox {
     color: #495057;
     border-color: #292f35; }
   QAbstractSpinBox::up-button {
-    background-color: #495057;
-    border: 1px solid #495057; }
-    QAbstractSpinBox::up-button:hover {
-      background-color: #292f35;
-      border: 1px solid #292f35; }
-    QAbstractSpinBox::up-button:pressed {
-      background-color: #1f364d;
-      border: 1px solid #1f364d; }
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-right: 3px solid transparent; }
     QAbstractSpinBox::up-button:disabled {
-      background-color: #292f35;
-      border: 1px solid #292f35; }
+      background-color: #292f35; }
   QAbstractSpinBox::down-button {
-    background-color: #495057;
-    border: 1px solid #495057; }
-    QAbstractSpinBox::down-button:hover {
-      background-color: #292f35;
-      border: 1px solid #292f35; }
-    QAbstractSpinBox::down-button:pressed {
-      background-color: #1f364d;
-      border: 1px solid #1f364d; }
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-right: 3px solid transparent; }
     QAbstractSpinBox::down-button:disabled {
-      background-color: #292f35;
-      border: 1px solid #292f35; }
+      background-color: #292f35; }
 
 QCheckBox {
   background: transparent; }
@@ -599,14 +585,11 @@ QComboBox {
   QComboBox:hover {
     border-color: #264b69; }
   QComboBox::drop-down {
-    background-color: #495057;
-    border: 2px solid transparent; }
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-right: 5px solid transparent; }
     QComboBox::drop-down:disabled {
       background-color: #292f35; }
-    QComboBox::drop-down:hover {
-      background-color: #292f35; }
-    QComboBox::drop-down:pressed {
-      background-color: #1f364d; }
 
 QDockWidget {
   background: #212529;
