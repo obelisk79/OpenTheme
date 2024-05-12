@@ -20,5 +20,18 @@ Preference Packs should be installed via the [Addon Manager](https://github.com/
 ![Screenshots](resources/images/OpenDark_sketcher.png)
 ![Screenshots](resources/images/text_panels.png)
 
+
+## Contributing
+To build SCSS sources into QSS files you will need to have qtsass installed: [spyder-ide/qtsass](https://github.com/spyder-ide/qtsass).
+
+Once you have it you should modify ONLY `.scss` files and rebuild them using `build.sh` script. 
+
+To watch files for changes and rebuild stylesheets automatically you can use `--watch` flag:
+```bash
+./build.sh --watch
+```
+
+This will make sure that your qss files are always up-to-date.
+
 ## License
  [LGPLv2](https://en.m.wikipedia.org/wiki/GNU_Lesser_General_Public_License)
