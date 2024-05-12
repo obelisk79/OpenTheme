@@ -89,9 +89,9 @@ QDialog {
 
 // non-interactive element
 QGroupBox {
-    border: 3px solid $contrastBorder;
+    border-top: 3px solid $contrastBorder;
     &::indicator {
-        border: 1px solid $contrastBorder;
+        border-top: 1px solid $contrastBorder;
     }
 }
 
