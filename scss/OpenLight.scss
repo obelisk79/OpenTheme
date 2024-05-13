@@ -16,35 +16,21 @@ QAbstractSpinBox {
         border-color: $standardBorder;
     }
     &::up-button {
-        background-color: $controlWidgetBackground;
-        border: 1px solid $contrastBorder;
-        &:hover {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-right: 3px solid transparent;
+
+        &:disabled { //To-Do: change arrow color instead of background color
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
-        }
-        &:pressed {
-            background-color: $accentBackground;
-            border: 1px solid $accentBackground;
-        }
-        &:disabled {
-            background-color: $standardBorder;
-            border: 1px solid $standardBorder;
         }
     }
     &::down-button {
-        background-color: $controlWidgetBackground;
-        border: 1px solid $contrastBorder;
-        &:hover {
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-right: 3px solid transparent;
+        &:disabled { //To-Do: change arrow color instead of background color
             background-color: $standardBorder;
-            border: 1px solid $standardBorder;
-        }
-        &:pressed {
-            background-color: $accentBackground;
-            border: 1px solid $accentBackground;
-        }
-        &:disabled {
-            background-color: $standardBorder;
-            border: 1px solid $standardBorder;
+            //border: 1px solid $standardBorder;
         }
     }
 }
@@ -73,23 +59,18 @@ QComboBox {
     background-color: $secondaryBackground;
     @include softborder;
     selection-background-color: $controlWidgetBackground;
-    &:disabled {
+    &:disabled { 
         color: $disabledText;
     }
     &:hover {
         border-color: $accentBorder;
     }
     &::drop-down {
-        background-color: $contrastBorder;
+        background-color: transparent;
         border: 2px solid transparent;
-        &:disabled {
+        border-right: 5px solid transparent;
+        &:disabled { //To-Do: change arrow color instead of background color
             background-color: $standardBorder;
-        }
-        &:hover {
-            background-color: $standardBorder;
-        }
-        &:pressed {
-            background-color: $accentBackground;
         }
     }
 }
@@ -282,17 +263,21 @@ QSizeGrip {
     background: transparent;
 }
 
+QSpinBox {
+    @extend QAbstractSpinBox;
+}
+
 QTabBar {
     &::tab {
         background-color: $controlWidgetBackground;
         border: 1px solid $contrastBorder;
         &:hover {
-            background-color: $standardBorder;
+            background-color: $accentBackground;
             border: 1px solid $accentBorder;
         }
         &:selected {
             color: $inverseText;
-            background-color: $selectedElement;
+            background-color: $accentBackground; //$selectedElement;
             border: 1px solid $accentBorder;
         }
     }
@@ -500,13 +485,5 @@ QWidget#Selector > QToolButton {
     &:hover {
         background-color: $standardBorder;
         border: 1px solid $accentBorder;
-    }
-}
-
-QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
-    selection-background-color: $accentBackground;
-
-    &::item:selected {
-        background-color: $accentBackground;
     }
 }
