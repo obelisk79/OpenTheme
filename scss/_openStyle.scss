@@ -290,7 +290,6 @@ QTabBar {
     margin: 4px;
     &::tab {
         margin: 4px;
-        @include wide6px;
         padding: 4px;
         padding-left: 12px;
         padding-right: 12px;
@@ -365,13 +364,8 @@ QToolButton {
     margin: 0px 3px 0px 3px;
     padding: 2px;
     border-radius: 4px;
-        &:hover {
-        margin: 0px 3px 0px 3px;
-    }
-    &:focus {
-        margin: 0px 3px 0px 3px;
-    }
-    &:pressed {
+    
+    &:hover, &:focus, &:pressed {
         margin: 0px 3px 0px 3px;
     }
     &::menu-button {
@@ -520,6 +514,38 @@ SpreadsheetGui--SheetTableView QLineEdit {
     min-width: 186px;
 }
 
-QTabBar#WbTabBar {
-    qproperty-drawBase: 0;
+/**
+ * Special handling for WB Tab Bar
+ */
+#WbTabBar {
+    // The "+" button styled to look like a tab
+    #WbTabBarMore {
+        margin: 0;
+        padding: 5px 8px;
+        margin-top: 1px;
+        padding-top: 4px;
+        border-radius: 4px;
+    }
+
+    > QTabBar {
+        // This adds background for scroll buttons
+        #ScrollLeftButton, #ScrollRightButton {
+            @extend QPushButton;
+        }
+
+        background-color: transparent;
+        qproperty-drawBase: 0;
+
+        &::tab {
+            &:left, &:right {
+                padding-left: 4px;
+                padding-right: 4px;
+                padding-bottom: 12px;
+                padding-top: 12px;
+
+                min-width: 24px;
+                min-height: 2em;
+            }
+        }
+    }
 }

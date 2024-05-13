@@ -193,7 +193,7 @@ QMenuBar {
   QMenuBar::item:selected {
     border-radius: 2px; }
 
-QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
+QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   padding: 4px 20px; }
 
 QRadioButton {
@@ -253,8 +253,6 @@ QTabBar {
   margin: 4px; }
   QTabBar::tab {
     margin: 4px;
-    padding-left: 6px;
-    padding-right: 6px;
     padding: 4px;
     padding-left: 12px;
     padding-right: 12px;
@@ -283,7 +281,7 @@ QToolBar {
     padding: 0; }
   QToolBar QTabBar::tab {
     padding-top: 6px; }
-  QToolBar QPushButton, QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QToolBar QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#Selector > QToolButton, QToolBar QWidget#wbList QPushButton, QToolBar QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#wbList QToolButton, QWidget#wbList QToolBar QPushButton, QWidget#wbList QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolBar QToolButton {
+  QToolBar QPushButton, QToolBar #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar QToolBar #ScrollLeftButton, QToolBar #WbTabBar > QTabBar #ScrollRightButton, #WbTabBar > QTabBar QToolBar #ScrollRightButton, QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QToolBar QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#Selector > QToolButton, QToolBar QWidget#wbList QPushButton, QToolBar QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QToolBar QWidget#wbList QToolButton, QWidget#wbList QToolBar QPushButton, QWidget#wbList QToolBar QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolBar QToolButton {
     padding: 3px; }
   QToolBar::separator:vertical {
     height: 1px;
@@ -302,11 +300,7 @@ QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
   padding: 2px;
   border-radius: 4px; }
-  QToolButton:hover, QWidget#Selector > QToolButton:hover {
-    margin: 0px 3px 0px 3px; }
-  QToolButton:focus, QWidget#Selector > QToolButton:focus {
-    margin: 0px 3px 0px 3px; }
-  QToolButton:pressed, QWidget#Selector > QToolButton:pressed {
+  QToolButton:hover, QWidget#Selector > QToolButton:hover, QToolButton:focus, QWidget#Selector > QToolButton:focus, QToolButton:pressed, QWidget#Selector > QToolButton:pressed {
     margin: 0px 3px 0px 3px; }
   QToolButton::menu-button, QWidget#Selector > QToolButton::menu-button {
     border-radius: 2px;
@@ -415,8 +409,26 @@ QWidget#Selector {
 SpreadsheetGui--SheetTableView QLineEdit {
   min-width: 186px; }
 
-QTabBar#WbTabBar {
+/**
+ * Special handling for WB Tab Bar
+ */
+#WbTabBar #WbTabBarMore {
+  margin: 0;
+  padding: 5px 8px;
+  margin-top: 1px;
+  padding-top: 4px;
+  border-radius: 4px; }
+
+#WbTabBar > QTabBar {
+  background-color: transparent;
   qproperty-drawBase: 0; }
+  #WbTabBar > QTabBar::tab:left, #WbTabBar > QTabBar::tab:right {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    min-width: 24px;
+    min-height: 2em; }
 
 QAbstractSpinBox::up-arrow {
   image: url(qss:images_dark-light/light_up_arrow.svg); }
@@ -697,19 +709,19 @@ QMenuBar {
     background-color: #1f364d;
     border: 1px solid #264b69; }
 
-QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
+QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
   border: 1px solid #495057;
   background-color: #495057; }
-  QPushButton:hover, QWidget#wbList QPushButton:hover, QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:hover, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:hover {
+  QPushButton:hover, QWidget#wbList QPushButton:hover, QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:hover, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:hover, #WbTabBar > QTabBar #ScrollLeftButton:hover, #WbTabBar > QTabBar #ScrollRightButton:hover {
     border: 1px solid #264b69;
     background-color: #292f35; }
-  QPushButton:focus, QWidget#wbList QPushButton:focus, QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:focus, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:focus {
+  QPushButton:focus, QWidget#wbList QPushButton:focus, QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:focus, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:focus, #WbTabBar > QTabBar #ScrollLeftButton:focus, #WbTabBar > QTabBar #ScrollRightButton:focus {
     border: 1px solid #264b69;
     background-color: #292f35; }
-  QPushButton:disabled, QWidget#wbList QPushButton:disabled, QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:disabled, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:disabled {
+  QPushButton:disabled, QWidget#wbList QPushButton:disabled, QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:disabled, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:disabled, #WbTabBar > QTabBar #ScrollLeftButton:disabled, #WbTabBar > QTabBar #ScrollRightButton:disabled {
     color: #495057;
     background-color: #292f35; }
-  QPushButton:pressed, QWidget#wbList QPushButton:pressed, QSint--ActionGroup QFrame[class="content"] QToolButton:pressed, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:pressed, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:pressed, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:pressed {
+  QPushButton:pressed, QWidget#wbList QPushButton:pressed, QSint--ActionGroup QFrame[class="content"] QToolButton:pressed, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:pressed, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:pressed, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:pressed, #WbTabBar > QTabBar #ScrollLeftButton:pressed, #WbTabBar > QTabBar #ScrollRightButton:pressed {
     color: #f8f9fa;
     background-color: #1f364d; }
 
