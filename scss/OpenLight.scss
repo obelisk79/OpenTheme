@@ -487,3 +487,11 @@ QWidget#Selector > QToolButton {
         border: 1px solid $accentBorder;
     }
 }
+
+QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
+    selection-background-color: $accentBackground;
+
+    &::item:selected {
+        background-color: $accentBackground;
+    }
+}
