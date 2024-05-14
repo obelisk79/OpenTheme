@@ -90,20 +90,15 @@ QDialog {
 // non-interactive element
 QGroupBox {
     font-weight: bold;
-    margin: 10px;
+    margin-top: 4px;
     padding-top: 10px;
-    margin-left: -20px;
-    margin-right: -20px;
+
     &::title {
-            top: -10px;
-            margin-bottom: 4px;
-            margin-left: 16px;
-            subcontrol-position: top left;
-            padding-left: 4px;
-            padding-right: 12px;
-            padding-top: 2px;
-            padding-bottom: 2px;
+        subcontrol-position: top left;
+        top: -8px;
+        padding-right: 12px;
     }
+
     &::indicator {
         width: 12px;
         height: 12px;
@@ -410,7 +405,6 @@ QDialog#Gui__Dialog__DlgPreferences QGroupBox {
 }
 
 QDialog#Gui__Dialog__DlgPreferences QListView {
-    padding: 10px 5px 10px 20px;
     min-width: 120px;
 }
  
