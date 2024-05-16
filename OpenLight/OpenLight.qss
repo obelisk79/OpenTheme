@@ -394,9 +394,8 @@ QWidget#Tabs {
   margin-left: 6px;
   padding-top: 0px; }
 
-QWidget#Selector {
-  max-height: 28px;
-  border-radius: 4px; }
+QWidget#Selector > QToolButton {
+  max-height: 24px; }
 
 SpreadsheetGui--SheetTableView QLineEdit {
   min-width: 186px; }
@@ -421,6 +420,9 @@ SpreadsheetGui--SheetTableView QLineEdit {
     padding-top: 12px;
     min-width: 24px;
     min-height: 2em; }
+
+QWidget#Workbench {
+  border: 0px solid transparent; }
 
 QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
   image: url(qss:images_dark-light/dark_up_arrow.svg); }
@@ -902,9 +904,13 @@ QWidget#Selector {
 QWidget#Selector > QToolButton {
   font-weight: 500;
   background-color: #ced4da;
-  border: 1px solid #868e96; }
+  border: 1px solid #868e96;
+  border-radius: 4px; }
   QWidget#Selector > QToolButton:hover {
-    background-color: #a3a8ad;
+    background-color: #a5d8ff;
+    border: 1px solid #1c7ed6; }
+  QWidget#Selector > QToolButton:selected {
+    background-color: #a5d8ff;
     border: 1px solid #1c7ed6; }
 
 QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
