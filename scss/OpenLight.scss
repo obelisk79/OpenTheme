@@ -482,8 +482,13 @@ QWidget#Selector > QToolButton {
     font-weight: 500;
     background-color: $controlWidgetBackground;
     border: 1px solid $contrastBorder;
+    border-radius: 4px;
     &:hover {
-        background-color: $standardBorder;
+        background-color: $accentBackground;
+        border: 1px solid $accentBorder;
+    }
+    &:selected {
+        background-color: $accentBackground;
         border: 1px solid $accentBorder;
     }
 }

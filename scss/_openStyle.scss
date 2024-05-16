@@ -435,7 +435,7 @@ QWidget#wbList QPushButton {
 Tasks panel (custom FreeCAD class)
 ==================================================================================================*/
 /* Panel header */
-QSint--ActionGroup QFrame[class="header"] {;
+QSint--ActionGroup QFrame[class="header"] {
     margin: 0px;
     padding: 0px;    
 }
@@ -499,9 +499,8 @@ QWidget#Tabs {
     padding-top: 0px;
 }
 
-QWidget#Selector {
-    max-height: 28px;
-    border-radius: 4px;
+QWidget#Selector > QToolButton {
+    max-height: 24px;
 }
 
 SpreadsheetGui--SheetTableView QLineEdit {
@@ -542,4 +541,8 @@ SpreadsheetGui--SheetTableView QLineEdit {
             }
         }
     }
+}
+
+QWidget#Workbench {
+    border: 0px solid transparent; 
 }
