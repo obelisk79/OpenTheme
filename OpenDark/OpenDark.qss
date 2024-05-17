@@ -723,13 +723,9 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
     color: #f8f9fa;
     background-color: #1f364d; }
 
-QRadioButton {
-  margin: 0px;
-  padding: 0px; }
-  QRadioButton::indicator {
-    border: 1px solid #495057;
-    border-radius: 2px;
-    background-color: #1a1e22; }
+QRadioButton::indicator {
+  border: 1px solid #495057;
+  background-color: #1a1e22; }
 
 QScrollBar {
   background-color: #1a1e22; }
