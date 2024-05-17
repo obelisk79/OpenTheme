@@ -11,3 +11,4 @@
 
 2024.MAY.17
 - corrected a regression causing radio buttons to be styled like checkboxes
+- change QGroupBox header padding to resolve text clipping for some users
