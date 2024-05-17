@@ -8,3 +8,6 @@
 - fixed color of snap indicator in Draft WB
 - corrected display issues with SelectorToolbar addon in vertical orientation
 - corrected color/display issues releated to list-views
+
+2024.MAY.17
+- corrected a regressions causing radio buttons to be styled like checkboxes
