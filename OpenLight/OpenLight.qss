@@ -94,7 +94,7 @@ QDialog {
 
 QGroupBox {
   font-weight: bold;
-  margin-top: 4px;
+  margin-top: 1.5ex;
   padding-top: 10px; }
   QGroupBox::title {
     subcontrol-position: top left;
@@ -724,6 +724,7 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
     background-color: #a5d8ff; }
 
 QRadioButton::indicator {
+  margin: 2px;
   border: 1px solid #868e96;
   background-color: #f1f3f5; }
 
