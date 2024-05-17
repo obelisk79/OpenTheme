@@ -10,4 +10,4 @@
 - corrected color/display issues releated to list-views
 
 2024.MAY.17
-- corrected a regressions causing radio buttons to be styled like checkboxes
+- corrected a regression causing radio buttons to be styled like checkboxes
