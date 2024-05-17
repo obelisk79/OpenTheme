@@ -639,8 +639,12 @@ QList, QListView, QTree QListView, QTreeView, QTree {
   border-radius: 2px;
   border: 1px solid transparent; }
   QList::item, QListView::item, QTreeView::item, QTree::item {
+    color: #000000;
     border-radius: 2px;
     border: 1px solid transparent; }
+  QList::item:selected, QListView::item:selected, QTreeView::item:selected, QTree::item:selected {
+    background-color: #a5d8ff;
+    border: 1px solid #1c7ed6; }
   QList::item:hover, QListView::item:hover, QTreeView::item:hover, QTree::item:hover {
     background-color: #ced4da;
     border: 1px solid #1c7ed6;
