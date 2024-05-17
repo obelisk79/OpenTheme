@@ -131,8 +131,13 @@ QList {
     border-radius: 2px;
     border: 1px solid transparent;
     &::item {
+        color: $primaryText;
         border-radius: 2px;
         border: 1px solid transparent;
+    }
+    &::item:selected {
+        background-color: $accentBackground;
+        border: 1px solid $accentBorder;
     }
     &::item:hover {
         background-color: $controlWidgetBackground;
