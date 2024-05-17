@@ -244,9 +244,8 @@ QPushButton {
 }
 
 QRadioButton {
-    @include space0px;
     &::indicator {
-        @include hardborder;
+        border: 1px solid $contrastBorder;
         background-color: $secondaryBackground;
     }
 }
