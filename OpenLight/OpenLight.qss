@@ -268,7 +268,8 @@ QTreeView QLineEdit {
   margin: 0px; }
 
 QToolBar {
-  padding: 2px; }
+  padding: 2px;
+  border-radius: 0; }
   QToolBar * {
     margin: 0;
     padding: 0; }
