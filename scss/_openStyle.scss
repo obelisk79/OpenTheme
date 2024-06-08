@@ -349,6 +349,16 @@ QToolBarExtension {
     min-width: 16px;
 }
 
+// special case for toolbars placed in menu bar and status bar
+QStatusBar QToolBar, QMenuBar QToolBar {
+    background-color: transparent;
+    border-bottom: none;
+}
+
+Gui--ToolBarAreaWidget {
+    background-color: transparent;
+}
+
 QToolButton {
     margin: 0px 3px 0px 3px;
     padding: 2px;
