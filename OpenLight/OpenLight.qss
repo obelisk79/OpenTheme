@@ -251,6 +251,13 @@ QTabBar {
     padding-right: 12px;
     min-width: 2em;
     border-radius: 4px; }
+    QTabBar::tab:left, QTabBar::tab:right {
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      min-width: 24px;
+      min-height: 2em; }
   QTabBar::close-button {
     margin-right: 6px;
     subcontrol-origin: margin;
