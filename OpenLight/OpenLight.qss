@@ -294,6 +294,13 @@ QToolBar {
 QToolBarExtension {
   min-width: 16px; }
 
+QStatusBar QToolBar, QMenuBar QToolBar {
+  background-color: transparent;
+  border-bottom: none; }
+
+Gui--ToolBarAreaWidget {
+  background-color: transparent; }
+
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
   padding: 2px;
