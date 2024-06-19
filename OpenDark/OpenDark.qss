@@ -186,6 +186,14 @@ QMenuBar {
   QMenuBar::item:selected {
     border-radius: 2px; }
 
+QProgressBar {
+  min-height: 24px;
+  text-align: center;
+  padding: 1px;
+  border-radius: 1px; }
+  QProgressBar::chunk {
+    border-radius: 1px; }
+
 QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   padding: 4px 20px; }
 
@@ -251,13 +259,6 @@ QTabBar {
     padding-right: 12px;
     min-width: 2em;
     border-radius: 4px; }
-    QTabBar::tab:left, QTabBar::tab:right {
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-bottom: 12px;
-      padding-top: 12px;
-      min-width: 24px;
-      min-height: 2em; }
   QTabBar::close-button {
     margin-right: 6px;
     subcontrol-origin: margin;
@@ -275,8 +276,7 @@ QTreeView QLineEdit {
   margin: 0px; }
 
 QToolBar {
-  padding: 2px;
-  border-radius: 0; }
+  padding: 2px; }
   QToolBar * {
     margin: 0;
     padding: 0; }
@@ -293,13 +293,6 @@ QToolBar {
 
 QToolBarExtension {
   min-width: 16px; }
-
-QStatusBar QToolBar, QMenuBar QToolBar {
-  background-color: transparent;
-  border-bottom: none; }
-
-Gui--ToolBarAreaWidget {
-  background-color: transparent; }
 
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
@@ -509,7 +502,7 @@ QTreeView::branch:has-children:!has-siblings:closed {
 
 QTreeView::branch:open:has-children:has-siblings {
   border-image: url(qss:images_dark-light/branch_vline_open_OpenDark.svg) 0;
-  image: url(qss:images_dark-light/branch_more_open_OpenLight.svg) 0; }
+  image: url(qss:images_dark-light/branch_more_open_OpenDark.svg) 0; }
 
 QTreeView::branch:open:has-children:!has-siblings {
   border-image: none;
@@ -528,28 +521,28 @@ QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
   background-image: url(qss:images_dark-light/light_up_arrow.svg); }
 
 Gui--OverlayToolButton {
-  image: url(qss:overlay/close_openlight.svg); }
+  image: url(qss:overlay/close_opendark.svg); }
   Gui--OverlayToolButton:hover {
     image: url(qss:overlay/closehover_opendark.svg); }
 
 Gui--OverlayToolButton[objectName="OBTN Transparent"] {
-  image: url(qss:overlay/transparent_openlight.svg); }
+  image: url(qss:overlay/transparent_opendark.svg); }
   Gui--OverlayToolButton[objectName="OBTN Transparent"]:hover {
     image: url(qss:overlay/transparenthover_opendark.svg); }
 
 Gui--OverlayToolButton[objectName="OBTN Overlay"] {
-  image: url(qss:overlay/overlay_openlight.svg); }
+  image: url(qss:overlay/overlay_opendark.svg); }
   Gui--OverlayToolButton[objectName="OBTN Overlay"]:hover {
     image: url(qss:overlay/overlayhover_opendark.svg); }
 
 Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
-  image: url(qss:overlay/mode_openlight.svg); }
+  image: url(qss:overlay/mode_opendark.svg); }
   Gui--OverlayToolButton[objectName="OBTN AutoMode"]:hover {
     image: url(qss:overlay/modehover_opendark.svg); }
 
 Gui--OverlaySplitterHandle Gui--OverlayToolButton,
 Gui--OverlayToolButton[objectName="OBTN Float"] {
-  image: url(qss:overlay/float_openlight.svg); }
+  image: url(qss:overlay/float_opendark.svg); }
   Gui--OverlaySplitterHandle Gui--OverlayToolButton:hover,
   Gui--OverlayToolButton[objectName="OBTN Float"]:hover {
     image: url(qss:overlay/floathover_opendark.svg); }
@@ -718,6 +711,17 @@ QMenuBar {
     color: #f8f9fa;
     background-color: #1f364d;
     border: 1px solid #264b69; }
+
+QProgressBar,
+QProgressBar:horizontal {
+  color: #dee2e6;
+  min-height: 24px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #495057; }
+  QProgressBar::chunk,
+  QProgressBar:horizontal::chunk {
+    background-color: #264b69; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
   border: 1px solid #495057;
