@@ -7,7 +7,7 @@
    viewBox="0 0 25 25"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    sodipodi:docname="branch_end_OpenDark.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -28,7 +28,7 @@
      inkscape:cx="13.810679"
      inkscape:cy="10.00998"
      inkscape:window-width="2560"
-     inkscape:window-height="1372"
+     inkscape:window-height="1368"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -57,9 +57,8 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="opacity:0.5;fill:none;stroke:#868e96;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:100"
-       d="M 16.51311,1.0186524e-6 16.5,13.5 29.053686,13.480328"
-       id="path1"
-       sodipodi:nodetypes="ccc" />
+       d="M 12,0 V 13.474609 13.5 c 0,0.276141 0.223859,0.5 0.5,0.5 0.03452,0 0.06901,-0.0031 0.101563,-0.0098 -0.02441,0.005 -0.05061,0.0085 -0.07617,0.0098 H 13 23 V 13 H 13 V 0 Z"
+       style="opacity:0.5;fill:#868e96;fill-rule:evenodd;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:100;paint-order:markers fill stroke"
+       id="path3" />
   </g>
 </svg>
