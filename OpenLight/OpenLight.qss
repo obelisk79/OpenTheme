@@ -186,6 +186,14 @@ QMenuBar {
   QMenuBar::item:selected {
     border-radius: 2px; }
 
+QProgressBar {
+  min-height: 24px;
+  text-align: center;
+  padding: 1px;
+  border-radius: 1px; }
+  QProgressBar::chunk {
+    border-radius: 1px; }
+
 QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   padding: 4px 20px; }
 
@@ -251,13 +259,6 @@ QTabBar {
     padding-right: 12px;
     min-width: 2em;
     border-radius: 4px; }
-    QTabBar::tab:left, QTabBar::tab:right {
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-bottom: 12px;
-      padding-top: 12px;
-      min-width: 24px;
-      min-height: 2em; }
   QTabBar::close-button {
     margin-right: 6px;
     subcontrol-origin: margin;
@@ -275,8 +276,7 @@ QTreeView QLineEdit {
   margin: 0px; }
 
 QToolBar {
-  padding: 2px;
-  border-radius: 0; }
+  padding: 2px; }
   QToolBar * {
     margin: 0;
     padding: 0; }
@@ -293,13 +293,6 @@ QToolBar {
 
 QToolBarExtension {
   min-width: 16px; }
-
-QStatusBar QToolBar, QMenuBar QToolBar {
-  background-color: transparent;
-  border-bottom: none; }
-
-Gui--ToolBarAreaWidget {
-  background-color: transparent; }
 
 QToolButton, QWidget#Selector > QToolButton {
   margin: 0px 3px 0px 3px;
@@ -718,6 +711,17 @@ QMenuBar {
     color: #000000;
     background-color: #a5d8ff;
     border: 1px solid #1c7ed6; }
+
+QProgressBar,
+QProgressBar:horizontal {
+  color: #000000;
+  min-height: 24px;
+  background-color: transparent;
+  text-align: center;
+  border: 1px solid #868e96; }
+  QProgressBar::chunk,
+  QProgressBar:horizontal::chunk {
+    background-color: #1c7ed6; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
   border: 1px solid #868e96;
