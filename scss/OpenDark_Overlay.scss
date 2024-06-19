@@ -2,17 +2,14 @@
 @import "./_mixins.scss";
 
 * {
-    color: $main-txt;
-    alternate-background-color: rgba(28.6,31.4,34.1,48);
+    color: $primaryText;
+    background-color: $primaryBackground;
+    alternate-background-color: $secondaryBackground;//rgba(134,142,150,0.5);
   }
   
   QTabWidget::pane {
     background-color: transparent;
     border: transparent;
-
-    QTabBar {
-      background-color: transparent;
-    }
   }
   
   /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
@@ -23,7 +20,7 @@
   
   Gui--OverlayTabWidget {
     qproperty-effectColor: rgba(33,37,41,96);
-    qproperty-effectBlurRadius: 4.0;
+    qproperty-effectBlurRadius: 20.0;
     qproperty-effectOffsetX: 0.0;
     qproperty-effectOffsetY: 0.0;
     qproperty-effectWidth: 1;
@@ -37,11 +34,11 @@
   
   QHeaderView { background:transparent }
   QHeaderView::section {
-    color: $main-txt;
-    background-color: rgba(10.2,11.8,13.3,48);
+    color: $primaryText;
+    background-color: #dee2e6;//rgba(10.2,11.8,13.3,32);
     padding: 2px;
     padding-left: 8px;
-    border: 1px solid $hardborder;
+    border: 1px solid $contrastBorder;
   }
   
   Gui--OverlayToolButton {
@@ -51,51 +48,65 @@
   }
   
   Gui--OverlayToolButton::hover {
-    background: $main-bg;
+    background: $primaryBackground;
   }
  
-//   QListView::item
-//   QTreeView::item {
-//     background-color: #ff00ff;
-//   }
-  
+
   QListView {
-    background-color: rgba(10.2,11.8,13.3,0.05);
+    background-color: $secondaryBackground;
+    &::indicator {
+      border-radius: 2px;
+      border-color: $contrastBorder
+    }
   }
   
   QListView::item,
   QTreeView::item  {
     margin: 3px 0px;
     border: 1px solid transparent;
-    border-radius: 2px;
+  }
+
+  QTreeView::item {
+    &, &:selected, &:hover {
+      background: none;
+      border: none;
+    }
   }
 
   #DocumentTreeItems::item {
-    background-color: $contrast-bg;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-color: $primaryBackground;
 
     &:hover {
-      border: 1px solid $accent-border;
-      background-color: $accent-bg;
+      border: 1px solid $accentBorder;
+      background-color: $accentBackground;
     }
 
     &:selected {
-      border: 1px solid $accent-border;
-      background-color: $accent-border;
+      border: 1px solid $accentBorder;
+      background-color: $accentBackground;
     }
   }
-
-//   Gui--PropertyEditor--PropertyEditor {
-//     qproperty-groupTextColor:  $main-txt;
-//     qproperty-groupBackground: #ff00ff;
-//     qproperty-itemBackground: #00ff00;
-//   }
+  
+  Gui--PropertyEditor--PropertyEditor {
+    qproperty-groupTextColor:  $primaryText;
+    qproperty-groupBackground: $standardBorder;
+    qproperty-itemBackground: #00ff00;
+  }
   
   Gui--CallTipsList::item {
     background-color: $primaryBackground; //rgba(100, 100, 100, 200);
   }
   
   Gui--CallTipsList::item::selected {
-    background-color: rgb(94, 144, 250);
+    color: $inverseText;
+    background-color: $accentBackground; //rgb(94, 144, 250);
+    border: 1px solid $accentBorder;
+    &:hover {
+      background-color: $standardBorder;
+      border: 1px solid $accentBorder;
+    }
   }
   
   /* Use the following selector to customize title bar for each side */
@@ -110,7 +121,7 @@
   
   Gui--OverlayTitleBar,
   Gui--OverlaySplitterHandle {
-    background-color: rgba(10.2,11.8,13.3,168);
+    background-color: rgba(185,192,197,0.75);
   }
   
   QScrollArea#ClippingScrollArea,
@@ -119,13 +130,33 @@
   }
   
   QSint--ActionGroup QFrame[class="content"] {
-    background-color: $contrast-bg; /* Task Panel background color */
+    background-color: $secondaryBackground; /* Task Panel background color */
   }
   
   QSint--ActionGroup QFrame[class="content"] > QWidget {
-    background-color: $main-bg; /* Task Panel background color */
+    background-color: $primaryBackground; /* Task Panel background color */
   }
 
   QComboBox QAbstractItemView {
-    background-color: $contrast-bg;
+    background-color: $secondaryBackground;
   }
+
+  // QAbstractSpinBox {
+  //   margin: 3px 6px 3px 6px; }
+  
+  QTreeView::indicator {
+    border: 1px solid $contrastBorder; 
+  }
+  
+  QTreeView::indicator:checked {
+    image: url(qss:images_dark-light/check_dark.svg); 
+  }
+
+QCheckBox,
+QLabel {
+  background-color: transparent;
+}
+
+QCheckBox::indicator {
+  background-color: $controlWidgetBackground;
+}

@@ -1,4 +1,4 @@
-// Contains all elements of OpenLight which define images
+// Contains all elements of OpenDark which define images
 
 QAbstractSpinBox {
     &::up-arrow {
@@ -139,7 +139,7 @@ QTreeView::branch:has-children:!has-siblings:closed  {
 
 QTreeView::branch:open:has-children:has-siblings  {
     border-image: url(qss:images_dark-light/branch_vline_open_OpenDark.svg) 0;
-    image: url(qss:images_dark-light/branch_more_open_OpenLight.svg) 0;
+    image: url(qss:images_dark-light/branch_more_open_OpenDark.svg) 0;
 }
 
 QTreeView::branch:open:has-children:!has-siblings  {
@@ -166,28 +166,28 @@ QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
 }
 
 Gui--OverlayToolButton {
-    image: url(qss:overlay/close_openlight.svg);
+    image: url(qss:overlay/close_opendark.svg);
         &:hover {
             image: url(qss:overlay/closehover_opendark.svg);
         }
 }
 
 Gui--OverlayToolButton[objectName="OBTN Transparent"] {
-    image: url(qss:overlay/transparent_openlight.svg);
+    image: url(qss:overlay/transparent_opendark.svg);
         &:hover {
             image: url(qss:overlay/transparenthover_opendark.svg);
         }
 }
 
 Gui--OverlayToolButton[objectName="OBTN Overlay"] {
-    image: url(qss:overlay/overlay_openlight.svg);
+    image: url(qss:overlay/overlay_opendark.svg);
         &:hover {
             image: url(qss:overlay/overlayhover_opendark.svg);
         }
 }
 
 Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
-    image: url(qss:overlay/mode_openlight.svg);
+    image: url(qss:overlay/mode_opendark.svg);
         &:hover {
             image: url(qss:overlay/modehover_opendark.svg);
         }
@@ -195,7 +195,7 @@ Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
 
 Gui--OverlaySplitterHandle Gui--OverlayToolButton,
 Gui--OverlayToolButton[objectName="OBTN Float"] {
-    image: url(qss:overlay/float_openlight.svg);
+    image: url(qss:overlay/float_opendark.svg);
         &:hover {
             image: url(qss:overlay/floathover_opendark.svg);
         }

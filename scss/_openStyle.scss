@@ -214,6 +214,16 @@ QMenuBar {
     }
 }
 
+QProgressBar {
+    min-height: 24px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 1px;
+    &::chunk {
+        border-radius: 1px;
+    }
+}
+
 QPushButton {
     padding: 4px 20px;
 }
@@ -290,17 +300,6 @@ QTabBar {
         padding-right: 12px;
         min-width: 2em;
         border-radius: 4px;
-
-        &:left,
-        &:right {
-            padding-left: 4px;
-            padding-right: 4px;
-            padding-bottom: 12px;
-            padding-top: 12px;
-        
-            min-width: 24px;
-            min-height: 2em;
-        }
     }
     &::close-button {
         margin-right: 6px;
@@ -332,7 +331,6 @@ QTreeView QLineEdit {
 
 QToolBar {
     padding: 2px;
-    border-radius: 0;
     * {
         margin: 0;
         padding: 0;
@@ -359,16 +357,6 @@ QToolBar {
 
 QToolBarExtension {
     min-width: 16px;
-}
-
-// special case for toolbars placed in menu bar and status bar
-QStatusBar QToolBar, QMenuBar QToolBar {
-    background-color: transparent;
-    border-bottom: none;
-}
-
-Gui--ToolBarAreaWidget {
-    background-color: transparent;
 }
 
 QToolButton {
