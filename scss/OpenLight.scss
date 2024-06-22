@@ -6,6 +6,7 @@
 
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
+    color: $primaryText;
     background-color: $secondaryBackground;
     @include softborder;
     &:hover {
@@ -37,6 +38,7 @@ QAbstractSpinBox {
 
 // normal, disabled, hover, checked are defined
 QCheckBox { 
+    color: $primaryText;
     background: transparent; 
     &:disabled {
         color: $disabledText;
@@ -56,6 +58,7 @@ QCheckBox {
 
 // normal, disabled, hover, pressed, controls are defined
 QComboBox {
+    color: $primaryText;
     background-color: $secondaryBackground;
     @include softborder;
     selection-background-color: $controlWidgetBackground;
@@ -83,12 +86,14 @@ QDockWidget {
 
 // non-interactive element
 QDialog {
+    color: $primaryText;
     background-color: $primaryBackground;
     @include noborder;
 }
 
 // non-interactive element
 QGroupBox {
+    color: $primaryText;
     border-top: 3px solid $contrastBorder;
     &::indicator {
         border-top: 1px solid $contrastBorder;
@@ -97,6 +102,7 @@ QGroupBox {
 
 // needs refinement applied to property view, spreadsheet etc.
 QHeaderView::section {
+    color: $primaryText;
     background-color: $standardBorder;
     border-left: 1px solid $secondaryBackground;
     border-right: 1px solid $secondaryBackground;
@@ -104,6 +110,7 @@ QHeaderView::section {
 
 // non-interactive element
 QLabel {
+    color: $primaryText;
     background-color: transparent;
     &[haslink="true"] {
         color: $selectedElement;
@@ -112,6 +119,7 @@ QLabel {
 
 // normal, disabled, hover, focus
 QLineEdit {
+    color: $primaryText;
     background-color: $secondaryBackground;
     @include softborder;
     &:disabled {
@@ -240,6 +248,7 @@ QProgressBar:horizontal {
 }
 
 QPushButton {
+    color: $primaryText;
     border: 1px solid $contrastBorder;
     background-color: $controlWidgetBackground;
     &:hover {
@@ -261,6 +270,7 @@ QPushButton {
 }
 
 QRadioButton {
+    color: $primaryText;
     &::indicator {
         margin: 2px;
         border: 1px solid $contrastBorder;
@@ -291,6 +301,7 @@ QSpinBox {
 
 QTabBar {
     &::tab {
+        color: $primaryText;
         background-color: $controlWidgetBackground;
         border: 1px solid $contrastBorder;
         &:hover {
@@ -306,6 +317,7 @@ QTabBar {
 }
 
 QTabBar QToolButton { /* the scroll buttons are tool buttons */
+    color: $primaryText;
     border: 1px solid $contrastBorder;
 }
 
@@ -365,7 +377,8 @@ QToolBarExtension {
 
 QToolButton {
     @include noborder;
-     background-color: transparent;
+    color: $primaryText;
+    background-color: transparent;
     &:hover {
         background-color: $controlWidgetBackground;
         border: 1px solid $accentBorder

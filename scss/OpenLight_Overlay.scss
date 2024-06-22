@@ -66,11 +66,9 @@
   
   QListView::item,
   QTreeView::item  {
-    margin: 3px 0px;
+    margin: 2px 0px;
+    padding: 1px 2px;
     border: 1px solid transparent;
-  }
-
-  QTreeView::item {
     &:selected, &:hover {
       background: none;
       border: none;
@@ -84,7 +82,7 @@
 
     &:hover {
       border: 1px solid $accentBorder;
-      background-color: $controlWidgetBackground;
+      background-color: $accentBackground;
     }
 
     &:selected {

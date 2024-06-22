@@ -8,7 +8,7 @@
   background-color: #212529;
   dialogbuttonbox-buttons-have-icons: 0; }
 
-QAbstractSpinBox {
+QAbstractSpinBox, QSpinBox {
   max-height: 20px;
   margin: 0px;
   padding: 2px;
@@ -16,7 +16,7 @@ QAbstractSpinBox {
   border-bottom-right-radius: 3px;
   padding-left: 6px;
   text-align: left; }
-  QAbstractSpinBox::up-button {
+  QAbstractSpinBox::up-button, QSpinBox::up-button {
     width: 12px;
     subcontrol-origin: border;
     subcontrol-position: top right;
@@ -24,7 +24,7 @@ QAbstractSpinBox {
     right: 1px;
     border-radius: 0px;
     border-top-right-radius: 2px; }
-  QAbstractSpinBox::down-button {
+  QAbstractSpinBox::down-button, QSpinBox::down-button {
     width: 12px;
     subcontrol-origin: border;
     subcontrol-position: bottom right;
@@ -32,12 +32,12 @@ QAbstractSpinBox {
     right: 1px;
     border-radius: 0px;
     border-bottom-right-radius: 2px; }
-  QAbstractSpinBox::up-arrow {
+  QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
     top: 1px; }
-  QAbstractSpinBox::down-arrow {
+  QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
     top: 1px; }
 
-QAbstractSpinBox > QLineEdit {
+QAbstractSpinBox > QLineEdit, QSpinBox > QLineEdit {
   padding: 0px;
   margin: 0px; }
 
@@ -390,7 +390,7 @@ QSint--ActionGroup QFrame[class="content"] QGroupBox > QCheckBox {
   subcontrol-origin: border;
   subcontrol-position: center left; }
 
-QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--ActionGroup QFrame[class="content"] QTreeView QSpinBox {
   margin: 0px;
   padding: 0px 0px 1px 0px; }
 
@@ -443,14 +443,14 @@ SpreadsheetGui--SheetTableView QLineEdit {
 QWidget#Workbench {
   border: 0px solid transparent; }
 
-QAbstractSpinBox::up-arrow {
+QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
   image: url(qss:images_dark-light/light_up_arrow.svg); }
-  QAbstractSpinBox::up-arrow:disabled {
+  QAbstractSpinBox::up-arrow:disabled, QSpinBox::up-arrow:disabled {
     image: url(qss:images_dark-light/light_up_arrow_disabled.svg); }
 
-QAbstractSpinBox::down-arrow {
+QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
   image: url(qss:images_dark-light/light_down_arrow.svg); }
-  QAbstractSpinBox::down-arrow:disabled {
+  QAbstractSpinBox::down-arrow:disabled, QSpinBox::down-arrow:disabled {
     image: url(qss:images_dark-light/light_down_arrow_disabled.svg); }
 
 QCheckBox::indicator:checked {
@@ -564,29 +564,31 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
 QToolButton#buttonPauseUpdate, QWidget#Selector > QToolButton#buttonPauseUpdate {
   qproperty-icon: url(qss:images_dark-light/stop.png); }
 
-QAbstractSpinBox {
+QAbstractSpinBox, QSpinBox {
+  color: #dee2e6;
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }
-  QAbstractSpinBox:hover {
+  QAbstractSpinBox:hover, QSpinBox:hover {
     border-color: #264b69; }
-  QAbstractSpinBox:disabled {
+  QAbstractSpinBox:disabled, QSpinBox:disabled {
     color: #868e96;
     border-color: #292f35; }
-  QAbstractSpinBox::up-button {
+  QAbstractSpinBox::up-button, QSpinBox::up-button {
     background-color: transparent;
     border: 1px solid transparent;
     border-right: 3px solid transparent; }
-    QAbstractSpinBox::up-button:disabled {
+    QAbstractSpinBox::up-button:disabled, QSpinBox::up-button:disabled {
       background-color: #292f35; }
-  QAbstractSpinBox::down-button {
+  QAbstractSpinBox::down-button, QSpinBox::down-button {
     background-color: transparent;
     border: 1px solid transparent;
     border-right: 3px solid transparent; }
-    QAbstractSpinBox::down-button:disabled {
+    QAbstractSpinBox::down-button:disabled, QSpinBox::down-button:disabled {
       background-color: #292f35; }
 
 QCheckBox {
+  color: #dee2e6;
   background: transparent; }
   QCheckBox:disabled {
     color: #868e96; }
@@ -601,6 +603,7 @@ QCheckBox {
       border: 1px solid #264b69; }
 
 QComboBox {
+  color: #dee2e6;
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px;
@@ -622,26 +625,31 @@ QDockWidget {
   border-radius: 2px; }
 
 QDialog {
+  color: #dee2e6;
   background-color: #212529;
   border: 1px solid transparent;
   border-radius: 2px; }
 
 QGroupBox {
+  color: #dee2e6;
   border-top: 3px solid #495057; }
   QGroupBox::indicator {
     border-top: 1px solid #495057; }
 
 QHeaderView::section {
+  color: #dee2e6;
   background-color: #292f35;
   border-left: 1px solid #1a1e22;
   border-right: 1px solid #1a1e22; }
 
 QLabel {
+  color: #dee2e6;
   background-color: transparent; }
   QLabel[haslink="true"] {
     color: #339af0; }
 
 QLineEdit {
+  color: #dee2e6;
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }
@@ -741,6 +749,7 @@ QProgressBar:horizontal {
     background-color: #264b69; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
+  color: #dee2e6;
   border: 1px solid #495057;
   background-color: #495057; }
   QPushButton:hover, QWidget#wbList QPushButton:hover, QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:hover, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:hover, #WbTabBar > QTabBar #ScrollLeftButton:hover, #WbTabBar > QTabBar #ScrollRightButton:hover {
@@ -756,10 +765,12 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
     color: #f8f9fa;
     background-color: #1f364d; }
 
-QRadioButton::indicator {
-  margin: 2px;
-  border: 1px solid #495057;
-  background-color: #1a1e22; }
+QRadioButton {
+  color: #dee2e6; }
+  QRadioButton::indicator {
+    margin: 2px;
+    border: 1px solid #495057;
+    background-color: #1a1e22; }
 
 QScrollBar {
   background-color: #1a1e22; }
@@ -774,6 +785,7 @@ QSizeGrip {
   background: transparent; }
 
 QTabBar::tab {
+  color: #dee2e6;
   background-color: #495057;
   border: 1px solid #495057; }
   QTabBar::tab:hover {
@@ -786,6 +798,7 @@ QTabBar::tab {
 
 QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
   /* the scroll buttons are tool buttons */
+  color: #dee2e6;
   border: 1px solid #495057; }
 
 QTableWidget, QTableView {
@@ -834,6 +847,7 @@ QToolBarExtension {
 QToolButton, QWidget#Selector > QToolButton {
   border: 1px solid transparent;
   border-radius: 2px;
+  color: #dee2e6;
   background-color: transparent; }
   QToolButton:hover, QWidget#Selector > QToolButton:hover {
     background-color: #495057;
@@ -896,7 +910,7 @@ QSint--ActionGroup QFrame[class="header"] QLabel {
 QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
   background-color: transparent; }
 
-QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--ActionGroup QFrame[class="content"] QTreeView QSpinBox {
   border: 0px solid transparent; }
 
 Gui--PropertyEditor--PropertyEditor {

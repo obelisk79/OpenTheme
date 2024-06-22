@@ -565,6 +565,7 @@ QToolButton#buttonPauseUpdate, QWidget#Selector > QToolButton#buttonPauseUpdate 
   qproperty-icon: url(qss:images_dark-light/stop.png); }
 
 QAbstractSpinBox, QSpinBox {
+  color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
@@ -587,6 +588,7 @@ QAbstractSpinBox, QSpinBox {
       background-color: #a3a8ad; }
 
 QCheckBox {
+  color: #000000;
   background: transparent; }
   QCheckBox:disabled {
     color: #7b838f; }
@@ -601,6 +603,7 @@ QCheckBox {
       border: 1px solid #1c7ed6; }
 
 QComboBox {
+  color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px;
@@ -622,26 +625,31 @@ QDockWidget {
   border-radius: 2px; }
 
 QDialog {
+  color: #000000;
   background-color: #dee2e6;
   border: 1px solid transparent;
   border-radius: 2px; }
 
 QGroupBox {
+  color: #000000;
   border-top: 3px solid #868e96; }
   QGroupBox::indicator {
     border-top: 1px solid #868e96; }
 
 QHeaderView::section {
+  color: #000000;
   background-color: #a3a8ad;
   border-left: 1px solid #f1f3f5;
   border-right: 1px solid #f1f3f5; }
 
 QLabel {
+  color: #000000;
   background-color: transparent; }
   QLabel[haslink="true"] {
     color: #74c0fc; }
 
 QLineEdit {
+  color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
@@ -741,6 +749,7 @@ QProgressBar:horizontal {
     background-color: #1c7ed6; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
+  color: #000000;
   border: 1px solid #868e96;
   background-color: #ced4da; }
   QPushButton:hover, QWidget#wbList QPushButton:hover, QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:hover, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:hover, #WbTabBar > QTabBar #ScrollLeftButton:hover, #WbTabBar > QTabBar #ScrollRightButton:hover {
@@ -756,10 +765,12 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
     color: #000000;
     background-color: #a5d8ff; }
 
-QRadioButton::indicator {
-  margin: 2px;
-  border: 1px solid #868e96;
-  background-color: #f1f3f5; }
+QRadioButton {
+  color: #000000; }
+  QRadioButton::indicator {
+    margin: 2px;
+    border: 1px solid #868e96;
+    background-color: #f1f3f5; }
 
 QScrollBar {
   background-color: #f1f3f5; }
@@ -774,6 +785,7 @@ QSizeGrip {
   background: transparent; }
 
 QTabBar::tab {
+  color: #000000;
   background-color: #ced4da;
   border: 1px solid #868e96; }
   QTabBar::tab:hover {
@@ -786,6 +798,7 @@ QTabBar::tab {
 
 QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
   /* the scroll buttons are tool buttons */
+  color: #000000;
   border: 1px solid #868e96; }
 
 QTableWidget, QTableView {
@@ -834,6 +847,7 @@ QToolBarExtension {
 QToolButton, QWidget#Selector > QToolButton {
   border: 1px solid transparent;
   border-radius: 2px;
+  color: #000000;
   background-color: transparent; }
   QToolButton:hover, QWidget#Selector > QToolButton:hover {
     background-color: #ced4da;
