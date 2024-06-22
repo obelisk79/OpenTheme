@@ -1,5 +1,4 @@
 * {
-  color: #000000;
   background-color: #dee2e6;
   alternate-background-color: #f1f3f5; }
 
@@ -55,7 +54,7 @@ QTreeView::item {
   margin: 3px 0px;
   border: 1px solid transparent; }
 
-QTreeView::item, QTreeView::item:selected, QTreeView::item:hover {
+QTreeView::item:selected, QTreeView::item:hover {
   background: none;
   border: none; }
 

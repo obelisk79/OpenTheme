@@ -2,7 +2,7 @@
 @import "./_mixins.scss";
 
 * {
-    color: $primaryText;
+    //color: $primaryText;
     background-color: $primaryBackground;
     alternate-background-color: $secondaryBackground;//rgba(134,142,150,0.5);
   }
@@ -10,6 +10,10 @@
   QTabWidget::pane {
     background-color: transparent;
     border: transparent;
+
+    QTabBar {
+      background-color: transparent;
+    }
   }
   
   /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
@@ -67,7 +71,7 @@
   }
 
   QTreeView::item {
-    &, &:selected, &:hover {
+    &:selected, &:hover {
       background: none;
       border: none;
     }
