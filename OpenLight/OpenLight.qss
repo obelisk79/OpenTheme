@@ -92,6 +92,7 @@ QGroupBox {
     width: 12px;
     height: 12px;
     left: 6px;
+    margin-top: 4px;
     border-radius: 2px; }
 
 QHeaderView::section {
@@ -465,8 +466,8 @@ QdockWidget {
   titlebar-close-icon: url(qss:images_dark-light/close_dark.svg);
   titlebar-normal-icon: url(qss:images_dark-light/light_dark.svg); }
 
-QGroupBox::indicator j:checked {
-  image: url(qss:images_dark-light/checkbox_dark.svg); }
+QGroupBox::indicator:checked {
+  image: url(qss:images_dark-light/check_dark.svg); }
 
 QList::indicator:checked, QTreeView::indicator:checked, QTree::indicator:checked, QListView::indicator:checked {
   image: url(qss:images_dark-light/check_dark.svg); }
@@ -634,7 +635,8 @@ QGroupBox {
   color: #000000;
   border-top: 3px solid #868e96; }
   QGroupBox::indicator {
-    border-top: 1px solid #868e96; }
+    border: 1px solid #868e96;
+    background-color: #f1f3f5; }
 
 QHeaderView::section {
   color: #000000;

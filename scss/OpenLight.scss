@@ -95,8 +95,9 @@ QDialog {
 QGroupBox {
     color: $primaryText;
     border-top: 3px solid $contrastBorder;
-    &::indicator {
-        border-top: 1px solid $contrastBorder;
+    &::indicator {  
+        border: 1px solid $contrastBorder;
+        background-color: $secondaryBackground;
     }
 }
 

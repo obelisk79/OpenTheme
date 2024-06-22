@@ -18,7 +18,7 @@ QAbstractSpinBox {
 QCheckBox {
     &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/check_dark.svg)
+            image:url(qss:images_dark-light/check_dark.svg);
         }
     }
 }
@@ -38,9 +38,9 @@ QdockWidget {
 }
 
 QGroupBox {
-    &::indicator j{
+    &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/checkbox_dark.svg);
+            image:url(qss:images_dark-light/check_dark.svg);
         }
     }
 }
@@ -49,7 +49,6 @@ QList {
     &::indicator {
         &:checked {
             image: url(qss:images_dark-light/check_dark.svg);
-            
             &:disabled {
                 image: url(qss:images_dark-light/check_dark_disabled.svg);
             }
