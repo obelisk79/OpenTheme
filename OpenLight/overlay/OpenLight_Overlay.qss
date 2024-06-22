@@ -51,12 +51,14 @@ QListView {
 
 QListView::item,
 QTreeView::item {
-  margin: 3px 0px;
+  margin: 2px 0px;
+  padding: 1px 2px;
   border: 1px solid transparent; }
-
-QTreeView::item:selected, QTreeView::item:hover {
-  background: none;
-  border: none; }
+  QListView::item:selected, QListView::item:hover,
+  QTreeView::item:selected,
+  QTreeView::item:hover {
+    background: none;
+    border: none; }
 
 #DocumentTreeItems::item {
   border: 1px solid transparent;
@@ -64,7 +66,7 @@ QTreeView::item:selected, QTreeView::item:hover {
   background-color: #dee2e6; }
   #DocumentTreeItems::item:hover {
     border: 1px solid #1c7ed6;
-    background-color: #ced4da; }
+    background-color: #a5d8ff; }
   #DocumentTreeItems::item:selected {
     border: 1px solid #1c7ed6;
     background-color: #a5d8ff; }
