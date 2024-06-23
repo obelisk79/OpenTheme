@@ -12,3 +12,11 @@
 2024.MAY.17
 - corrected a regression causing radio buttons to be styled like checkboxes
 - change QGroupBox header padding to resolve text clipping for some users
+
+2024.MAY.20-22
+- Multiple fixes for tree-view, preferences page
+- changed selection color
+- homgenized styling of OpenDark and OpenLight better
+- tweaked sketch mode display settings
+- enabled section view mode by default when entering sketcher (is not retroactive to existing sketches)
+- fixed checkboxes in preference window having broken borders
