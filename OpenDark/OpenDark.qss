@@ -667,10 +667,6 @@ QList, QListView, QTree, QTreeView {
   background-color: #1a1e22;
   border-radius: 2px;
   border: 1px solid transparent; }
-  QList:enabled, QListView:enabled, QTree:enabled, QTreeView:enabled {
-    color: #dee2e6; }
-  QList:disabled, QListView:disabled, QTree:disabled, QTreeView:disabled {
-    color: #868e96; }
   QList::item, QListView::item, QTree::item, QTreeView::item {
     border-radius: 2px;
     border: 1px solid transparent; }
@@ -823,6 +819,10 @@ QTreeView {
   border-radius: 2px;
   selection-color: #f8f9fa;
   selection-background-color: #1f364d; }
+  QTreeView:enabled {
+    color: #dee2e6; }
+  QTreeView:disabled {
+    color: #868e96; }
   QTreeView::item:selected {
     color: #f8f9fa;
     background-color: #339af0;
