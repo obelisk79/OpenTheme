@@ -20,3 +20,4 @@
 - tweaked sketch mode display settings
 - enabled section view mode by default when entering sketcher (is not retroactive to existing sketches)
 - fixed checkboxes in preference window having broken borders
+- removed QtNormalizer as it is no longer needed.
