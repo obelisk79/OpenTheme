@@ -114,6 +114,10 @@ QTreeView{
     @extend QList;
 }
 
+QTreeView::branch {
+    background:  transparent;
+}
+
 QTreeView::branch:has-siblings:!adjoins-item  {
     border-image: url(qss:images_dark-light/branch_vline_OpenDark.svg) 0;
 }
@@ -203,3 +207,23 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
 QToolButton#buttonPauseUpdate { //this is the cancel cache update button in addon-manager
     qproperty-icon: url(qss:images_dark-light/stop.png);
 }
+
+QTreeView::branch#groupsTreeView:closed:has-children:has-siblings  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:open:has-children:has-siblings  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:open:has-children:!has-siblings  {
+   border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:has-children:!has-siblings:closed  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:has-siblings:!adjoins-item  {
+    border-image: none 0;
+  }

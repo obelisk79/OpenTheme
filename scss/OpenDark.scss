@@ -139,12 +139,6 @@ QList {
     background-color: $secondaryBackground;
     border-radius: 2px;
     border: 1px solid transparent;
-    &:enabled {
-        color: $primaryText
-    }
-    &:disabled {
-        color: $disabledText;
-    }
     &::item {
         border-radius: 2px;
         border: 1px solid transparent;
@@ -347,6 +341,12 @@ QTreeView {
     @include noborder;
     selection-color: $inverseText;
     selection-background-color: $accentBackground;
+    &:enabled {
+        color: $primaryText
+    }
+    &:disabled {
+        color: $disabledText;
+    }
     &::item:selected {
         color: $inverseText;
         background-color: $selectedElement;

@@ -498,6 +498,9 @@ QSizeGrip {
 QTabBar::close-button {
   background-image: url(qss:images_dark-light/close_dark.svg); }
 
+QTreeView::branch {
+  background: transparent; }
+
 QTreeView::branch:has-siblings:!adjoins-item {
   border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0; }
 
@@ -564,6 +567,21 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
 
 QToolButton#buttonPauseUpdate, QWidget#Selector > QToolButton#buttonPauseUpdate {
   qproperty-icon: url(qss:images_dark-light/stop.png); }
+
+QTreeView::branch#groupsTreeView:closed:has-children:has-siblings {
+  border-image: none 0; }
+
+QTreeView::branch#groupsTreeView:open:has-children:has-siblings {
+  border-image: none 0; }
+
+QTreeView::branch#groupsTreeView:open:has-children:!has-siblings {
+  border-image: none 0; }
+
+QTreeView::branch#groupsTreeView:has-children:!has-siblings:closed {
+  border-image: none 0; }
+
+QTreeView::branch#groupsTreeView:has-siblings:!adjoins-item {
+  border-image: none 0; }
 
 QAbstractSpinBox, QSpinBox {
   color: #000000;
@@ -667,10 +685,6 @@ QList, QListView, QTree, QTreeView {
   background-color: #f1f3f5;
   border-radius: 2px;
   border: 1px solid transparent; }
-  QList:enabled, QListView:enabled, QTree:enabled, QTreeView:enabled {
-    color: #000000; }
-  QList:disabled, QListView:disabled, QTree:disabled, QTreeView:disabled {
-    color: #7b838f; }
   QList::item, QListView::item, QTree::item, QTreeView::item {
     border-radius: 2px;
     border: 1px solid transparent; }
@@ -823,6 +837,10 @@ QTreeView {
   border-radius: 2px;
   selection-color: #000000;
   selection-background-color: #a5d8ff; }
+  QTreeView:enabled {
+    color: #000000; }
+  QTreeView:disabled {
+    color: #7b838f; }
   QTreeView::item:selected {
     color: #000000;
     background-color: #74c0fc;
