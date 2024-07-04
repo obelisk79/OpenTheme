@@ -639,6 +639,7 @@ QComboBox {
       background-color: #292f35; }
 
 QDockWidget {
+  color: #dee2e6;
   background: #212529;
   border: 1px solid #495057;
   border-radius: 2px; }
@@ -704,6 +705,7 @@ QList, QListView, QTree, QTreeView {
       border-radius: 2px; }
 
 QListView {
+  color: #dee2e6;
   background-color: #1a1e22;
   alternate-background-color: #1a1e22; }
 
@@ -805,11 +807,11 @@ QTabBar::tab {
   background-color: #495057;
   border: 1px solid #495057; }
   QTabBar::tab:hover {
-    background-color: #292f35;
+    background-color: accentBackground;
     border: 1px solid #264b69; }
   QTabBar::tab:selected {
     color: #f8f9fa;
-    background-color: #339af0;
+    background-color: #1f364d;
     border: 1px solid #264b69; }
 
 QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
@@ -898,7 +900,11 @@ QToolTip {
   background-color: #1c7ed6; }
 
 QDialog QTreeWidget {
+  color: #dee2e6;
   background-color: #1a1e22; }
+
+QFileDialog {
+  color: #dee2e6; }
 
 QWidget#wbList * {
   background-color: transparent; }
