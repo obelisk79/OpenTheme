@@ -852,6 +852,7 @@ QTreeView::branch {
   background: transparent; }
 
 QTextEdit {
+  color: #dee2e6;
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }

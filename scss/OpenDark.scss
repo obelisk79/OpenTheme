@@ -361,6 +361,7 @@ QTreeView::branch  {
 }
 
 QTextEdit {
+    color:$primaryText;
     background-color: $secondaryBackground;
     @include softborder;
 }
