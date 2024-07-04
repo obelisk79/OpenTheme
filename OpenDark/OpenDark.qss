@@ -455,7 +455,7 @@ QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
     image: url(qss:images_dark-light/light_down_arrow_disabled.svg); }
 
 QCheckBox::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
 
 QComboBox::down-arrow {
   image: url(qss:images_dark-light/light_down_arrow.svg); }
@@ -467,10 +467,10 @@ QdockWidget {
   titlebar-normal-icon: url(qss:images_dark-light/light_light.svg); }
 
 QGroupBox::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
 
 QList::indicator:checked, QTreeView::indicator:checked, QTree::indicator:checked, QListView::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
   QList::indicator:checked:disabled, QTreeView::indicator:checked:disabled, QTree::indicator:checked:disabled, QListView::indicator:checked:disabled {
     image: url(qss:images_dark-light/check_light_disabled.svg); }
 
