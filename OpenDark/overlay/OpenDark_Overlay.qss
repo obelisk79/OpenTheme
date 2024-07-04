@@ -10,7 +10,7 @@ QTabWidget::pane {
 
 /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
   To customize for each overlay docking site, use the following selector
-  
+
   Gui--OverlayTabWidget#OverlayLeft {}
   */
 Gui--OverlayTabWidget {
