@@ -37,9 +37,9 @@ QAbstractSpinBox {
 }
 
 // normal, disabled, hover, checked are defined
-QCheckBox { 
+QCheckBox {
     color: $primaryText;
-    background: transparent; 
+    background: transparent;
     &:disabled {
         color: $disabledText;
     }
@@ -62,7 +62,7 @@ QComboBox {
     background-color: $secondaryBackground;
     @include softborder;
     selection-background-color: $controlWidgetBackground;
-    &:disabled { 
+    &:disabled {
         color: $disabledText;
     }
     &:hover {
@@ -80,6 +80,7 @@ QComboBox {
 
 // non-interactive element
 QDockWidget {
+    color: $primaryText;
     background: $primaryBackground;
     @include hardborder;
 }
@@ -154,7 +155,7 @@ QList {
     }
     &::indicator {
         background-color: transparent;
-        border: 1px solid $contrastBorder; 
+        border: 1px solid $contrastBorder;
         border-radius: 2px;
         &:disabled {
             border: 1px solid $standardBorder;
@@ -164,6 +165,7 @@ QList {
 }
 
 QListView {
+    color: $primaryText;
     background-color: $secondaryBackground;
     alternate-background-color: $secondaryBackground;
 }
@@ -207,7 +209,7 @@ QMenu {
     &::separator {
         background-color: $standardBorder;
     }
-} 
+}
 
 QMenuBar {
     color: $secondaryText;
@@ -300,12 +302,12 @@ QTabBar {
         background-color: $controlWidgetBackground;
         border: 1px solid $contrastBorder;
         &:hover {
-            background-color: $standardBorder;
+            background-color: accentBackground; //$standardBorder;
             border: 1px solid $accentBorder;
         }
         &:selected {
             color: $inverseText;
-            background-color: $selectedElement;
+            background-color: $accentBackground; //$selectedElement;
             border: 1px solid $accentBorder;
         }
     }
@@ -419,7 +421,12 @@ QToolTip {
 
 // Specialty styling
 QDialog QTreeWidget {
+    color: $primaryText;
     background-color: $secondaryBackground;
+}
+
+QFileDialog {
+    color: $primaryText;
 }
 
 QWidget#wbList * {
@@ -466,7 +473,7 @@ QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
 }
 
 Gui--PropertyEditor--PropertyEditor {
-    gridline-color: $contrastBorder;  
+    gridline-color: $contrastBorder;
     qproperty-groupBackground: $controlWidgetBackground;
 }
 
