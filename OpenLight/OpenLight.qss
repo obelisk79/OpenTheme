@@ -639,6 +639,7 @@ QComboBox {
       background-color: #a3a8ad; }
 
 QDockWidget {
+  color: #000000;
   background: #dee2e6;
   border: 1px solid #868e96;
   border-radius: 2px; }
@@ -704,6 +705,7 @@ QList, QListView, QTree, QTreeView {
       border-radius: 2px; }
 
 QListView {
+  color: #000000;
   background-color: #f1f3f5;
   alternate-background-color: #f1f3f5; }
 
@@ -850,6 +852,7 @@ QTreeView::branch {
   background: transparent; }
 
 QTextEdit {
+  color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
@@ -898,7 +901,11 @@ QToolTip {
   background-color: #a5d8ff; }
 
 QDialog QTreeWidget {
+  color: #000000;
   background-color: #f1f3f5; }
+
+QFileDialog {
+  color: #000000; }
 
 QWidget#wbList * {
   background-color: transparent; }
