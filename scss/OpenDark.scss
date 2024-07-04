@@ -302,7 +302,7 @@ QTabBar {
         background-color: $controlWidgetBackground;
         border: 1px solid $contrastBorder;
         &:hover {
-            background-color: accentBackground; //$standardBorder;
+            background-color: $accentBackground; //$standardBorder;
             border: 1px solid $accentBorder;
         }
         &:selected {
