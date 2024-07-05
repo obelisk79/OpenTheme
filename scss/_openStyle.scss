@@ -313,8 +313,8 @@ QTabBar {
         background-repeat: none;
     }
     &::scroller {
-       width: 60px;
-       max-height: 10px;
+       width: 52px;
+       margin: 7px 0px 7px 3px;
     }
     qproperty-drawBase: 0;
 }
@@ -568,6 +568,12 @@ SpreadsheetGui--SheetTableView QLineEdit {
             }
         }
     }
+}
+
+#ScrollLeftButton,
+#ScrollRightButton {
+    margin: 7px 0px 7px 3px;
+    max-height: 22px;
 }
 
 QWidget#Workbench {
