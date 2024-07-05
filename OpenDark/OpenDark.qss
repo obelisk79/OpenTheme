@@ -146,6 +146,9 @@ QMdiSubWindow {
 QMdiSubWindow > QWidget {
   background-color: #00ff00; }
 
+QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
+  background-color: #ff00ff; }
+
 QMenu {
   border-radius: 0px; }
   QMenu::item {
@@ -262,7 +265,7 @@ QTabBar {
     background-position: center center;
     background-repeat: none; }
   QTabBar::scroller {
-    width: 60px; }
+    width: 52px; }
 
 QTreeView {
   show-decoration-selected: 0;
@@ -440,6 +443,11 @@ SpreadsheetGui--SheetTableView QLineEdit {
     padding-top: 12px;
     min-width: 24px;
     min-height: 2em; }
+
+#ScrollLeftButton,
+#ScrollRightButton {
+  margin: 7px 0px 7px 3px;
+  max-height: 22px; }
 
 QWidget#Workbench {
   border: 0px solid transparent; }
