@@ -146,9 +146,6 @@ QMdiSubWindow {
 QMdiSubWindow > QWidget {
   background-color: #00ff00; }
 
-QTabBar QToolButton, QTabBar QWidget#Selector > QToolButton {
-  background-color: #ff00ff; }
-
 QMenu {
   border-radius: 0px; }
   QMenu::item {
@@ -265,7 +262,8 @@ QTabBar {
     background-position: center center;
     background-repeat: none; }
   QTabBar::scroller {
-    width: 52px; }
+    width: 52px;
+    margin: 7px 0px 7px 3px; }
 
 QTreeView {
   show-decoration-selected: 0;

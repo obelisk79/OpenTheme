@@ -172,9 +172,6 @@ QMdiSubWindow > QWidget {
     background-color: #00ff00;
 }
 
-QTabBar QToolButton {
-    background-color: #ff00ff;
-}
 //finished
 QMenu {
     border-radius: 0px;
@@ -321,6 +318,7 @@ QTabBar {
     }
     &::scroller {
        width: 52px;
+       margin: 7px 0px 7px 3px;
     }
 }
 
