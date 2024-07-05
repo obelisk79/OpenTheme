@@ -237,7 +237,8 @@ QSizeGrip {
   height: 12px; }
 
 QTabBar {
-  margin: 4px; }
+  margin: 4px;
+  qproperty-drawBase: 0; }
   QTabBar::tab {
     margin: 4px;
     padding: 4px;
@@ -259,7 +260,8 @@ QTabBar {
     background-position: center center;
     background-repeat: none; }
   QTabBar::scroller {
-    width: 60px; }
+    width: 60px;
+    max-height: 10px; }
 
 QTreeView {
   show-decoration-selected: 0;
