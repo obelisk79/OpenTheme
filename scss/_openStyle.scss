@@ -314,9 +314,10 @@ QTabBar {
     }
     &::scroller {
        width: 60px;
+       max-height: 10px;
     }
+    qproperty-drawBase: 0;
 }
-
 
 QTreeView {
     show-decoration-selected: 0;
