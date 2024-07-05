@@ -71,7 +71,7 @@ QMenu {
 QRadioButton {
     &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/radiobutton_light.svg);
+            image:url(qss:images_dark-light/OpenDark_radiobutton.svg);
         }
     }
 }
