@@ -158,11 +158,11 @@ QMainWindow {
     }
 }
 
-QMdiArea {
-    background-image: url(qss:images_dark-light/FreecadLogo.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+// QMdiArea {
+//     background-image: url(qss:images_dark-light/FreecadLogo.png);
+//     background-position: center center;
+//     background-repeat: no-repeat;
+// }
 
 QMdiSubWindow {
     border: 1px solid transparent;
