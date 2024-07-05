@@ -158,18 +158,14 @@ QMainWindow {
     }
 }
 
-QMdiArea {
-    background-image: url(qss:images_dark-light/FreecadLogo.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-}
+// QMdiArea {
+//     background-image: url(qss:images_dark-light/FreecadLogo.png);
+//     background-position: center center;
+//     background-repeat: no-repeat;
+// }
 
 QMdiSubWindow {
     border: 1px solid transparent;
-}
-
-QMdiSubWindow > QWidget {
-    background-color: #00ff00;
 }
 
 //finished
@@ -320,6 +316,7 @@ QTabBar {
        width: 52px;
        margin: 7px 0px 7px 3px;
     }
+    qproperty-drawBase: 0;
 }
 
 QTreeView {

@@ -143,9 +143,6 @@ QMdiArea {
 QMdiSubWindow {
   border: 1px solid transparent; }
 
-QMdiSubWindow > QWidget {
-  background-color: #00ff00; }
-
 QMenu {
   border-radius: 0px; }
   QMenu::item {
@@ -240,7 +237,8 @@ QSizeGrip {
   height: 12px; }
 
 QTabBar {
-  margin: 4px; }
+  margin: 4px;
+  qproperty-drawBase: 0; }
   QTabBar::tab {
     margin: 4px;
     padding: 4px;
@@ -461,7 +459,7 @@ QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
     image: url(qss:images_dark-light/light_down_arrow_disabled.svg); }
 
 QCheckBox::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
 
 QComboBox::down-arrow {
   image: url(qss:images_dark-light/light_down_arrow.svg); }
@@ -473,10 +471,10 @@ QdockWidget {
   titlebar-normal-icon: url(qss:images_dark-light/light_light.svg); }
 
 QGroupBox::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
 
 QList::indicator:checked, QTreeView::indicator:checked, QTree::indicator:checked, QListView::indicator:checked {
-  image: url(qss:images_dark-light/check_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_check.svg); }
   QList::indicator:checked:disabled, QTreeView::indicator:checked:disabled, QTree::indicator:checked:disabled, QListView::indicator:checked:disabled {
     image: url(qss:images_dark-light/check_light_disabled.svg); }
 
@@ -894,12 +892,9 @@ QToolButton, QWidget#Selector > QToolButton {
   QToolButton::menu-button, QWidget#Selector > QToolButton::menu-button {
     width: 14px;
     height: 14px;
-    border-bottom: 0px solid #ffffff;
-    border: 0px solid #00ff00; }
+    border-bottom: 0px solid #ffffff; }
   QToolButton::menu-arrow, QWidget#Selector > QToolButton::menu-arrow {
     background: transparent; }
-  QToolButton:indeterminate, QWidget#Selector > QToolButton:indeterminate {
-    background-color: #00ff00; }
 
 QToolTip {
   color: #f8f9fa;
