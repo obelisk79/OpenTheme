@@ -94,7 +94,7 @@
   Gui--PropertyEditor--PropertyEditor {
     qproperty-groupTextColor:  $primaryText;
     qproperty-groupBackground: $standardBorder;
-    qproperty-itemBackground: #00ff00;
+    qproperty-itemBackground: $primaryBackground;
   }
 
   Gui--CallTipsList::item {

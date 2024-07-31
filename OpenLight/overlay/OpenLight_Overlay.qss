@@ -74,7 +74,7 @@ QTreeView::item {
 Gui--PropertyEditor--PropertyEditor {
   qproperty-groupTextColor: #000000;
   qproperty-groupBackground: #a3a8ad;
-  qproperty-itemBackground: #00ff00; }
+  qproperty-itemBackground: #dee2e6; }
 
 Gui--CallTipsList::item {
   background-color: #dee2e6; }
