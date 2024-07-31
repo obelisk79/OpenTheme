@@ -21,3 +21,6 @@
 - enabled section view mode by default when entering sketcher (is not retroactive to existing sketches)
 - fixed checkboxes in preference window having broken borders
 - removed QtNormalizer as it is no longer needed.
+
+2024.JULY.30
+- Fixed more than 12 long-standing theme issues and inconsistencies.
