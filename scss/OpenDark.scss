@@ -405,13 +405,9 @@ QToolButton {
         width: 14px;
         height: 14px;
         border-bottom: 0px solid #ffffff;
-        border: 0px solid #00ff00;
     }
     &::menu-arrow {
         background: transparent;
-    }
-    &:indeterminate {
-        background-color: #00ff00;
     }
 }
 

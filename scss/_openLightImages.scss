@@ -18,7 +18,7 @@ QAbstractSpinBox {
 QCheckBox {
     &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/check_dark.svg);
+            image:url(qss:images_dark-light/OpenLight_check.svg);
         }
     }
 }
@@ -40,7 +40,7 @@ QdockWidget {
 QGroupBox {
     &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/check_dark.svg);
+            image:url(qss:images_dark-light/OpenLight_check.svg);
         }
     }
 }
@@ -48,7 +48,7 @@ QGroupBox {
 QList {
     &::indicator {
         &:checked {
-            image: url(qss:images_dark-light/check_dark.svg);
+            image: url(qss:images_dark-light/OpenLight_check.svg);
             &:disabled {
                 image: url(qss:images_dark-light/check_dark_disabled.svg);
             }
@@ -71,7 +71,7 @@ QMenu {
 QRadioButton {
     &::indicator {
         &:checked {
-            image:url(qss:images_dark-light/radiobutton_dark.svg);
+            image:url(qss:images_dark-light/OpenLight_radiobutton.svg);
         }
     }
 }
@@ -234,4 +234,3 @@ QTreeView::branch#groupsTreeView:closed:has-children:has-siblings  {
   QTreeView::branch#groupsTreeView:has-siblings:!adjoins-item  {
     border-image: none 0;
   }
-
