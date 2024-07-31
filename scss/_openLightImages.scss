@@ -118,17 +118,17 @@ QTreeView::branch {
     background:  transparent;
 }
 
-QTreeView::branch:has-siblings:!adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0;
-}
+// QTreeView::branch:has-siblings:!adjoins-item  {
+//     border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0;
+// }
 
-QTreeView::branch:has-siblings:adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_more_OpenLight.svg) 0;
-}
+// QTreeView::branch:has-siblings:adjoins-item  {
+//     border-image: url(qss:images_dark-light/branch_more_OpenLight.svg) 0;
+// }
 
-QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
-    border-image: url(qss:images_dark-light/branch_end_OpenLight.svg) 0;
-}
+// QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
+//     border-image: url(qss:images_dark-light/branch_end_OpenLight.svg) 0;
+// }
 
 QTreeView::branch:closed:has-children:has-siblings  {
     border-image: none;
@@ -141,7 +141,7 @@ QTreeView::branch:has-children:!has-siblings:closed  {
 }
 
 QTreeView::branch:open:has-children:has-siblings  {
-    border-image: url(qss:images_dark-light/branch_vline_open_OpenLight.svg) 0;
+    border-image: none;
     image: url(qss:images_dark-light/branch_more_open_OpenLight.svg) 0;
 }
 
@@ -204,6 +204,13 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
         }
 }
 
+Gui--OverlayToolButton[objectName="OBTN Transparent"] {
+    image: url(qss:overlay/transparent_openlight.svg);
+        &:hover {
+            image: url(qss:overlay/transparenthover_openlight.svg);
+        }
+}
+
 QToolButton#buttonPauseUpdate { //this is the cancel cache update button in addon-manager
     qproperty-icon: url(qss:images_dark-light/stop.png);
 }
@@ -227,3 +234,4 @@ QTreeView::branch#groupsTreeView:closed:has-children:has-siblings  {
   QTreeView::branch#groupsTreeView:has-siblings:!adjoins-item  {
     border-image: none 0;
   }
+

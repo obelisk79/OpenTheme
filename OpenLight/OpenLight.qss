@@ -9,7 +9,7 @@
   dialogbuttonbox-buttons-have-icons: 0; }
 
 QAbstractSpinBox, QSpinBox {
-  max-height: 20px;
+  min-height: 20px;
   margin: 0px;
   padding: 2px;
   border-top-right-radius: 3px;
@@ -112,7 +112,8 @@ QLineEdit {
   margin: 0px;
   padding: 2px;
   padding-left: 6px;
-  padding-right: 6px; }
+  padding-right: 6px;
+  min-height: 16px; }
 
 Qlist {
   padding: 0px 8px 0px 8px; }
@@ -276,7 +277,6 @@ QTreeView {
   QTreeView::item {
     margin: 0px 0px;
     padding: 0px 3px;
-    font-weight: 700;
     font-size: 24px; }
 
 QTreeView QLineEdit {
@@ -301,6 +301,8 @@ QToolBar {
     margin: 6px 4px; }
 
 QToolBarExtension {
+  left: 100px;
+  padding-right: 100px;
   min-width: 16px; }
 
 QStatusBar QToolBar, QMenuBar QToolBar {
@@ -405,6 +407,18 @@ Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
   margin-left: 1px;
   max-height: 20px; }
 
+Gui--PropertyEditor--PropertyEditor QWidget {
+  margin: 0px;
+  padding: 0px;
+  border: 0px solid transparent;
+  border-right: 1px solid #868e96;
+  border-bottom: 1px solid #868e96;
+  border-radius: 0px;
+  min-height: 0px; }
+
+Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
+  margin-top: 3px; }
+
 QTabWidget#TabBar > QTabBar::tab:top,
 QTabWidget#TabBar > QTabBar::tab:bottom {
   margin: 0px 2px 4px 2px;
@@ -447,8 +461,9 @@ SpreadsheetGui--SheetTableView QLineEdit {
   margin: 7px 0px 7px 3px;
   max-height: 22px; }
 
-QWidget#Workbench {
-  border: 0px solid transparent; }
+#fcSymbolDir,
+#fcFile {
+  max-height: 26px; }
 
 QAbstractSpinBox::up-arrow, QSpinBox::up-arrow {
   image: url(qss:images_dark-light/dark_up_arrow.svg); }
@@ -507,15 +522,6 @@ QTabBar::close-button {
 QTreeView::branch {
   background: transparent; }
 
-QTreeView::branch:has-siblings:!adjoins-item {
-  border-image: url(qss:images_dark-light/branch_vline_OpenLight.svg) 0; }
-
-QTreeView::branch:has-siblings:adjoins-item {
-  border-image: url(qss:images_dark-light/branch_more_OpenLight.svg) 0; }
-
-QTreeView::branch:!has-children:!has-siblings:adjoins-item {
-  border-image: url(qss:images_dark-light/branch_end_OpenLight.svg) 0; }
-
 QTreeView::branch:closed:has-children:has-siblings {
   border-image: none;
   image: url(qss:images_dark-light/branch_more_closed_OpenLight.svg) 0; }
@@ -525,7 +531,7 @@ QTreeView::branch:has-children:!has-siblings:closed {
   image: url(qss:images_dark-light/branch_end_closed_OpenLight.svg) 0; }
 
 QTreeView::branch:open:has-children:has-siblings {
-  border-image: url(qss:images_dark-light/branch_vline_open_OpenLight.svg) 0;
+  border-image: none;
   image: url(qss:images_dark-light/branch_more_open_OpenLight.svg) 0; }
 
 QTreeView::branch:open:has-children:!has-siblings {
@@ -570,6 +576,11 @@ Gui--OverlayToolButton[objectName="OBTN Float"] {
   Gui--OverlaySplitterHandle Gui--OverlayToolButton:hover,
   Gui--OverlayToolButton[objectName="OBTN Float"]:hover {
     image: url(qss:overlay/floathover_openlight.svg); }
+
+Gui--OverlayToolButton[objectName="OBTN Transparent"] {
+  image: url(qss:overlay/transparent_openlight.svg); }
+  Gui--OverlayToolButton[objectName="OBTN Transparent"]:hover {
+    image: url(qss:overlay/transparenthover_openlight.svg); }
 
 QToolButton#buttonPauseUpdate, QWidget#Selector > QToolButton#buttonPauseUpdate {
   qproperty-icon: url(qss:images_dark-light/stop.png); }
@@ -728,6 +739,7 @@ QMenu {
   border-radius: 2px; }
   QMenu::item {
     color: #000000;
+    background-color: #f1f3f5;
     border: 1px solid transparent;
     border-radius: 2px;
     border-radius: 0px; }
@@ -997,3 +1009,8 @@ QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
   selection-background-color: #a5d8ff; }
   QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView::item:selected {
     background-color: #a5d8ff; }
+
+QToolButton#ScrollLeftButton, QWidget#Selector > QToolButton#ScrollLeftButton,
+QToolButton#ScrollRightButton,
+QWidget#Selector > QToolButton#ScrollRightButton {
+  background-color: #f1f3f5; }

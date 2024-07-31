@@ -1,6 +1,6 @@
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
-    max-height: 20px;
+    min-height: 20px;
     @include space2px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -126,6 +126,7 @@ QLabel {
 QLineEdit {
     @include space2px;
     @include wide6px;
+    min-height: 16px;
 }
 
 Qlist {
@@ -334,7 +335,6 @@ QTreeView {
     &::item {
         margin: 0px 0px;
         padding: 0px 3px;
-        font-weight: 700;
         font-size: 24px;
     }
 }
@@ -372,6 +372,8 @@ QToolBar {
 }
 
 QToolBarExtension {
+    left: 100px;
+    padding-right: 100px;
     min-width: 16px;
 }
 
@@ -513,6 +515,19 @@ Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
     max-height: 20px;
 }
 
+Gui--PropertyEditor--PropertyEditor QWidget {
+    @include space0px;
+    border: 0px solid transparent;
+    border-right: 1px solid $contrastBorder;
+    border-bottom: 1px solid $contrastBorder;
+    border-radius: 0px;
+    min-height: 0px;
+}
+
+Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
+    margin-top: 3px;
+}
+
 QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
 }
@@ -579,6 +594,14 @@ SpreadsheetGui--SheetTableView QLineEdit {
     max-height: 22px;
 }
 
-QWidget#Workbench {
-    border: 0px solid transparent; 
+// QWidget#Workbench,
+// QToolBar#Edit,
+// QToolBar#File,
+// QToolBar#Help {
+//     border: 0px solid transparent; 
+// }
+
+#fcSymbolDir,
+#fcFile {
+    max-height: 26px; 
 }

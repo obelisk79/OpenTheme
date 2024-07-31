@@ -187,6 +187,7 @@ QMenu {
     @include softborder;
     &::item {
         color: $primaryText;
+        background-color: $secondaryBackground;
         @include noborder;
         border-radius: 0px;
     }
@@ -542,4 +543,9 @@ QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
     &::item:selected {
         background-color: $accentBackground;
     }
+}
+
+QToolButton#ScrollLeftButton,
+QToolButton#ScrollRightButton {
+    background-color: $secondaryBackground;
 }
