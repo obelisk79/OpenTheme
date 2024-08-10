@@ -98,7 +98,8 @@ Gui--CallTipsList::item::selected {
   */
 Gui--OverlayTitleBar,
 Gui--OverlaySplitterHandle {
-  background-color: rgba(185, 192, 197, 75%); }
+  color: #adb5bd;
+  background-color: rgba(33, 37, 41, 75%); }
 
 QScrollArea#ClippingScrollArea,
 QWidget#ClippingScrollAreaContents {
