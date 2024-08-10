@@ -297,6 +297,10 @@ QSpinBox {
     @extend QAbstractSpinBox;
 }
 
+QStatusBar {
+    color: $secondaryText;
+}
+
 QTabBar {
     &::tab {
         color: $primaryText;
@@ -492,6 +496,10 @@ Gui--OverlayToolButton {
             background-color: transparent;
             border: 0px solid transparent;
         }
+}
+
+Gui--OverlayTitleBar {
+    color: $secondaryText;
 }
 
 QSint--ActionGroup QFrame[class="content"] QToolButton {

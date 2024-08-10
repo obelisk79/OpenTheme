@@ -818,6 +818,9 @@ QScrollBar {
 QSizeGrip {
   background: transparent; }
 
+QStatusBar {
+  color: #495057; }
+
 QTabBar::tab {
   color: #000000;
   background-color: #ced4da;
@@ -971,6 +974,9 @@ Gui--OverlayToolButton {
   Gui--OverlayToolButton:pressed {
     background-color: transparent;
     border: 0px solid transparent; }
+
+Gui--OverlayTitleBar {
+  color: #495057; }
 
 Gui--NotificationLabel {
   background-color: #f1f3f5;
