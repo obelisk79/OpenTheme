@@ -293,6 +293,10 @@ QSizeGrip {
     background: transparent;
 }
 
+QStatusBar {
+    color: $secondaryText;
+}
+
 QSpinBox {
     @extend QAbstractSpinBox;
 }
