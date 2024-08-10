@@ -27,3 +27,6 @@
 
 2024.AUGUST.09
 - Added explicit declaration of color to text in status bar and panel title bar
+
+2024.AUGUST.10
+- Changed panel titlebar and splitterbar background colors to better fit the OpenDark theme.
