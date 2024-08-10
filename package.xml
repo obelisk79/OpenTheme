@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
- <name>OpenTheme/name>
+ <name>OpenTheme</name>
  <version>2024.08.09</version>
  <date>2024.08.09</date>
  <description>An accessible and coordinated set of Light and Dark themes for FreeCAD</description>
