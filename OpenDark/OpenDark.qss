@@ -847,6 +847,9 @@ QScrollBar {
 QSizeGrip {
   background: transparent; }
 
+QStatusBar {
+  color: #adb5bd; }
+
 QTabBar::tab {
   color: #dee2e6;
   background-color: #495057;
