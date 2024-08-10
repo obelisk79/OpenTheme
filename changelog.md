@@ -24,3 +24,6 @@
 
 2024.JULY.30
 - Fixed more than 12 long-standing theme issues and inconsistencies.
+
+2024.AUGUST.09
+- Added explicit declaration of color to text in status bar and panel title bar
