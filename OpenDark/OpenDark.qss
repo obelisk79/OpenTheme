@@ -1009,6 +1009,9 @@ Gui--OverlayToolButton {
     background-color: transparent;
     border: 0px solid transparent; }
 
+Gui--OverlayTitleBar {
+  color: #adb5bd; }
+
 Gui--NotificationLabel {
   background-color: #1a1e22;
   border: 1px solid #292f35;

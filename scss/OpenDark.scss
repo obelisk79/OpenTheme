@@ -502,6 +502,10 @@ Gui--OverlayToolButton {
         }
 }
 
+Gui--OverlayTitleBar {
+    color: $secondaryText;
+}
+
 QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
 }
