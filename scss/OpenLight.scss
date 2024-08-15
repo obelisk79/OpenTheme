@@ -9,6 +9,9 @@ QAbstractSpinBox {
     color: $primaryText;
     background-color: $secondaryBackground;
     @include softborder;
+    &:focus {
+        border-color: $accentBorder;
+    }
     &:hover {
         border-color: $accentBorder;
     }
@@ -47,6 +50,9 @@ QCheckBox {
         color: $primaryText;
         background-color: $secondaryBackground;
         @include hardborder;
+        &:focus {
+            border-color: $accentBorder;
+        }
         &:disabled {
             background-color: $standardBorder;
         }
@@ -62,6 +68,9 @@ QComboBox {
     background-color: $secondaryBackground;
     @include softborder;
     selection-background-color: $controlWidgetBackground;
+    &:focus {
+        border-color: $accentBorder;
+    }
     &:disabled {
         color: $disabledText;
     }
@@ -124,6 +133,9 @@ QLineEdit {
     color: $primaryText;
     background-color: $secondaryBackground;
     @include softborder;
+    &:focus {
+        border-color: $accentBorder;
+    }
     &:disabled {
         color: $disabledText;
     }
@@ -273,6 +285,9 @@ QRadioButton {
         margin: 2px;
         border: 1px solid $contrastBorder;
         background-color: $secondaryBackground;
+        &:focus {
+            border-color: $accentBorder;
+        }
     }
 }
 
