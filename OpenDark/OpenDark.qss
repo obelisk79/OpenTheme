@@ -136,11 +136,6 @@ QMainWindow {
   QMainWindow::separator:vertical {
     width: 4px; }
 
-QMdiArea {
-  background-image: url(qss:images_dark-light/FreecadLogo.png);
-  background-position: center center;
-  background-repeat: no-repeat; }
-
 QMdiSubWindow {
   border: 1px solid transparent; }
 
@@ -497,7 +492,7 @@ QMenu::indicator:checked {
   image: url(qss:images_dark-light/checkbox_light.svg); }
 
 QRadioButton::indicator:checked {
-  image: url(qss:images_dark-light/radiobutton_light.svg); }
+  image: url(qss:images_dark-light/OpenDark_radiobutton.svg); }
 
 QScrollBar::sub-line:vertical {
   border-image: url(qss:images_dark-light/light_up_arrow.svg); }
@@ -632,6 +627,8 @@ QAbstractSpinBox, QSpinBox {
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }
+  QAbstractSpinBox:focus, QSpinBox:focus {
+    border-color: #264b69; }
   QAbstractSpinBox:hover, QSpinBox:hover {
     border-color: #264b69; }
   QAbstractSpinBox:disabled, QSpinBox:disabled {
@@ -660,6 +657,8 @@ QCheckBox {
     background-color: #1a1e22;
     border: 1px solid #495057;
     border-radius: 2px; }
+    QCheckBox::indicator:focus {
+      border-color: #264b69; }
     QCheckBox::indicator:disabled {
       background-color: #292f35; }
     QCheckBox::indicator:hover {
@@ -671,6 +670,8 @@ QComboBox {
   border: 1px solid #292f35;
   border-radius: 2px;
   selection-background-color: #495057; }
+  QComboBox:focus {
+    border-color: #264b69; }
   QComboBox:disabled {
     color: #868e96; }
   QComboBox:hover {
@@ -718,6 +719,8 @@ QLineEdit {
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }
+  QLineEdit:focus {
+    border-color: #264b69; }
   QLineEdit:disabled {
     color: #868e96; }
   QLineEdit:hover {
@@ -834,6 +837,8 @@ QRadioButton {
     margin: 2px;
     border: 1px solid #495057;
     background-color: #1a1e22; }
+    QRadioButton::indicator:focus {
+      border-color: #264b69; }
 
 QScrollBar {
   background-color: #1a1e22; }
