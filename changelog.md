@@ -30,3 +30,7 @@
 
 2024.AUGUST.10
 - Changed panel titlebar and splitterbar background colors to better fit the OpenDark theme.
+
+2024.AUGUST.15
+- Defined the color for the axis/coordinate symbol in the corner
+- Defined focus colors for input fields.
