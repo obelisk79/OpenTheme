@@ -126,6 +126,9 @@ QLabel {
     &[haslink="true"] {
         color: $selectedElement;
     }
+    &:disabled {
+        color: $disabledText;
+    }
 }
 
 // normal, disabled, hover, focus
@@ -281,12 +284,18 @@ QPushButton {
 
 QRadioButton {
     color: $primaryText;
+    &:disabled {
+        color: $disabledText;
+    }
     &::indicator {
         margin: 2px;
         border: 1px solid $contrastBorder;
         background-color: $secondaryBackground;
         &:focus {
             border-color: $accentBorder;
+        } 
+        &:disabled {
+            border-color: $standardBorder;
         }
     }
 }
@@ -384,6 +393,10 @@ QTextEdit {
     color:$primaryText;
     background-color: $secondaryBackground;
     @include softborder;
+    &:disabled {
+        color: $disabledText;
+        border-color: $standardBorder;
+    }
 }
 
 QToolBar {

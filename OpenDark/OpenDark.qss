@@ -713,6 +713,8 @@ QLabel {
   background-color: transparent; }
   QLabel[haslink="true"] {
     color: #339af0; }
+  QLabel:disabled {
+    color: #868e96; }
 
 QLineEdit {
   color: #dee2e6;
@@ -833,12 +835,16 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
 
 QRadioButton {
   color: #dee2e6; }
+  QRadioButton:disabled {
+    color: #868e96; }
   QRadioButton::indicator {
     margin: 2px;
     border: 1px solid #495057;
     background-color: #1a1e22; }
     QRadioButton::indicator:focus {
       border-color: #264b69; }
+    QRadioButton::indicator:disabled {
+      border-color: #292f35; }
 
 QScrollBar {
   background-color: #1a1e22; }
@@ -909,6 +915,9 @@ QTextEdit {
   background-color: #1a1e22;
   border: 1px solid #292f35;
   border-radius: 2px; }
+  QTextEdit:disabled {
+    color: #868e96;
+    border-color: #292f35; }
 
 QToolBar {
   background-color: #212529;
