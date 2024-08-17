@@ -34,3 +34,7 @@
 2024.AUGUST.15
 - Defined the color for the axis/coordinate symbol in the corner
 - Defined focus colors for input fields.
+
+
+2024.AUGUST.17
+- Add missing disabled widget definitions
