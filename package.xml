@@ -19,7 +19,7 @@
     <subdirectory>./OpenDark/</subdirectory>
     <file>OpenDark.qss</file>
   </preferencepack>
-   <preferencepack>
+  <preferencepack>
     <name>OpenLight</name>
     <description>A modern Light theme for FreeCAD based on the Open-Color palette</description>
     <tag>2024</tag>
@@ -27,6 +27,13 @@
     <tag>light</tag>
     <subdirectory>./OpenLight/</subdirectory>
     <file>OpenLight.qss</file>
+  </preferencepack>
+  <preferencepack>
+    <name>OpenPreferences</name>
+    <description>A set of recommended preferences to complement OpenThemes.</description>
+    <tag>OpenThemes recommended settings</tag>
+    <subdirectory>./OpenPreferences/</subdirectory>
+    <file>OpenPreferences.cfg</file>
   </preferencepack>
 </content>
 </package>
