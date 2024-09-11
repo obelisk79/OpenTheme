@@ -890,6 +890,15 @@ QTextEdit {
     color: #7b838f;
     border-color: #a3a8ad; }
 
+QPlainTextEdit {
+  color: #000000;
+  background-color: #f1f3f5;
+  border: 1px solid #a3a8ad;
+  border-radius: 2px; }
+  QPlainTextEdit:disabled {
+    color: #7b838f;
+    border-color: #a3a8ad; }
+
 QToolBar {
   background-color: #dee2e6;
   border-bottom: 1px solid #a3a8ad; }

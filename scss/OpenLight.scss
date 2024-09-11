@@ -399,6 +399,16 @@ QTextEdit {
     }
 }
 
+QPlainTextEdit {
+    color:$primaryText;
+    background-color: $secondaryBackground;
+    @include softborder;
+    &:disabled {
+        color: $disabledText;
+        border-color: $standardBorder;
+    }
+}
+
 QToolBar {
     background-color: $primaryBackground;
     border-bottom: 1px solid $standardBorder;
