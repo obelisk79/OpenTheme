@@ -881,12 +881,12 @@ QTreeView {
 QTreeView::branch {
   background: transparent; }
 
-QTextEdit {
+QTextEdit, QPlainTextEdit {
   color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px; }
-  QTextEdit:disabled {
+  QTextEdit:disabled, QPlainTextEdit:disabled {
     color: #7b838f;
     border-color: #a3a8ad; }
 
