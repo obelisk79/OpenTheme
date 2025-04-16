@@ -240,7 +240,7 @@ QTabBar {
     padding: 4px;
     padding-left: 12px;
     padding-right: 12px;
-    min-width: 16px;
+    min-width: 2em;
     border-radius: 4px; }
     QTabBar::tab:left, QTabBar::tab:right {
       padding-left: 4px;
@@ -248,7 +248,7 @@ QTabBar {
       padding-bottom: 12px;
       padding-top: 12px;
       min-width: 24px;
-      min-height: 24px; }
+      min-height: 2em; }
   QTabBar::close-button {
     margin-right: 6px;
     subcontrol-origin: margin;
@@ -335,6 +335,11 @@ QToolBar > QToolButton#qt_toolbutton_menubutton {
     subcontrol-origin: margin; }
   QToolBar > QToolButton#qt_toolbutton_menubutton::menu-indicator {
     subcontrol-position: right bottom; }
+
+QToolButton#qt_toolbar_ext_button, QWidget#Selector > QToolButton#qt_toolbar_ext_button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 16px; }
 
 QToolTip {
   padding: 4px; }
@@ -446,15 +451,8 @@ SpreadsheetGui--SheetTableView QLineEdit {
     padding-right: 4px;
     padding-bottom: 12px;
     padding-top: 12px;
-    min-height: 2em;
-    min-width: 24px; }
-  #WbTabBar > QTabBar[style="icon-only"]::tab {
-    min-width: 16px;
-    min-height: 16px; }
-    #WbTabBar > QTabBar[style="icon-only"]::tab:top, #WbTabBar > QTabBar[style="icon-only"]::tab:bottom {
-      padding-right: 0; }
-    #WbTabBar > QTabBar[style="icon-only"]::tab:left, #WbTabBar > QTabBar[style="icon-only"]::tab:right {
-      padding-top: 0; }
+    min-width: 24px;
+    min-height: 2em; }
 
 #ScrollLeftButton,
 #ScrollRightButton {
