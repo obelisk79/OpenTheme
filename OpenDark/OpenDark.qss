@@ -329,7 +329,7 @@ QToolButton#qt_toolbar_ext_button, QWidget#Selector > QToolButton#qt_toolbar_ext
   padding: 0px;
   margin-top: 5px;
   margin-bottom: 5px;
-  min-width: 12px; }
+  min-width: 10px; }
 
 QToolBar > QToolButton#qt_toolbutton_menubutton {
   padding-right: 4px; }
