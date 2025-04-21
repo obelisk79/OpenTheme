@@ -293,11 +293,6 @@ QToolBar {
     width: 1px;
     margin: 6px 4px; }
 
-QToolBarExtension {
-  left: 100px;
-  padding-right: 100px;
-  min-width: 16px; }
-
 QStatusBar QToolBar, QMenuBar QToolBar {
   background-color: transparent;
   border-bottom: none; }
@@ -328,6 +323,13 @@ QToolButton, QWidget#Selector > QToolButton {
     /* Exclude a shift for better image */
     subcontrol-origin: padding;
     /* Shift it a bit */ }
+
+QToolButton#qt_toolbar_ext_button, QWidget#Selector > QToolButton#qt_toolbar_ext_button {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 16px; }
 
 QToolBar > QToolButton#qt_toolbutton_menubutton {
   padding-right: 4px; }

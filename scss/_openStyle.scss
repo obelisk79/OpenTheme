@@ -372,12 +372,6 @@ QToolBar {
     }
 }
 
-QToolBarExtension {
-    left: 100px;
-    padding-right: 100px;
-    min-width: 16px;
-}
-
 // special case for toolbars placed in menu bar and status bar
 QStatusBar QToolBar, QMenuBar QToolBar {
     background-color: transparent;
@@ -416,6 +410,14 @@ QToolButton {
         subcontrol-origin: padding;
         /* Shift it a bit */
     }
+}
+
+QToolButton#qt_toolbar_ext_button {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 16px; 
 }
 
 QToolBar > QToolButton#qt_toolbutton_menubutton {
