@@ -54,11 +54,11 @@ QCheckBox {
       width: 12px;
       height: 12px; }
 
-QComboBox {
+QComboBox, Gui--WorkbenchComboBox {
   margin: 0px;
   padding: 2px;
   padding-left: 8px; }
-  QComboBox::drop-down {
+  QComboBox::drop-down, Gui--WorkbenchComboBox::drop-down {
     subcontrol-origin: border;
     subcontrol-position: top right;
     border-top-right-radius: 2px;
@@ -393,7 +393,7 @@ QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--Ac
   margin: 0px;
   padding: 0px 0px 1px 0px; }
 
-QDialog#Gui__Dialog__DlgPreferences QComboBox {
+QDialog#Gui__Dialog__DlgPreferences QComboBox, QDialog#Gui__Dialog__DlgPreferences Gui--WorkbenchComboBox {
   max-height: 22px; }
 
 /* Cells with values that can only be changed with "..." button (Attachment)
@@ -480,9 +480,9 @@ QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
 QCheckBox::indicator:checked {
   image: url(qss:images_dark-light/OpenLight_check.svg); }
 
-QComboBox::down-arrow {
+QComboBox::down-arrow, Gui--WorkbenchComboBox::down-arrow {
   image: url(qss:images_dark-light/dark_down_arrow.svg); }
-  QComboBox::down-arrow:disabled {
+  QComboBox::down-arrow:disabled, Gui--WorkbenchComboBox::down-arrow:disabled {
     image: url(qss:images_dark-light/dark_down_arrow_disabled.svg); }
 
 QdockWidget {
@@ -644,23 +644,23 @@ QCheckBox {
     QCheckBox::indicator:hover {
       border: 1px solid #1c7ed6; }
 
-QComboBox {
+QComboBox, Gui--WorkbenchComboBox {
   color: #000000;
   background-color: #f1f3f5;
   border: 1px solid #a3a8ad;
   border-radius: 2px;
   selection-background-color: #ced4da; }
-  QComboBox:focus {
+  QComboBox:focus, Gui--WorkbenchComboBox:focus {
     border-color: #1c7ed6; }
-  QComboBox:disabled {
+  QComboBox:disabled, Gui--WorkbenchComboBox:disabled {
     color: #7b838f; }
-  QComboBox:hover {
+  QComboBox:hover, Gui--WorkbenchComboBox:hover {
     border-color: #1c7ed6; }
-  QComboBox::drop-down {
+  QComboBox::drop-down, Gui--WorkbenchComboBox::drop-down {
     background-color: transparent;
     border: 2px solid transparent;
     border-right: 5px solid transparent; }
-    QComboBox::drop-down:disabled {
+    QComboBox::drop-down:disabled, Gui--WorkbenchComboBox::drop-down:disabled {
       background-color: #a3a8ad; }
 
 QDockWidget {
