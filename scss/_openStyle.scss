@@ -535,6 +535,10 @@ QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
 }
 
+Gui--WorkbenchComboBox {
+    @extend QComboBox;
+}
+
 QTabWidget#TabBar > QTabBar::tab:top,
 QTabWidget#TabBar > QTabBar::tab:bottom {
     margin: 0px 2px 4px 2px;
