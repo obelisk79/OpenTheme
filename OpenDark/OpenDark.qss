@@ -1067,3 +1067,22 @@ QToolButton#ScrollLeftButton, QWidget#Selector > QToolButton#ScrollLeftButton,
 QToolButton#ScrollRightButton,
 QWidget#Selector > QToolButton#ScrollRightButton {
   background-color: #1a1e22; }
+
+QToolBox {
+  background-color: transparent;
+  color: #f8f9fa; }
+
+QToolBox::tab {
+  color: #f8f9fa; }
+
+QToolBox::tab:disabled {
+  color: #adb5bd; }
+
+QToolBox::tab:selected {
+  color: #f8f9fa; }
+
+QToolBox::tab:selected:disabled {
+  color: #adb5bd; }
+
+QToolBox::tab:!selected {
+  color: #f8f9fa; }
