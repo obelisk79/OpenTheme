@@ -585,3 +585,28 @@ QToolButton#ScrollLeftButton,
 QToolButton#ScrollRightButton {
     background-color: $secondaryBackground;
 }
+
+QToolBox {
+  background-color: transparent;
+  color: $inverseText;
+}
+
+QToolBox::tab {
+  color: $inverseText;
+}
+
+QToolBox::tab:disabled {
+  color: $secondaryText;
+}
+
+QToolBox::tab:selected {
+  color: $inverseText;
+}
+
+QToolBox::tab:selected:disabled {
+  color: $secondaryText;
+}
+
+QToolBox::tab:!selected {
+  color: $inverseText;
+}
