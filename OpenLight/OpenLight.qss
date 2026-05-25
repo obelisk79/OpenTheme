@@ -168,6 +168,14 @@ QMenuBar {
   QMenuBar::item:selected {
     border-radius: 2px; }
 
+QProgressBar {
+  min-height: 24px;
+  text-align: center;
+  padding: 1px;
+  border-radius: 1px; }
+  QProgressBar::chunk {
+    border-radius: 1px; }
+
 QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   padding: 4px 20px; }
 
@@ -777,18 +785,16 @@ QMenuBar {
     background-color: #a5d8ff;
     border: 1px solid #1c7ed6; }
 
-QProgressBar {
+QProgressBar,
+QProgressBar:horizontal {
   color: #000000;
   min-height: 24px;
   background-color: transparent;
   text-align: center;
-  border: 1px solid #868e96;
-  border-radius: 1px;
-  padding: 1px; }
-
-QProgressBar::chunk {
-  background-color: #1c7ed6;
-  border-radius: 1px; }
+  border: 1px solid #868e96; }
+  QProgressBar::chunk,
+  QProgressBar:horizontal::chunk {
+    background-color: #1c7ed6; }
 
 QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton {
   color: #000000;
