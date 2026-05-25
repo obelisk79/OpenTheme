@@ -30,7 +30,7 @@ QHeaderView {
 
 QHeaderView::section {
   color: #dee2e6;
-  background-color: #dee2e6;
+  background-color: #292f35;
   padding: 2px;
   padding-left: 8px;
   border: 1px solid #495057; }
@@ -128,3 +128,6 @@ QLabel {
 
 QCheckBox::indicator {
   background-color: #495057; }
+
+QLineEdit {
+  height: 24px;}
