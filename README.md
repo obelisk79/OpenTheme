@@ -1,4 +1,5 @@
 ![Colours](resources/icons/OpenTheme.png)
+
 Latest Version is v2026.10.03
 
 Consider supporting me on [KO-FI](https://ko-fi.com/obelisk79)
