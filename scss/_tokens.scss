@@ -1,0 +1,77 @@
+// Role variables. Each compiles to a FreeCAD style-parameter token, so the built
+// .qss holds @TextPrimary etc. and FreeCAD fills in the colour from the active
+// pack's parameters/<Pack>.yaml. Add a role here and in tools/make_themes.py.
+// unquote() stops Sass treating '@' as an at-rule.
+
+@function token($name) { @return unquote("@" + $name); }
+
+// Text
+$textPrimary: token(TextPrimary);
+$textSecondary: token(TextSecondary);
+$textDisabled: token(TextDisabled);
+$textStrong: token(TextStrong);
+$textLink: token(TextLink);
+
+// Surfaces
+$surfaceBase: token(SurfaceBase);
+$surfaceOverlay: token(SurfaceOverlay);
+$surfaceOverlayHover: token(SurfaceOverlayHover);
+$menuBarBackground: token(MenuBarBackground);
+$surfaceHover: token(SurfaceHover);
+$surfaceDisabled: token(SurfaceDisabled);
+
+// Inputs and controls
+$fieldBackground: token(FieldBackground);
+$fieldBorder: token(FieldBorder);
+$controlBackground: token(ControlBackground);
+$controlBackgroundHover: token(ControlBackgroundHover);
+$controlBorder: token(ControlBorder);
+$indicatorBorder: token(IndicatorBorder);
+
+// Accent: Subtle is the hover tint, Strong the selected fill
+$accentSubtle: token(AccentSubtle);
+$accentSubtleBorder: token(AccentSubtleBorder);
+$textOnAccentSubtle: token(TextOnAccentSubtle);
+$accentStrong: token(AccentStrong);
+$textOnAccent: token(TextOnAccent);
+
+// Borders
+$borderSubtle: token(BorderSubtle);
+$borderStrong: token(BorderStrong);
+$borderDisabled: token(BorderDisabled);
+$borderHover: token(BorderHover);
+$borderFocus: token(BorderFocus);
+$borderEmphasis: token(BorderEmphasis);
+
+// Item views
+$viewAlternateRow: token(ViewAlternateRow);
+$viewGridLines: token(ViewGridLines);
+$viewHeaderBackground: token(ViewHeaderBackground);
+$viewHeaderBorder: token(ViewHeaderBorder);
+$viewGroupBackground: token(ViewGroupBackground);
+
+// Scrollbars, progress, tooltips
+$scrollbarTrack: token(ScrollbarTrack);
+$scrollbarHandle: token(ScrollbarHandle);
+$scrollbarHandleHover: token(ScrollbarHandleHover);
+$progressBackground: token(ProgressBackground);
+$progressChunk: token(ProgressChunk);
+$progressText: token(ProgressText);
+$tooltipBackground: token(TooltipBackground);
+$tooltipText: token(TooltipText);
+$tooltipBorder: token(TooltipBorder);
+
+// Overlay panels
+$overlayHeaderBackground: token(OverlayHeaderBackground);
+$overlayGroupBackground: token(OverlayGroupBackground);
+$overlayTitleBackground: token(OverlayTitleBackground);
+
+// Images
+$imageDir: "opentheme_images";
+$iconVariant: token(IconVariant);
+$iconVariantOnAccent: token(IconVariantOnAccent);
+
+// Geometry
+$borderWidth: token(BorderWidth);
+$cornerRadius: token(CornerRadius);
+$cornerRadiusLarge: token(CornerRadiusLarge);

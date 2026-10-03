@@ -1,0 +1,653 @@
+// Shared theme body for every OpenTheme pack. Colours are role variables from
+// _tokens.scss, which compile to FreeCAD style-parameter tokens (@TextPrimary ...)
+// resolved at load time from each pack's parameters/<Pack>.yaml.
+
+// normal, disabled, controls, hover, pressed
+QAbstractSpinBox {
+    color: $textPrimary;
+    background-color: $fieldBackground;
+    @include fieldborder;
+    &:focus {
+        border-color: $borderFocus;
+    } 
+    &:hover {
+        border-color: $borderHover;
+    }
+    &:disabled {
+        color: $textDisabled;
+        border-color: $borderDisabled;
+    }
+    &::up-button {
+        background-color: transparent;
+        border: $borderWidth solid transparent;
+        border-right: 3px solid transparent;
+
+        &:disabled { //To-Do: change arrow color instead of background color
+            background-color: $surfaceDisabled;
+        }
+    }
+    &::down-button {
+        background-color: transparent;
+        border: $borderWidth solid transparent;
+        border-right: 3px solid transparent;
+        &:disabled { //To-Do: change arrow color instead of background color
+            background-color: $surfaceDisabled;
+            //border: $borderWidth solid $borderSubtle;
+        }
+    }
+}
+
+// normal, disabled, hover, checked are defined
+QCheckBox {
+    color: $textPrimary;
+    background: transparent;
+    &:disabled {
+        color: $textDisabled;
+    }
+    &::indicator {
+        color: $textPrimary;
+        background-color: $fieldBackground;
+        @include indicatorborder;
+        &:focus {
+            border-color: $borderFocus;
+        } 
+        &:disabled {
+            background-color: $surfaceDisabled;
+        }
+        &:hover {
+            @include borderhover;
+        }
+    }
+}
+
+// normal, disabled, hover, pressed, controls are defined
+QComboBox {
+    color: $textPrimary;
+    background-color: $fieldBackground;
+    @include fieldborder;
+    selection-background-color: $surfaceHover;
+    &:focus {
+        border-color: $borderFocus;
+    } 
+    &:disabled {
+        color: $textDisabled;
+    }
+    &:hover {
+        border-color: $borderHover;
+    }
+    &::drop-down {
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-right: 5px solid transparent;
+        &:disabled { //To-Do: change arrow color instead of background color
+            background-color: $surfaceDisabled;
+        }
+    }
+}
+
+// non-interactive element
+QDockWidget {
+    color: $textPrimary;
+    background: $surfaceBase;
+    @include hardborder;
+}
+
+// non-interactive element
+QDialog {
+    color: $textPrimary;
+    background-color: $surfaceBase;
+    @include noborder;
+}
+
+// non-interactive element
+QGroupBox {
+    color: $textPrimary;
+    border-top: 3px solid $borderStrong;
+    &::indicator {
+        border: $borderWidth solid $indicatorBorder;
+        background-color: $fieldBackground;
+    }
+}
+
+// needs refinement applied to property view, spreadsheet etc.
+QHeaderView::section {
+    color: $textPrimary;
+    background-color: $viewHeaderBackground;
+    border-left: $borderWidth solid $viewHeaderBorder;
+    border-right: $borderWidth solid $viewHeaderBorder;
+}
+
+// The header widget itself, so the strip past the last column matches the sections.
+// Applies to the row header too: Qt has no selector for only the top header.
+QHeaderView {
+    background-color: $viewHeaderBackground;
+}
+
+QHeaderView::section {
+    &:hover {
+        background-color: $surfaceHover;
+    }
+    // Qt also reports the header of the current row or column as pressed
+    &:pressed {
+        color: $textOnAccentSubtle;
+        background-color: $accentSubtle;
+    }
+    &:disabled {
+        color: $textDisabled;
+    }
+    &:pressed:disabled {
+        color: $textDisabled;
+        background-color: $surfaceDisabled;
+    }
+}
+
+QTableCornerButton::section {
+    background-color: $viewHeaderBackground;
+    border: $borderWidth solid $viewHeaderBorder;
+}
+
+// non-interactive element
+QLabel {
+    color: $textPrimary;
+    background-color: transparent;
+    &[haslink="true"] {
+        color: $textLink;
+    }
+    &:disabled {
+        color: $textDisabled;
+    }
+}
+
+// normal, disabled, hover, focus
+QLineEdit {
+    color: $textPrimary;
+    background-color: $fieldBackground;
+    @include fieldborder;
+    &:focus {
+        border-color: $borderFocus;
+    } 
+    &:disabled {
+        color: $textDisabled;
+    }
+    &:hover {
+        @include borderhover;
+    }
+    &:focus {
+        @include borderhover;
+    }
+}
+
+QList {
+    font-weight:500;
+    background-color: $fieldBackground;
+    border-radius: $cornerRadius;
+    border: $borderWidth solid transparent;
+    &::item {
+        border-radius: $cornerRadius;
+        border: $borderWidth solid transparent;
+    }
+    &::item:selected {
+        @include selectedstate;
+    }
+    &::item:hover:!selected {
+        @include hoverstate;
+        border-radius: $cornerRadius;
+    }
+    &::indicator {
+        background-color: transparent;
+        border: $borderWidth solid $indicatorBorder;
+        border-radius: $cornerRadius;
+        &:disabled {
+            border: $borderWidth solid $borderDisabled;
+            border-radius: $cornerRadius
+        }
+    }
+}
+
+QListView {
+    color: $textPrimary;
+    selection-color: $textOnAccent;
+    selection-background-color: $accentStrong;
+    background-color: $fieldBackground;
+    alternate-background-color: $fieldBackground;
+}
+
+QMainWindow {
+    &::separator {
+        border: 0px solid transparent;
+        background-color: $borderSubtle;
+        &:hover {
+            color: $textOnAccentSubtle;
+            background-color: $accentSubtle;
+        }
+    }
+}
+
+//finished
+QMenu {
+    background-color: $surfaceOverlay;
+    @include softborder;
+    &::item {
+        background-color: $surfaceOverlay;
+        color: $textPrimary;
+        @include noborder;
+        border-radius: 0px;
+    }
+    &::item:disabled {
+        color: $textDisabled;
+    }
+    &::item:selected {
+        //color: $textOnAccentSubtle;
+        @include borderhover;
+        background-color: $surfaceOverlayHover;
+    }
+    &::item:pressed {
+        color: $textOnAccentSubtle;
+        @include borderhover;
+        background-color: $accentSubtle;
+    }
+    &::indicator {
+        border: $borderWidth solid $indicatorBorder;
+    }
+    &::separator {
+        background-color: $borderSubtle;
+    }
+}
+
+QMenuBar {
+    color: $textSecondary;
+    background-color: $menuBarBackground;
+    border-bottom: $borderWidth solid $borderSubtle;
+    &::item {
+        @include noborder;
+    }
+
+    &::item:pressed {
+        color: $textOnAccentSubtle;
+        background-color: $accentSubtle;
+        @include borderhover;
+    }
+
+    &::item:selected {
+        color: $textOnAccentSubtle;
+        background-color: $accentSubtle;
+        @include borderhover;
+    }
+}
+
+// One plain selector on purpose: adding QProgressBar:horizontal beside it made Qt
+// draw the bar as always full (#82).
+QProgressBar {
+    color: $progressText;
+    min-height: 24px;
+    background-color: $progressBackground;
+    text-align: center;
+    border: $borderWidth solid $borderStrong;
+    &::chunk {
+        background-color: $progressChunk;
+    }
+}
+
+QPushButton {
+    color: $textPrimary;
+    border: $borderWidth solid $controlBorder;
+    background-color: $controlBackground;
+    &:hover {
+        border:$borderWidth solid $borderHover;
+        background-color: $controlBackgroundHover;
+    }
+    &:focus {
+        border:$borderWidth solid $borderFocus;
+        background-color: $controlBackgroundHover;
+    }
+    &:disabled {
+        color: $textDisabled;
+        background-color: $surfaceDisabled;
+    }
+    &:pressed {
+        color: $textOnAccentSubtle;
+        background-color: $accentSubtle;
+    }
+    &:default {
+        border: $borderWidth solid $borderEmphasis;
+    }
+}
+
+QRadioButton {
+    color: $textPrimary;
+    &:disabled {
+        color: $textDisabled;
+    }
+    &::indicator {
+        margin: 2px;
+        border: $borderWidth solid $indicatorBorder;
+        background-color: $fieldBackground;
+        &:focus {
+            border-color: $borderFocus;
+        } 
+        &:disabled {
+            border-color: $borderDisabled;
+        }
+    }
+}
+
+QScrollBar {
+    background-color: $scrollbarTrack;
+    &::handle {
+        background-color: $scrollbarHandle;
+        border: $borderWidth solid transparent;
+
+        &:hover {
+            background-color: $scrollbarHandleHover;
+            border: $borderWidth solid $borderHover
+        }
+    }
+}
+
+QSizeGrip {
+    background: transparent;
+}
+
+QStatusBar {
+    color: $textSecondary;
+}
+
+QSpinBox {
+    @extend QAbstractSpinBox;
+}
+
+QTabBar {
+    &::tab {
+        color: $textSecondary;
+        background-color: transparent;
+        border: $borderWidth solid $borderSubtle;
+        &:hover {
+            @include hoverstate;
+        }
+        &:selected {
+            @include selectedstate;
+        }
+    }
+}
+
+QTabBar QToolButton { /* the scroll buttons are tool buttons */
+    color: $textPrimary;
+    border: $borderWidth solid $controlBorder;
+}
+
+QTableWidget {
+    background-color: $fieldBackground;
+    alternate-background-color: $viewAlternateRow;
+    gridline-color: $viewGridLines;
+}
+
+QTableView {
+    color:$textPrimary;  /*Text in focused cell*/
+    selection-color: $textOnAccent;
+    selection-background-color: $accentStrong;
+    @extend QTableWidget;
+    &:disabled {
+        color: $textDisabled;
+    }
+    &::item {
+        &:selected {
+            color: $textOnAccent;
+            background-color: $accentStrong;
+        }
+        &:selected:disabled {
+            color: $textDisabled;
+            background-color: $surfaceDisabled;
+        }
+    }
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        background-color: $fieldBackground;
+        @include indicatorborder;
+        &:disabled {
+            background-color: $surfaceDisabled;
+        }
+    }
+}
+
+QTreeView {
+    background-color: $surfaceBase;
+    alternate-background-color: $surfaceBase;
+    @include noborder;
+    selection-color: $textOnAccent;
+    selection-background-color: $accentStrong;
+    &:enabled {
+        color: $textPrimary
+    }
+    &:disabled {
+        color: $textDisabled;
+    }
+    &::item:selected {
+        @include selectedstate;
+    }
+}
+
+QTreeView::branch  {
+    background: transparent;
+}
+
+QTextEdit {
+    color:$textPrimary;
+    background-color: $fieldBackground;
+    @include fieldborder;
+    &:disabled {
+        color: $textDisabled;
+        border-color: $borderDisabled;
+    }
+}
+
+QPlainTextEdit {
+    @extend QTextEdit;
+}
+
+QToolBar {
+    background-color: $surfaceBase;
+    border-bottom: $borderWidth solid $borderSubtle;
+    &::separator {
+        background-color: $borderStrong;
+    }
+}
+
+QToolBarExtension {
+    border: $borderWidth solid transparent;
+    background-color: transparent;
+}
+
+QToolButton {
+    @include noborder;
+    color: $textPrimary;
+    background-color: transparent;
+    &:hover {
+        background-color: $surfaceHover;
+        border: $borderWidth solid $borderHover
+    }
+    &:focus {
+        border: $borderWidth solid $borderFocus;
+    }
+    &:pressed {
+        color: $textOnAccentSubtle;
+        border: $borderWidth solid $borderHover;
+        background-color: $accentSubtle;
+    }
+    &:checked {
+        color: $textOnAccent;
+        background-color: $accentStrong;
+        border: $borderWidth solid $borderHover;
+    }
+    &::menu-button {
+        width: 14px;
+        height: 14px;
+        border-bottom: 0px solid #ffffff;
+    }
+    &::menu-arrow {
+        background: transparent;
+    }
+}
+
+QToolTip {
+    color: $tooltipText;
+    @include tooltipborder;
+    background-color: $tooltipBackground;
+}
+
+// Specialty styling
+QDialog QTreeWidget {
+    color: $textPrimary;
+    background-color: $fieldBackground;
+}
+
+QFileDialog {
+    color: $textPrimary;
+}
+
+QWidget#wbList * {
+    background-color: transparent;
+}
+
+QWidget#wbList QPushButton {
+    @extend QPushButton;
+}
+
+/*==================================================================================================
+Tasks panel (custom FreeCAD class)
+==================================================================================================*/
+/* Action group */
+QFrame[class="panel"] {
+    background-color: transparent; /* temporal (transparent background) */
+}
+
+/* Panel header */
+QSint--ActionGroup QFrame[class="header"] {;
+    border-bottom: 3px solid $borderStrong;
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="header"]:hover {
+    background-color: $controlBackgroundHover;
+    border-bottom: 3px solid $borderHover;
+}
+
+QSint--ActionGroup QToolButton[class="header"] {
+    color: $textPrimary; /* Task Panel Header text color */
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel {
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
+    background-color: transparent;
+}
+
+QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox {
+    border: 0px solid transparent;
+}
+
+Gui--PropertyEditor--PropertyEditor {
+    gridline-color: $viewGridLines;
+    qproperty-groupBackground: $viewGroupBackground;
+    qproperty-groupTextColor: $textPrimary;
+}
+
+/* Cells with values that can only be changed with "..." button (Attachment)
+/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+	background-color: $surfaceBase;
+}
+
+Gui--OverlayToolButton {
+    background-color: transparent;
+    border: 0px solid transparent;
+        &:hover {
+            background-color: transparent;
+            border: 0px solid transparent;
+        }
+        &:pressed {
+            background-color: transparent;
+            border: 0px solid transparent;
+        }
+}
+
+Gui--OverlayTitleBar {
+    color: $textSecondary;
+}
+
+QSint--ActionGroup QFrame[class="content"] QToolButton {
+    @extend QPushButton;
+}
+
+Gui--NotificationLabel {
+    background-color: $surfaceOverlay;
+    @include softborder;
+}
+
+QTabWidget#TabBar > QTabBar {
+    border: 0px solid transparent;
+    background-color: transparent;
+}
+
+QWidget#Tabs {
+    background-color: transparent;
+    border: 0px solid transparent;
+}
+
+QWidget#Selector{
+    border-bottom: $borderWidth solid transparent;
+}
+
+QWidget#Selector > QToolButton {
+    @extend QToolButton;
+    font-weight: 500;
+    background-color: $controlBackground;
+    border: $borderWidth solid $controlBorder;
+    border-radius: $cornerRadiusLarge;
+    &:hover {
+        @include hoverstate;
+    }
+    &:selected {
+        @include selectedstate;
+    }
+}
+
+QDialog#Gui__Dialog__DlgPreferences QTreeView#groupsTreeView {
+    selection-background-color: $accentStrong;
+
+    &::item:selected {
+        background-color: $accentStrong;
+    }
+}
+
+QToolButton#ScrollLeftButton,
+QToolButton#ScrollRightButton {
+    background-color: $fieldBackground;
+}
+
+QToolBox {
+  background-color: transparent;
+  color: $textStrong;
+}
+
+QToolBox::tab {
+  color: $textStrong;
+}
+
+QToolBox::tab:disabled {
+  color: $textSecondary;
+}
+
+QToolBox::tab:selected {
+  color: $textStrong;
+}
+
+QToolBox::tab:selected:disabled {
+  color: $textSecondary;
+}
+
+QToolBox::tab:!selected {
+  color: $textStrong;
+}

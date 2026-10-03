@@ -1,0 +1,224 @@
+// Every image the stylesheet uses. $iconVariant compiles to the @IconVariant token (ondark / onlight),
+// so each pack picks the glyph set that suits its background.
+
+QAbstractSpinBox {
+    &::up-arrow {
+        image: url(qss:#{$imageDir}/up_arrow_#{$iconVariant}.svg);
+        &:disabled {
+            image: url(qss:#{$imageDir}/up_arrow_disabled_#{$iconVariant}.svg);
+        }
+    }
+    &::down-arrow {
+        image: url(qss:#{$imageDir}/down_arrow_#{$iconVariant}.svg);
+        &:disabled {
+            image: url(qss:#{$imageDir}/down_arrow_disabled_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QCheckBox {
+    &::indicator {
+        &:checked {
+            image:url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QComboBox {
+    &::down-arrow {
+        image: url(qss:#{$imageDir}/down_arrow_#{$iconVariant}.svg);
+        &:disabled {
+            image: url(qss:#{$imageDir}/down_arrow_disabled_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QGroupBox {
+    &::indicator {
+        &:checked {
+            image:url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QList {
+    &::indicator {
+        &:checked {
+            image: url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+            &:disabled {
+                image: url(qss:#{$imageDir}/check_disabled_#{$iconVariant}.svg);
+            }
+        }
+    }
+}
+
+QListView {
+    @extend QList;
+}
+
+QMenu {
+    &::indicator {
+        &:checked {
+            image:url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QRadioButton {
+    &::indicator {
+        &:checked {
+            image:url(qss:#{$imageDir}/radiobutton_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QScrollBar {
+    &::sub-line {
+        &:vertical {
+            border-image: url(qss:#{$imageDir}/up_arrow_#{$iconVariant}.svg);
+        }
+        &:horizontal:horizontal {
+            border-image: url(qss:#{$imageDir}/left_arrow_#{$iconVariant}.svg);
+        }
+    }
+    &::add-line {
+        &:vertical {
+            border-image: url(qss:#{$imageDir}/down_arrow_#{$iconVariant}.svg);
+        }
+        &:horizontal {
+            border-image: url(qss:#{$imageDir}/right_arrow_#{$iconVariant}.svg);
+        }
+    }
+}
+
+QSizeGrip {
+    image:url(qss:#{$imageDir}/sizegrip_#{$iconVariant}.svg);
+}
+
+QTree {
+    @extend QList;
+}
+
+QTreeView{
+    @extend QList;
+}
+
+QTreeView::branch {
+    background:  transparent;
+}
+
+QTreeView::branch:closed:has-children:has-siblings  {
+    border-image: none;
+    image: url(qss:#{$imageDir}/branch_more_closed_#{$iconVariant}.svg) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed  {
+    border-image: none;
+    image: url(qss:#{$imageDir}/branch_end_closed_#{$iconVariant}.svg) 0;
+}
+
+QTreeView::branch:open:has-children:has-siblings  {
+    border-image: none;
+    image: url(qss:#{$imageDir}/branch_more_open_#{$iconVariant}.svg) 0;
+}
+
+QTreeView::branch:open:has-children:!has-siblings  {
+    border-image: none;
+    image: url(qss:#{$imageDir}/branch_end_open_#{$iconVariant}.svg) 0;
+}
+
+QToolBarExtension {
+    qproperty-icon: url(qss:#{$imageDir}/expand_#{$iconVariant}.svg);
+}
+
+QToolButton {
+    &::menu-arrow {
+        image: url(qss:#{$imageDir}/more_arrow_#{$iconVariant}.svg);
+    }
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel {
+    background-image: url(qss:#{$imageDir}/down_arrow_#{$iconVariant}.svg);
+}
+
+QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
+    background-image: url(qss:#{$imageDir}/up_arrow_#{$iconVariant}.svg);
+}
+
+QTabBar::close-button {
+    image: url(qss:#{$imageDir}/obtn_close_#{$iconVariant}.svg);
+    &:hover {
+        image: url(qss:#{$imageDir}/obtn_closehover_#{$iconVariant}.svg);
+    }
+    &:selected {
+        image: url(qss:#{$imageDir}/obtn_closehover_#{$iconVariantOnAccent}.svg);
+    }
+}
+
+Gui--OverlayToolButton {
+    image: url(qss:#{$imageDir}/obtn_close_#{$iconVariant}.svg);
+        &:hover {
+            image: url(qss:#{$imageDir}/obtn_closehover_#{$iconVariant}.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Transparent"] {
+    image: url(qss:#{$imageDir}/obtn_transparent_#{$iconVariant}.svg);
+        &:hover {
+            image: url(qss:#{$imageDir}/obtn_transparenthover_#{$iconVariant}.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN Overlay"] {
+    image: url(qss:#{$imageDir}/obtn_overlay_#{$iconVariant}.svg);
+        &:hover {
+            image: url(qss:#{$imageDir}/obtn_overlayhover_#{$iconVariant}.svg);
+        }
+}
+
+Gui--OverlayToolButton[objectName="OBTN AutoMode"] {
+    image: url(qss:#{$imageDir}/obtn_mode_#{$iconVariant}.svg);
+        &:hover {
+            image: url(qss:#{$imageDir}/obtn_modehover_#{$iconVariant}.svg);
+        }
+}
+
+Gui--OverlaySplitterHandle Gui--OverlayToolButton,
+Gui--OverlayToolButton[objectName="OBTN Float"] {
+    image: url(qss:#{$imageDir}/obtn_float_#{$iconVariant}.svg);
+        &:hover {
+            image: url(qss:#{$imageDir}/obtn_floathover_#{$iconVariant}.svg);
+        }
+}
+
+QToolButton#buttonPauseUpdate { //this is the cancel cache update button in addon-manager
+    qproperty-icon: url(qss:#{$imageDir}/stop.png);
+}
+
+QTreeView::branch#groupsTreeView:closed:has-children:has-siblings  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:open:has-children:has-siblings  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:open:has-children:!has-siblings  {
+   border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:has-children:!has-siblings:closed  {
+    border-image: none 0;
+  }
+
+  QTreeView::branch#groupsTreeView:has-siblings:!adjoins-item  {
+    border-image: none 0;
+  }
+
+QTableView::indicator:checked {
+    image: url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+}
+
+QTableView::indicator:checked:disabled {
+    image: url(qss:#{$imageDir}/check_disabled_#{$iconVariant}.svg);
+}

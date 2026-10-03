@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
  <name>OpenTheme</name>
- <version>2025.05.20</version>
- <date>2025.05.20</date>
+ <version>2026.10.03</version>
+ <date>2026.10.03</date>
  <description>An accessible and coordinated set of Light and Dark themes for FreeCAD</description>
  <maintainer email="nomail@freecad.org">Obelisk79</maintainer>
  <license file="LICENSE">LGPL-2.1-or-later</license>
  <url type="repository" branch="main">https://github.com/obelisk79/OpenTheme</url>
- <icon>resources/icons/openthemes.svg</icon>
+ <icon>resources/icons/OpenTheme.png</icon>
 
 <content>
   <preferencepack>
     <name>OpenDark</name>
     <description>A modern Dark theme for FreeCAD based on the Open-Color palette</description>
-    <tag>2024</tag>
     <type>Theme</type>
     <tag>dark</tag>
     <subdirectory>./OpenDark/</subdirectory>
-    <file>OpenDark.qss</file>
+    <file>OpenDark.cfg</file>
   </preferencepack>
   <preferencepack>
     <name>OpenLight</name>
     <description>A modern Light theme for FreeCAD based on the Open-Color palette</description>
-    <tag>2024</tag>
     <type>Theme</type>
     <tag>light</tag>
     <subdirectory>./OpenLight/</subdirectory>
-    <file>OpenLight.qss</file>
+    <file>OpenLight.cfg</file>
+  </preferencepack>
+  <preferencepack>
+    <name>OpenSystem</name>
+    <description>OpenTheme styling in your desktop's own colours, light or dark</description>
+    <type>Theme</type>
+    <tag>system</tag>
+    <subdirectory>./OpenSystem/</subdirectory>
+    <file>OpenSystem.cfg</file>
   </preferencepack>
   <preferencepack>
     <name>OpenPreferences</name>

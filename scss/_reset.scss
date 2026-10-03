@@ -2,10 +2,10 @@
     padding: 0px;
     margin: 0px;
     border: 0px solid transparent;
-    border-radius: 2px;
+    border-radius: $cornerRadius;
     border-image: none;
     outline: 0;
-    // color: $primaryText;
-    background-color: $primaryBackground;
+    // color: $textPrimary;
+    background-color: $surfaceBase;
     dialogbuttonbox-buttons-have-icons: 0;
 }
