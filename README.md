@@ -11,9 +11,9 @@ This is a set of light and dark color-impaired accessible aesthetically pleasing
 These themes should be installed via the [Addon Manager](https://github.com/FreeCAD/FreeCAD-addons).
 
 The themes style FreeCAD. If you want recommended settings, and UI layout apply the OpenPreferences pack.
-### APPLYING A PREFERENCE PACK IS A ONE-WAY PROCESS. Consider backing up your [user.cfg](https://wiki.freecad.org/Start_up_and_Configuration#Configuration_set) file before applying. 
+#### APPLYING A PREFERENCE PACK IS A ONE-WAY PROCESS. Consider backing up your [user.cfg](https://wiki.freecad.org/Start_up_and_Configuration#Configuration_set) file before applying. 
 
-### ...or by saving your existing settings in a new preference pack.
+#### ...or by saving your existing settings in a new preference pack.
 ![Save Settings](resources/images/preferencepack.png)
 
 ## Screenshots
