@@ -1,0 +1,170 @@
+@import "./_tokens.scss";
+@import "./_mixins.scss";
+
+* {
+    //color: $textPrimary;
+    background-color: $surfaceBase;
+    alternate-background-color: $fieldBackground;//rgba(134,142,150,0.5);
+  }
+
+  QTabWidget::pane {
+    background-color: transparent;
+    border: transparent;
+
+    QTabBar {
+      background-color: transparent;
+    }
+  }
+
+  /* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
+  To customize for each overlay docking site, use the following selector
+
+  Gui--OverlayTabWidget#OverlayLeft {}
+  */
+
+  Gui--OverlayTabWidget {
+    qproperty-effectColor: rgba(33,37,41,96);
+    qproperty-effectBlurRadius: 20.0;
+    qproperty-effectOffsetX: 0.0;
+    qproperty-effectOffsetY: 0.0;
+    qproperty-effectWidth: 1;
+    qproperty-effectHeight: 1;
+    qproperty-enableEffect: 1;
+  }
+
+  Gui--OverlayTabWidget::pane {
+    background-color: transparent;
+  }
+
+  QHeaderView { background:transparent }
+  QHeaderView::section {
+    color: $textPrimary;
+    background-color: $overlayHeaderBackground;
+    padding: 2px;
+    padding-left: 8px;
+    border: $borderWidth solid $borderStrong;
+  }
+
+  Gui--OverlayToolButton {
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+  }
+
+  Gui--OverlayToolButton::hover {
+    background: $surfaceBase;
+  }
+
+
+  QListView {
+    background-color: $fieldBackground;
+    &::indicator {
+      border-radius: $cornerRadius;
+      border-color: $indicatorBorder
+    }
+  }
+
+  QListView::item,
+  QTreeView::item  {
+    margin: 2px 0px;
+    padding: 1px 2px;
+    border: $borderWidth solid transparent;
+    &:selected, &:hover {
+      background: none;
+      border: none;
+    }
+  }
+
+  // The reset above also cleared list selections, leaving no sign of the selected row (#132)
+  QListView::item:selected {
+    @include selectedstate;
+  }
+
+  QListView::item:hover:!selected {
+    @include hoverstate;
+  }
+
+  #DocumentTreeItems::item {
+    border: $borderWidth solid transparent;
+    border-radius: $cornerRadius;
+    background-color: $surfaceBase;
+
+    &:hover {
+      @include hoverstate;
+    }
+
+    &:selected {
+      @include selectedstate;
+    }
+  }
+
+  Gui--PropertyEditor--PropertyEditor {
+    qproperty-groupTextColor:  $textPrimary;
+    qproperty-groupBackground: $overlayGroupBackground;
+    qproperty-itemBackground: $surfaceBase;
+  }
+
+  Gui--CallTipsList::item {
+    background-color: $surfaceBase; //rgba(100, 100, 100, 200);
+  }
+
+  Gui--CallTipsList::item::selected {
+    @include selectedstate;
+  }
+
+  /* Use the following selector to customize title bar for each side */
+  /*
+  Gui--OverlayTabWidget#OverlayBottom Gui--OverlayTitleBar,
+  Gui--OverlayTabWidget#OverlayBottom QSplitter Gui--OverlaySplitterHandle {
+    background-color: qlineargradient(
+      spread:pad, x1:0, y1:1, x2:0, y2:0,
+      stop:0 #80202020, stop:1 #00202020);
+  }
+  */
+
+  Gui--OverlayTitleBar,
+  Gui--OverlaySplitterHandle {
+    color: $textSecondary;
+    background-color: $overlayTitleBackground;
+  }
+
+  QScrollArea#ClippingScrollArea,
+  QWidget#ClippingScrollAreaContents {
+    background-color: #ff00ff;
+  }
+
+  QSint--ActionGroup QFrame[class="content"] {
+    background-color: $fieldBackground; /* Task Panel background color */
+  }
+
+  QSint--ActionGroup QFrame[class="content"] > QWidget {
+    background-color: $surfaceBase; /* Task Panel background color */
+  }
+
+  QComboBox QAbstractItemView {
+    background-color: $surfaceOverlay;
+  }
+
+  // QAbstractSpinBox {
+  //   margin: 3px 6px 3px 6px; }
+
+  QTreeView::indicator {
+    border: $borderWidth solid $indicatorBorder;
+  }
+
+  QTreeView::indicator:checked {
+    image: url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+  }
+
+QCheckBox,
+QLabel {
+  background-color: transparent;
+}
+
+QCheckBox::indicator {
+  background-color: $controlBackground;
+}
+
+QLineEdit {
+  min-height: 24px;
+}

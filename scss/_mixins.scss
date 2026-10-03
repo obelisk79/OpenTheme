@@ -14,20 +14,65 @@
 }
 
 @mixin noborder {
-    border: 1px solid transparent;
-    border-radius: 2px;
+    border: $borderWidth solid transparent;
+    border-radius: $cornerRadius;
 }
 
 @mixin softborder {
-    border: 1px solid $standardBorder;
-    border-radius: 2px;
+    border: $borderWidth solid $borderSubtle;
+    border-radius: $cornerRadius;
 }
 
 @mixin hardborder {
-    border: 1px solid $contrastBorder;
-    border-radius: 2px;
+    border: $borderWidth solid $borderStrong;
+    border-radius: $cornerRadius;
 }
 
 @mixin borderhover {
-    border: 1px solid $accentBorder;
+    border: $borderWidth solid $borderHover;
+}
+
+// inputs: spin boxes, combo boxes, line and text edits
+@mixin fieldborder {
+    border: $borderWidth solid $fieldBorder;
+    border-radius: $cornerRadius;
+}
+
+// check box and radio button indicators
+@mixin indicatorborder {
+    border: $borderWidth solid $indicatorBorder;
+    border-radius: $cornerRadius;
+}
+
+@mixin tooltipborder {
+    border: $borderWidth solid $tooltipBorder;
+}
+
+// The two states of anything that can be both hovered and selected: list, tree and
+// table rows, tabs. Hover is a tint of the accent; selected is the full accent.
+@mixin hoverstate {
+    color: $textOnAccentSubtle;
+    background-color: $accentSubtle;
+    border: $borderWidth solid $accentSubtleBorder;
+}
+
+@mixin selectedstate {
+    color: $textOnAccent;
+    background-color: $accentStrong;
+    border: $borderWidth solid $borderEmphasis;
+}
+
+
+// The two states of anything that can be both hovered and selected: list, tree and
+// table rows, tabs. Hover is a tint of the accent; selected is the full accent.
+@mixin hoverstate {
+    color: $textOnAccentSubtle;
+    background-color: $accentSubtle;
+    border: $borderWidth solid $accentSubtleBorder;
+}
+
+@mixin selectedstate {
+    color: $textOnAccent;
+    background-color: $accentStrong;
+    border: $borderWidth solid $borderEmphasis;
 }

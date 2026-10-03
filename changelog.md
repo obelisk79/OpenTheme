@@ -40,3 +40,24 @@
 
 2024.AUGUST31
 - Initial Implementation of 'OpenPreferences' pack based on proposed new default FreeCAD settings
+
+2026.OCTOBER.03
+- Themes now use FreeCAD style parameters: one stylesheet for every pack, with colours supplied by each pack's parameters/<Pack>.yaml. Older FreeCAD versions should use the OpenTheme_Legacy branch
+- Each theme is defined by a plain text file in tools/themes/ (one `Name = colour` per line); tools/make_themes.py builds a pack for every file it finds
+- OpenDark and OpenLight are built from ten seed colours on a more neutral grey ramp
+- New pack OpenSystem: the same styling in the desktop's own colours
+- Geometry tokens for border width and corner radius
+- Contrast reviewed with APCA: links, text on selected items, disabled buttons, borders, scrollbar handles, report view and Sketcher colours
+- Hover and selected now look different everywhere both exist: hover is a tint of the accent, selected is the full accent
+- Selected rows in lists and overlay panels have a text colour and a visible highlight (#132, #175, #143)
+- Property editor group headers have a text colour (#182)
+- Progress bar shows its real value and the fill stands out from the track (#82, #136)
+- Unselected tabs recede; selected tab is filled and outlined (#183, #146)
+- Default button is outlined (#28)
+- Less padding on buttons, tool buttons and tree items (#145, #163, #166, #130, #141, #168, #172)
+- Dark overlay headers readable; overlay line edits no longer clip text (PR #187)
+- Tables: selected text colour, row banding, disabled state, corner button, header states, themed cell checkboxes; the spreadsheet grid has alternating row colours
+- Document tab close buttons use the theme's close glyph
+- Dark theme no longer draws tree branch lines, matching the light theme
+- OpenPreferences no longer restores a saved window layout, saves workbench toolbars per tab, or background-loads workbenches (#177, #181, #184, #174)
+- Seed-based definitions for other palettes (Catppuccin, Nord, Dracula, Gruvbox, Solarized, Tokyo Night, Rose Pine, One, Everforest, Kanagawa, Monokai, High Contrast) are kept in tools/themes-saved/ and are not built by default

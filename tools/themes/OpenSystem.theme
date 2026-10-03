@@ -1,0 +1,68 @@
+# OpenSystem: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. tools/themes/README.md explains every entry.
+
+description = OpenTheme styling in your desktop's own colours, light or dark
+mode = system
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = palette(window-text)
+TextSecondary = palette(window-text)
+TextDisabled = palette(placeholder-text)
+TextStrong = palette(window-text)
+TextLink = palette(link)
+# Surfaces
+SurfaceBase = palette(window)
+SurfaceOverlay = palette(base)
+SurfaceOverlayHover = palette(alternate-base)
+MenuBarBackground = palette(window)
+SurfaceHover = palette(midlight)
+SurfaceDisabled = palette(window)
+# Inputs and controls
+FieldBackground = palette(base)
+FieldBorder = palette(placeholder-text)
+ControlBackground = palette(button)
+ControlBackgroundHover = palette(midlight)
+ControlBorder = palette(mid)
+IndicatorBorder = palette(placeholder-text)
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = palette(highlight)
+AccentSubtle = palette(midlight)
+AccentSubtleBorder = palette(highlight)
+TextOnAccentSubtle = palette(window-text)
+AccentStrong = palette(highlight)
+TextOnAccent = palette(highlighted-text)
+# Borders
+BorderSubtle = palette(mid)
+BorderStrong = palette(dark)
+BorderDisabled = palette(midlight)
+BorderHover = palette(highlight)
+BorderFocus = palette(highlight)
+BorderEmphasis = palette(highlight)
+# Item views
+ViewAlternateRow = palette(alternate-base)
+ViewGridLines = palette(mid)
+ViewHeaderBackground = palette(button)
+ViewHeaderBorder = palette(mid)
+ViewGroupBackground = palette(button)
+# Scrollbars, progress, tooltips
+ScrollbarTrack = palette(window)
+ScrollbarHandle = palette(mid)
+ScrollbarHandleHover = palette(dark)
+ProgressBackground = palette(base)
+ProgressChunk = palette(highlight)
+ProgressText = palette(window-text)
+TooltipBackground = palette(tooltip-base)
+TooltipText = palette(tooltip-text)
+TooltipBorder = palette(mid)
+# Overlay panels
+OverlayHeaderBackground = palette(button)
+OverlayGroupBackground = palette(button)
+OverlayTitleBackground = palette(window)
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = #e03131
+StatusWarning = #f08c00
+StatusSuccess = #2f9e44
+ViewportHighlight = #15aabf
+ViewportSelection = #22b8cf

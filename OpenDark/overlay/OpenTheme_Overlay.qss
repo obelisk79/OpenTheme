@@ -1,0 +1,142 @@
+* {
+  background-color: @SurfaceBase;
+  alternate-background-color: @FieldBackground; }
+
+QTabWidget::pane {
+  background-color: transparent;
+  border: transparent; }
+  QTabWidget::pane QTabBar {
+    background-color: transparent; }
+
+/* The OverlayTabWidget is named as OverlayLeft, OverlayRight, OverlayTop, OverlayBottom.
+  To customize for each overlay docking site, use the following selector
+
+  Gui--OverlayTabWidget#OverlayLeft {}
+  */
+Gui--OverlayTabWidget {
+  qproperty-effectColor: rgba(33, 37, 41, 37%);
+  qproperty-effectBlurRadius: 20.0;
+  qproperty-effectOffsetX: 0.0;
+  qproperty-effectOffsetY: 0.0;
+  qproperty-effectWidth: 1;
+  qproperty-effectHeight: 1;
+  qproperty-enableEffect: 1; }
+
+Gui--OverlayTabWidget::pane {
+  background-color: transparent; }
+
+QHeaderView {
+  background: transparent; }
+
+QHeaderView::section {
+  color: @TextPrimary;
+  background-color: @OverlayHeaderBackground;
+  padding: 2px;
+  padding-left: 8px;
+  border: @BorderWidth solid @BorderStrong; }
+
+Gui--OverlayToolButton {
+  background-color: transparent;
+  padding: 0px;
+  border: none; }
+
+Gui--OverlayToolButton::hover {
+  background: @SurfaceBase; }
+
+QListView {
+  background-color: @FieldBackground; }
+  QListView::indicator {
+    border-radius: @CornerRadius;
+    border-color: @IndicatorBorder; }
+
+QListView::item,
+QTreeView::item {
+  margin: 2px 0px;
+  padding: 1px 2px;
+  border: @BorderWidth solid transparent; }
+  QListView::item:selected, QListView::item:hover,
+  QTreeView::item:selected,
+  QTreeView::item:hover {
+    background: none;
+    border: none; }
+
+QListView::item:selected {
+  color: @TextOnAccent;
+  background-color: @AccentStrong;
+  border: @BorderWidth solid @BorderEmphasis; }
+
+QListView::item:hover:!selected {
+  color: @TextOnAccentSubtle;
+  background-color: @AccentSubtle;
+  border: @BorderWidth solid @AccentSubtleBorder; }
+
+#DocumentTreeItems::item {
+  border: @BorderWidth solid transparent;
+  border-radius: @CornerRadius;
+  background-color: @SurfaceBase; }
+  #DocumentTreeItems::item:hover {
+    color: @TextOnAccentSubtle;
+    background-color: @AccentSubtle;
+    border: @BorderWidth solid @AccentSubtleBorder; }
+  #DocumentTreeItems::item:selected {
+    color: @TextOnAccent;
+    background-color: @AccentStrong;
+    border: @BorderWidth solid @BorderEmphasis; }
+
+Gui--PropertyEditor--PropertyEditor {
+  qproperty-groupTextColor: @TextPrimary;
+  qproperty-groupBackground: @OverlayGroupBackground;
+  qproperty-itemBackground: @SurfaceBase; }
+
+Gui--CallTipsList::item {
+  background-color: @SurfaceBase; }
+
+Gui--CallTipsList::item::selected {
+  color: @TextOnAccent;
+  background-color: @AccentStrong;
+  border: @BorderWidth solid @BorderEmphasis; }
+
+/* Use the following selector to customize title bar for each side */
+/*
+  Gui--OverlayTabWidget#OverlayBottom Gui--OverlayTitleBar,
+  Gui--OverlayTabWidget#OverlayBottom QSplitter Gui--OverlaySplitterHandle {
+    background-color: qlineargradient(
+      spread:pad, x1:0, y1:1, x2:0, y2:0,
+      stop:0 #80202020, stop:1 #00202020);
+  }
+  */
+Gui--OverlayTitleBar,
+Gui--OverlaySplitterHandle {
+  color: @TextSecondary;
+  background-color: @OverlayTitleBackground; }
+
+QScrollArea#ClippingScrollArea,
+QWidget#ClippingScrollAreaContents {
+  background-color: #ff00ff; }
+
+QSint--ActionGroup QFrame[class="content"] {
+  background-color: @FieldBackground;
+  /* Task Panel background color */ }
+
+QSint--ActionGroup QFrame[class="content"] > QWidget {
+  background-color: @SurfaceBase;
+  /* Task Panel background color */ }
+
+QComboBox QAbstractItemView {
+  background-color: @SurfaceOverlay; }
+
+QTreeView::indicator {
+  border: @BorderWidth solid @IndicatorBorder; }
+
+QTreeView::indicator:checked {
+  image: url(qss:opentheme_images/check_@IconVariant.svg); }
+
+QCheckBox,
+QLabel {
+  background-color: transparent; }
+
+QCheckBox::indicator {
+  background-color: @ControlBackground; }
+
+QLineEdit {
+  min-height: 24px; }
