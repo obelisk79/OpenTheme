@@ -327,6 +327,7 @@ QTabBar {
 QTreeView {
     show-decoration-selected: 0;
     padding: 0px 8px 0px 8px;
+    qproperty-indentation: 20;
     &::indicator {
         width: 9px;
         height: 9px;

@@ -261,7 +261,8 @@ QTabBar {
 
 QTreeView {
   show-decoration-selected: 0;
-  padding: 0px 8px 0px 8px; }
+  padding: 0px 8px 0px 8px;
+  qproperty-indentation: 20; }
   QTreeView::indicator {
     width: 9px;
     height: 9px;
@@ -518,6 +519,26 @@ QSizeGrip {
 
 QTreeView::branch {
   background: transparent; }
+
+QTreeView::branch:has-siblings:!adjoins-item {
+  border-image: url(qss:opentheme_images/branch_line_@IconVariant.svg) 0 repeat; }
+
+QTreeView::branch:has-siblings:adjoins-item {
+  border-image: url(qss:opentheme_images/branch_line_@IconVariant.svg) 0 repeat;
+  image: url(qss:opentheme_images/branch_stub_@IconVariant.svg) 0; }
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+  border-image: none;
+  image: url(qss:opentheme_images/branch_corner_@IconVariant.svg) 0; }
+
+QTreeView#groupsTreeView::branch:has-siblings:!adjoins-item,
+QTreeView#groupsTreeView::branch:!has-children:has-siblings:adjoins-item,
+QTreeView#groupsTreeView::branch:!has-children:!has-siblings:adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:has-siblings:!adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:!has-children:has-siblings:adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:!has-children:!has-siblings:adjoins-item {
+  border-image: none;
+  image: none; }
 
 QTreeView::branch:closed:has-children:has-siblings {
   border-image: none;
@@ -1044,6 +1065,28 @@ Gui--OverlayToolButton {
 
 Gui--OverlayTitleBar {
   color: @TextSecondary; }
+
+QSint--ActionGroup QFrame[class="content"] QDialog QToolButton, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton {
+  border: @BorderWidth solid transparent;
+  border-radius: @CornerRadius;
+  color: @TextPrimary;
+  background-color: transparent;
+  padding: 2px; }
+  QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:hover, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:hover {
+    background-color: @SurfaceHover;
+    border: @BorderWidth solid @BorderHover; }
+  QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:focus {
+    border: @BorderWidth solid @BorderFocus; }
+  QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:pressed, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:pressed {
+    color: @TextOnAccentSubtle;
+    border: @BorderWidth solid @BorderHover;
+    background-color: @AccentSubtle; }
+  QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:checked, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:checked {
+    color: @TextOnAccent;
+    background-color: @AccentStrong;
+    border: @BorderWidth solid @BorderHover; }
+  QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QDialog QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QDialog QWidget#Selector > QToolButton:disabled {
+    background-color: transparent; }
 
 Gui--NotificationLabel {
   background-color: @SurfaceOverlay;

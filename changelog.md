@@ -61,3 +61,5 @@
 - Dark theme no longer draws tree branch lines, matching the light theme
 - OpenPreferences no longer restores a saved window layout, saves workbench toolbars per tab, or background-loads workbenches (#177, #181, #184, #174)
 - Seed-based definitions for other palettes (Catppuccin, Nord, Dracula, Gruvbox, Solarized, Tokyo Night, Rose Pine, One, Everforest, Kanagawa, Monokai, High Contrast) are kept in tools/themes-saved/ and are not built by default
+- Model tree and other trees show dotted branch lines; the Preferences page list and the property editor do not
+- File dialogs opened from a task panel no longer squash their navigation button icons

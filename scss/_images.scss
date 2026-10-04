@@ -107,6 +107,30 @@ QTreeView::branch {
     background:  transparent;
 }
 
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(qss:#{$imageDir}/branch_line_#{$iconVariant}.svg) 0 repeat;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(qss:#{$imageDir}/branch_line_#{$iconVariant}.svg) 0 repeat;
+    image: url(qss:#{$imageDir}/branch_stub_#{$iconVariant}.svg) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: none;
+    image: url(qss:#{$imageDir}/branch_corner_#{$iconVariant}.svg) 0;
+}
+
+QTreeView#groupsTreeView::branch:has-siblings:!adjoins-item,
+QTreeView#groupsTreeView::branch:!has-children:has-siblings:adjoins-item,
+QTreeView#groupsTreeView::branch:!has-children:!has-siblings:adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:has-siblings:!adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:!has-children:has-siblings:adjoins-item,
+Gui--PropertyEditor--PropertyEditor::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: none;
+    image: none;
+}
+
 QTreeView::branch:closed:has-children:has-siblings  {
     border-image: none;
     image: url(qss:#{$imageDir}/branch_more_closed_#{$iconVariant}.svg) 0;

@@ -459,26 +459,7 @@ QToolBarExtension {
 }
 
 QToolButton {
-    @include noborder;
-    color: $textPrimary;
-    background-color: transparent;
-    &:hover {
-        background-color: $surfaceHover;
-        border: $borderWidth solid $borderHover
-    }
-    &:focus {
-        border: $borderWidth solid $borderFocus;
-    }
-    &:pressed {
-        color: $textOnAccentSubtle;
-        border: $borderWidth solid $borderHover;
-        background-color: $accentSubtle;
-    }
-    &:checked {
-        color: $textOnAccent;
-        background-color: $accentStrong;
-        border: $borderWidth solid $borderHover;
-    }
+    @include toolbutton;
     &::menu-button {
         width: 14px;
         height: 14px;
@@ -579,6 +560,14 @@ Gui--OverlayTitleBar {
 
 QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
+}
+
+QSint--ActionGroup QFrame[class="content"] QDialog QToolButton {
+    @include toolbutton;
+    padding: 2px;
+    &:focus, &:disabled {
+        background-color: transparent;
+    }
 }
 
 Gui--NotificationLabel {
