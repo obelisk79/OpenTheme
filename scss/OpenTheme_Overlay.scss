@@ -161,6 +161,10 @@ QLabel {
   background-color: transparent;
 }
 
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+  background-color: $surfaceBase;
+}
+
 QCheckBox::indicator {
   background-color: $controlBackground;
 }
