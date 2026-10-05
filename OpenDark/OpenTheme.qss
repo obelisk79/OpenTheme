@@ -10,6 +10,7 @@
 
 QAbstractSpinBox, QSpinBox {
   margin: 0px;
+  qproperty-alignment: AlignLeft;
   padding: 3px 2px 2px 2px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -425,6 +426,9 @@ Gui--PropertyEditor--PropertyEditor QWidget > QLineEdit > QWidget {
 
 QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton {
   padding: 4px 10px 3px 10px; }
+
+QSint--ActionGroup QFrame[class="content"] QTabBar QToolButton, QSint--ActionGroup QFrame[class="content"] QTabBar QWidget#Selector > QToolButton {
+  padding: 0px; }
 
 QTabWidget#TabBar > QTabBar::tab:top,
 QTabWidget#TabBar > QTabBar::tab:bottom {

@@ -5,6 +5,7 @@ $expressionTextMargin: 2px;
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
     margin: 0px;
+    qproperty-alignment: AlignLeft;
     padding: ($inputPadding - 1px) 2px ($inputPadding - 2px) 2px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -554,6 +555,10 @@ Gui--PropertyEditor--PropertyEditor QWidget > QLineEdit > QWidget {
 QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
     padding: $inputPadding 10px ($inputPadding - 1px) 10px;
+}
+
+QSint--ActionGroup QFrame[class="content"] QTabBar QToolButton {
+    padding: 0px;
 }
 
 Gui--WorkbenchComboBox {
