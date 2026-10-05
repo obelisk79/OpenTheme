@@ -63,3 +63,4 @@
 - Seed-based definitions for other palettes (Catppuccin, Nord, Dracula, Gruvbox, Solarized, Tokyo Night, Rose Pine, One, Everforest, Kanagawa, Monokai, High Contrast) are kept in tools/themes-saved/ and are not built by default
 - Model tree and other trees show dotted branch lines; the Preferences page list and the property editor do not
 - File dialogs opened from a task panel no longer squash their navigation button icons
+- Spin boxes, buttons and line edits are the same height as combo boxes, in task panels and overlay panels

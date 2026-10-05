@@ -1,7 +1,11 @@
+// FreeCAD's expression spin boxes carry 2px of text margin above and below; the other inputs are padded to their height
+$inputPadding: 4px;
+$expressionTextMargin: 2px;
+
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
-    min-height: 20px;
-    @include space2px;
+    margin: 0px;
+    padding: ($inputPadding - 1px) 2px ($inputPadding - 2px) 2px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     padding-left: 6px;
@@ -32,6 +36,14 @@ QAbstractSpinBox {
     }
 }
 
+Gui--QuantitySpinBox,
+Gui--IntSpinBox,
+Gui--UIntSpinBox,
+Gui--DoubleSpinBox {
+    padding-top: $inputPadding - 1px - $expressionTextMargin;
+    padding-bottom: $inputPadding - 2px - $expressionTextMargin;
+}
+
 QAbstractSpinBox > QLineEdit {
     padding: 0px;
     margin: 0px;
@@ -55,7 +67,8 @@ QCheckBox {
 
 // normal, disabled, hover, pressed, controls are defined
 QComboBox {
-    @include space2px;
+    margin: 0px;
+    padding: $inputPadding 2px;
     padding-left: 8px;
     &::drop-down {
         subcontrol-origin: border;
@@ -124,8 +137,8 @@ QLabel {
 
 // normal, disabled, hover, focus
 QLineEdit {
-    @include space2px;
-    @include wide6px;
+    margin: 0px;
+    padding: $inputPadding 6px;
     min-height: 16px;
 }
 
@@ -220,7 +233,7 @@ QProgressBar {
 }
 
 QPushButton {
-    padding: 4px 10px;
+    padding: ($inputPadding + 1px) 10px;
 }
 
 QRadioButton {
@@ -533,6 +546,7 @@ Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
 
 QSint--ActionGroup QFrame[class="content"] QToolButton {
     @extend QPushButton;
+    padding: $inputPadding 10px ($inputPadding - 1px) 10px;
 }
 
 Gui--WorkbenchComboBox {

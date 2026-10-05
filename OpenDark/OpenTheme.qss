@@ -9,9 +9,8 @@
   dialogbuttonbox-buttons-have-icons: 0; }
 
 QAbstractSpinBox, QSpinBox {
-  min-height: 20px;
   margin: 0px;
-  padding: 2px;
+  padding: 3px 2px 2px 2px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   padding-left: 6px;
@@ -37,6 +36,13 @@ QAbstractSpinBox, QSpinBox {
   QAbstractSpinBox::down-arrow, QSpinBox::down-arrow {
     top: 1px; }
 
+Gui--QuantitySpinBox,
+Gui--IntSpinBox,
+Gui--UIntSpinBox,
+Gui--DoubleSpinBox {
+  padding-top: 1px;
+  padding-bottom: 0px; }
+
 QAbstractSpinBox > QLineEdit, QSpinBox > QLineEdit {
   padding: 0px;
   margin: 0px; }
@@ -56,7 +62,7 @@ QCheckBox {
 
 QComboBox, Gui--WorkbenchComboBox {
   margin: 0px;
-  padding: 2px;
+  padding: 4px 2px;
   padding-left: 8px; }
   QComboBox::drop-down, Gui--WorkbenchComboBox::drop-down {
     subcontrol-origin: border;
@@ -110,9 +116,7 @@ QLabel {
 
 QLineEdit {
   margin: 0px;
-  padding: 2px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 4px 6px;
   min-height: 16px; }
 
 Qlist {
@@ -177,7 +181,7 @@ QProgressBar {
     border-radius: 1px; }
 
 QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
-  padding: 4px 10px; }
+  padding: 5px 10px; }
 
 QRadioButton {
   margin: 0px;
@@ -413,6 +417,9 @@ Gui--PropertyEditor--PropertyEditor QWidget {
 
 Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
   margin-top: 3px; }
+
+QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton {
+  padding: 4px 10px 3px 10px; }
 
 QTabWidget#TabBar > QTabBar::tab:top,
 QTabWidget#TabBar > QTabBar::tab:bottom {

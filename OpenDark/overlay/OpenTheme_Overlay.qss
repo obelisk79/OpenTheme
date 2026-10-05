@@ -137,6 +137,3 @@ QLabel {
 
 QCheckBox::indicator {
   background-color: @ControlBackground; }
-
-QLineEdit {
-  min-height: 24px; }
