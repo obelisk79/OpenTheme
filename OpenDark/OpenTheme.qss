@@ -400,13 +400,9 @@ QSint--ActionGroup QFrame[class="content"] QTreeView QAbstractSpinBox, QSint--Ac
 QDialog#Gui__Dialog__DlgPreferences QComboBox, QDialog#Gui__Dialog__DlgPreferences Gui--WorkbenchComboBox {
   max-height: 22px; }
 
-/* Cells with values that can only be changed with "..." button (Attachment)
-/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
-Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
-  margin-left: 1px;
-  max-height: 20px; }
-
-Gui--PropertyEditor--PropertyEditor QWidget {
+Gui--PropertyEditor--PropertyEditor > QWidget,
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget,
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QWidget {
   margin: 0px;
   padding: 0px;
   border: 0px solid transparent;
@@ -415,7 +411,16 @@ Gui--PropertyEditor--PropertyEditor QWidget {
   border-radius: 0px;
   min-height: 0px; }
 
-Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QDialog {
+  border: none; }
+
+/* Cells with values that can only be changed with "..." button (Attachment)
+/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+  margin-left: 1px;
+  max-height: 20px; }
+
+Gui--PropertyEditor--PropertyEditor QWidget > QLineEdit > QWidget {
   margin-top: 3px; }
 
 QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton {

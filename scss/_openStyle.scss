@@ -524,14 +524,10 @@ QDialog#Gui__Dialog__DlgPreferences QComboBox {
     max-height: 22px;
 }
 
-/* Cells with values that can only be changed with "..." button (Attachment)
-/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
-Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
-	margin-left: 1px;
-    max-height: 20px;
-}
-
-Gui--PropertyEditor--PropertyEditor QWidget {
+// child selectors keep the flattening on the cell editors and out of dialogs opened from a cell
+Gui--PropertyEditor--PropertyEditor > QWidget,
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget,
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QWidget {
     @include space0px;
     border: 0px solid transparent;
     border-right: $borderWidth solid $viewGridLines;
@@ -540,7 +536,18 @@ Gui--PropertyEditor--PropertyEditor QWidget {
     min-height: 0px;
 }
 
-Gui--PropertyEditor--PropertyEditor QLineEdit > QWidget {
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QDialog {
+    border: none;
+}
+
+/* Cells with values that can only be changed with "..." button (Attachment)
+/* These seem to draw on top of the underlying label, so must be completely hidden or have an opaque background */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+	margin-left: 1px;
+    max-height: 20px;
+}
+
+Gui--PropertyEditor--PropertyEditor QWidget > QLineEdit > QWidget {
     margin-top: 3px;
 }
 
