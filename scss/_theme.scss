@@ -461,8 +461,8 @@ QToolBarExtension {
 QToolButton {
     @include toolbutton;
     &::menu-button {
-        width: 14px;
-        height: 14px;
+        width: 15px;
+        height: 15px;
         border-bottom: 0px solid #ffffff;
     }
     &::menu-arrow {

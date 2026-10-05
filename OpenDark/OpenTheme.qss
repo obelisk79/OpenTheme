@@ -1017,8 +1017,8 @@ QToolButton, QWidget#Selector > QToolButton {
     background-color: @AccentStrong;
     border: @BorderWidth solid @BorderHover; }
   QToolButton::menu-button, QWidget#Selector > QToolButton::menu-button {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-bottom: 0px solid #ffffff; }
   QToolButton::menu-arrow, QWidget#Selector > QToolButton::menu-arrow {
     background: transparent; }
