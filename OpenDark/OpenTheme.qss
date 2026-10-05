@@ -633,6 +633,15 @@ QTableView::indicator:checked {
 QTableView::indicator:checked:disabled {
   image: url(qss:opentheme_images/check_disabled_@IconVariant.svg); }
 
+QToolButton#compact_button, QWidget#Selector > QToolButton#compact_button {
+  qproperty-icon: url(qss:opentheme_images/view_compact_@IconVariant.svg) off, url(qss:opentheme_images/view_compact_@IconVariantOnAccent.svg) on; }
+
+QToolButton#expanded_button, QWidget#Selector > QToolButton#expanded_button {
+  qproperty-icon: url(qss:opentheme_images/view_expanded_@IconVariant.svg) off, url(qss:opentheme_images/view_expanded_@IconVariantOnAccent.svg) on; }
+
+QToolButton#composite_button, QWidget#Selector > QToolButton#composite_button {
+  qproperty-icon: url(qss:opentheme_images/view_composite_@IconVariant.svg) off, url(qss:opentheme_images/view_composite_@IconVariantOnAccent.svg) on; }
+
 QAbstractSpinBox, QSpinBox {
   color: @TextPrimary;
   background-color: @FieldBackground;

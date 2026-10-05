@@ -246,3 +246,9 @@ QTableView::indicator:checked {
 QTableView::indicator:checked:disabled {
     image: url(qss:#{$imageDir}/check_disabled_#{$iconVariant}.svg);
 }
+
+@each $view in compact, expanded, composite {
+    QToolButton##{$view}_button {
+        qproperty-icon: url(qss:#{$imageDir}/view_#{$view}_#{$iconVariant}.svg) off, url(qss:#{$imageDir}/view_#{$view}_#{$iconVariantOnAccent}.svg) on;
+    }
+}
