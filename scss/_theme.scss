@@ -66,6 +66,16 @@ QComboBox {
     background-color: $fieldBackground;
     @include fieldborder;
     selection-background-color: $surfaceHover;
+    &::indicator:checked:enabled {
+        border: $borderWidth solid $indicatorBorder;
+        border-radius: $cornerRadius;
+    }
+    &::item {
+        background-color: transparent;
+        &:selected {
+            background-color: $surfaceHover;
+        }
+    }
     &:focus {
         border-color: $borderFocus;
     } 

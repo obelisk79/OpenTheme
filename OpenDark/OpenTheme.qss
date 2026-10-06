@@ -63,13 +63,16 @@ QCheckBox {
 
 QComboBox, Gui--WorkbenchComboBox {
   margin: 0px;
-  padding: 4px 2px;
-  padding-left: 8px; }
+  padding: 4px 18px 4px 8px; }
   QComboBox::drop-down, Gui--WorkbenchComboBox::drop-down {
     subcontrol-origin: border;
     subcontrol-position: top right;
     border-top-right-radius: @CornerRadius;
     border-bottom-right-radius: @CornerRadius; }
+  QComboBox::indicator, Gui--WorkbenchComboBox::indicator {
+    width: 12px;
+    height: 12px;
+    margin: 3px 4px; }
 
 QDockWidget {
   margin: 0px;
@@ -132,6 +135,11 @@ Qlist {
     padding: 0px 3px;
     font-weight: 700;
     font-size: 24px; }
+
+QListView::indicator {
+  width: 12px;
+  height: 12px;
+  padding: 1px; }
 
 QMainWindow {
   margin: 0px;
@@ -504,6 +512,12 @@ QComboBox::down-arrow, Gui--WorkbenchComboBox::down-arrow {
   QComboBox::down-arrow:disabled, Gui--WorkbenchComboBox::down-arrow:disabled {
     image: url(qss:opentheme_images/down_arrow_disabled_@IconVariant.svg); }
 
+QComboBox::indicator:checked:enabled, Gui--WorkbenchComboBox::indicator:checked:enabled {
+  image: url(qss:opentheme_images/check_@IconVariant.svg); }
+
+QComboBox::indicator:disabled, Gui--WorkbenchComboBox::indicator:disabled {
+  image: none; }
+
 QGroupBox::indicator:checked {
   image: url(qss:opentheme_images/check_@IconVariant.svg); }
 
@@ -699,6 +713,13 @@ QComboBox, Gui--WorkbenchComboBox {
   border: @BorderWidth solid @FieldBorder;
   border-radius: @CornerRadius;
   selection-background-color: @SurfaceHover; }
+  QComboBox::indicator:checked:enabled, Gui--WorkbenchComboBox::indicator:checked:enabled {
+    border: @BorderWidth solid @IndicatorBorder;
+    border-radius: @CornerRadius; }
+  QComboBox::item, Gui--WorkbenchComboBox::item {
+    background-color: transparent; }
+    QComboBox::item:selected, Gui--WorkbenchComboBox::item:selected {
+      background-color: @SurfaceHover; }
   QComboBox:focus, Gui--WorkbenchComboBox:focus {
     border-color: @BorderFocus; }
   QComboBox:disabled, Gui--WorkbenchComboBox:disabled {

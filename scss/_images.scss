@@ -31,6 +31,12 @@ QComboBox {
             image: url(qss:#{$imageDir}/down_arrow_disabled_#{$iconVariant}.svg);
         }
     }
+    &::indicator:checked:enabled {
+        image: url(qss:#{$imageDir}/check_#{$iconVariant}.svg);
+    }
+    &::indicator:disabled {
+        image: none;
+    }
 }
 
 QGroupBox {

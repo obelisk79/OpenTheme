@@ -6,9 +6,9 @@ description = A modern Dark theme for FreeCAD based on the Open-Color palette
 mode = dark
 
 # ---- Palette: this theme's own colour names. The leading 0 puts them first in FreeCAD's theme editor ----
-0_SeedBackground = #222427
-0_SeedForeground = #dee1e4
-0_SeedAccent = #339af0
+0_SeedBackground = #222428
+0_SeedForeground = #dee1e5
+0_SeedAccent = #228be6
 0_SeedOnAccent = #ffffff
 0_SeedError = #ff8787
 0_SeedWarning = #ffa94d
@@ -26,7 +26,7 @@ BorderWidth = 0_BorderWidth
 CornerRadius = 0_CornerRadius
 CornerRadiusLarge = 0_CornerRadiusLarge
 # Text
-TextPrimary = 0_SeedForeground
+TextPrimary = blend(0_SeedBackground, 0_SeedForeground, 90)
 TextSecondary = blend(0_SeedBackground, 0_SeedForeground, 75)
 TextDisabled = blend(0_SeedBackground, 0_SeedForeground, 55)
 TextStrong = blend(0_SeedForeground, 0_SeedExtreme, 78)
@@ -40,11 +40,11 @@ SurfaceHover = blend(0_SeedBackground, 0_SeedForeground, 22)
 SurfaceDisabled = blend(0_SeedBackground, 0_SeedForeground, 5)
 # Inputs and controls
 FieldBackground = blend(0_SeedBackground, 0_SeedRecess, 17)
-FieldBorder = blend(0_SeedBackground, 0_SeedForeground, 55)
+FieldBorder = blend(0_SeedBackground, 0_SeedForeground, 28)
 ControlBackground = blend(0_SeedBackground, 0_SeedForeground, 22)
 ControlBackgroundHover = blend(0_SeedBackground, 0_SeedForeground, 5)
-ControlBorder = blend(0_SeedBackground, 0_SeedForeground, 55)
-IndicatorBorder = blend(0_SeedBackground, 0_SeedForeground, 55)
+ControlBorder = blend(0_SeedBackground, 0_SeedForeground, 28)
+IndicatorBorder = blend(0_SeedBackground, 0_SeedForeground, 28)
 # Accent: Subtle is the hover tint, Strong the selected fill
 AccentColor = 0_SeedAccent
 AccentSubtle = blend(0_SeedBackground, 0_SeedAccent, 19)

@@ -1,6 +1,8 @@
 // FreeCAD's expression spin boxes carry 2px of text margin above and below; the other inputs are padded to their height
 $inputPadding: 4px;
 $expressionTextMargin: 2px;
+// room for the check mark column of the drop-down list, which is only as wide as the combo box
+$comboCheckColumn: 18px;
 
 // normal, disabled, controls, hover, pressed
 QAbstractSpinBox {
@@ -69,13 +71,17 @@ QCheckBox {
 // normal, disabled, hover, pressed, controls are defined
 QComboBox {
     margin: 0px;
-    padding: $inputPadding 2px;
-    padding-left: 8px;
+    padding: $inputPadding $comboCheckColumn $inputPadding 8px;
     &::drop-down {
         subcontrol-origin: border;
         subcontrol-position: top right;
         border-top-right-radius: $cornerRadius;
         border-bottom-right-radius: $cornerRadius;
+    }
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        margin: 3px 4px;
     }
 }
 
@@ -161,6 +167,11 @@ Qlist {
 
 QListView {
     @extend QList;
+    &::indicator {
+        width: 12px;
+        height: 12px;
+        padding: 1px;
+    }
 }
 
 QMainWindow {
