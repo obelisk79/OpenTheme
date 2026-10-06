@@ -1010,6 +1010,11 @@ QTreeView {
     background-color: @AccentStrong;
     border: @BorderWidth solid @BorderEmphasis; }
 
+Gui--TreeWidget::item:selected,
+Gui--TreeWidget::item:hover:!selected {
+  background-color: transparent;
+  border-color: transparent; }
+
 QTreeView::branch {
   background: transparent; }
 

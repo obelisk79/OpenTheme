@@ -440,6 +440,13 @@ QTreeView {
     }
 }
 
+// the document tree paints its rows through #DocumentTreeItems; its own row rule only reaches the branch area
+Gui--TreeWidget::item:selected,
+Gui--TreeWidget::item:hover:!selected {
+    background-color: transparent;
+    border-color: transparent;
+}
+
 QTreeView::branch  {
     background: transparent;
 }
