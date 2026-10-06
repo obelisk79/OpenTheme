@@ -248,6 +248,11 @@ QPushButton {
     padding: ($inputPadding + 1px) 10px;
 }
 
+// a floor, so a width-capped dialog (macOS message boxes) cannot squeeze buttons below their label
+QDialogButtonBox > QAbstractButton {
+    min-width: 64px;
+}
+
 QRadioButton {
     @include space0px;
     margin: 2px;
