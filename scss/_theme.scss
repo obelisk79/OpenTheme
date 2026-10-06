@@ -310,6 +310,9 @@ QPushButton {
         border:$borderWidth solid $borderFocus;
         background-color: $controlBackgroundHover;
     }
+    &:checked {
+        @include hoverstate;
+    }
     &:disabled {
         color: $textDisabled;
         background-color: $surfaceDisabled;

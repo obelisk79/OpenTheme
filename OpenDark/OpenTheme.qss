@@ -908,6 +908,10 @@ QPushButton, QWidget#wbList QPushButton, QSint--ActionGroup QFrame[class="conten
   QPushButton:focus, QWidget#wbList QPushButton:focus, QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:focus, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:focus, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:focus, #WbTabBar > QTabBar #ScrollLeftButton:focus, #WbTabBar > QTabBar #ScrollRightButton:focus {
     border: @BorderWidth solid @BorderFocus;
     background-color: @ControlBackgroundHover; }
+  QPushButton:checked, QWidget#wbList QPushButton:checked, QSint--ActionGroup QFrame[class="content"] QToolButton:checked, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:checked, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:checked, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:checked, #WbTabBar > QTabBar #ScrollLeftButton:checked, #WbTabBar > QTabBar #ScrollRightButton:checked {
+    color: @TextOnAccentSubtle;
+    background-color: @AccentSubtle;
+    border: @BorderWidth solid @AccentSubtleBorder; }
   QPushButton:disabled, QWidget#wbList QPushButton:disabled, QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton:disabled, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton:disabled, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton:disabled, #WbTabBar > QTabBar #ScrollLeftButton:disabled, #WbTabBar > QTabBar #ScrollRightButton:disabled {
     color: @TextDisabled;
     background-color: @SurfaceDisabled; }
