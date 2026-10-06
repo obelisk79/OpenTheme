@@ -6,7 +6,7 @@ description = A modern Light theme for FreeCAD based on the Open-Color palette
 mode = light
 
 # ---- Palette: this theme's own colour names. The leading 0 puts them first in FreeCAD's theme editor ----
-0_SeedBackground = #dee1e4
+0_SeedBackground = #dee1e5
 0_SeedForeground = #000000
 0_SeedAccent = #339af0
 0_SeedOnAccent = #ffffff
