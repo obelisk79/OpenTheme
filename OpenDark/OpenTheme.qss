@@ -1068,6 +1068,9 @@ QFileDialog {
 QWidget#wbList * {
   background-color: transparent; }
 
+QWidget#wbList QToolTip {
+  background-color: @TooltipBackground; }
+
 /*==================================================================================================
 Tasks panel (custom FreeCAD class)
 ==================================================================================================*/

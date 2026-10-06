@@ -500,6 +500,10 @@ QWidget#wbList * {
     background-color: transparent;
 }
 
+QWidget#wbList QToolTip {
+    background-color: $tooltipBackground;
+}
+
 QWidget#wbList QPushButton {
     @extend QPushButton;
 }
