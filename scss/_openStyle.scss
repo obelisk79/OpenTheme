@@ -248,6 +248,11 @@ QPushButton {
     padding: ($inputPadding + 1px) 10px;
 }
 
+// as tall as the workbench tabs beside them
+QToolBar > .QPushButton {
+    padding: 5px 3px;
+}
+
 // a floor, so a width-capped dialog (macOS message boxes) cannot squeeze buttons below their label
 QDialogButtonBox > QAbstractButton {
     min-width: 64px;

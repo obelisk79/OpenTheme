@@ -192,6 +192,9 @@ QProgressBar {
 QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollRightButton, QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#Selector > QToolButton, QWidget#wbList QPushButton, QWidget#wbList QSint--ActionGroup QFrame[class="content"] QToolButton, QSint--ActionGroup QFrame[class="content"] QWidget#wbList QToolButton {
   padding: 5px 10px; }
 
+QToolBar > .QPushButton {
+  padding: 5px 3px; }
+
 QDialogButtonBox > QAbstractButton {
   min-width: 64px; }
 
