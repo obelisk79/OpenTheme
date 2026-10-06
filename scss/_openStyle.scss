@@ -253,6 +253,10 @@ QToolBar > .QPushButton {
     padding: 5px 3px;
 }
 
+QToolBar > Gui--WorkbenchComboBox {
+    padding: 5px 0px 4px 4px;
+}
+
 // a floor, so a width-capped dialog (macOS message boxes) cannot squeeze buttons below their label
 QDialogButtonBox > QAbstractButton {
     min-width: 64px;

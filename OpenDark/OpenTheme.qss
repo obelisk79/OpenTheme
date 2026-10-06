@@ -195,6 +195,9 @@ QPushButton, #WbTabBar > QTabBar #ScrollLeftButton, #WbTabBar > QTabBar #ScrollR
 QToolBar > .QPushButton {
   padding: 5px 3px; }
 
+QToolBar > Gui--WorkbenchComboBox {
+  padding: 5px 0px 4px 4px; }
+
 QDialogButtonBox > QAbstractButton {
   min-width: 64px; }
 
