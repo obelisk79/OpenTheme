@@ -95,4 +95,26 @@ The entries below are **roles**: where a colour is used. Every theme must set al
 | `CornerRadius` | Optional. Corner rounding, `2px` if left out |
 | `CornerRadiusLarge` | Optional. Rounding of tabs and tool buttons, `3px` if left out |
 
+## Preferences
+
+The colours above also set FreeCAD's 3D view, Sketcher and editor colours. To set any of those, or any other FreeCAD preference, yourself, end the file with a `[preferences]` section:
+
+    [preferences]
+    View/SketchEdgeColor = #f2f2f4
+    View/SketchVertexColor = 0_SeedForeground
+    View/ConstrainedIcoColor = blend(0_SeedError, 0_SeedBackground, 20)
+    Mod/Sketcher/General/ShowGrid = true
+
+Each line is a preference's group and name, then its value. The group is the path shown in FreeCAD's parameter editor (Tools › Edit parameters) after `BaseApp/Preferences`. A line here replaces the value the script would otherwise write, and every other preference keeps its usual value.
+
+A value is a colour in any form shown above, `true` or `false`, a number, or text. A preference the theme already sets keeps its type. A new one takes its type from the value; a new colour is stored the way most FreeCAD colour preferences are.
+
+The script names any line whose preference the theme did not already set. That is how a misspelt group or name shows up, since FreeCAD ignores preferences it does not know.
+
+## Building into another folder
+
+    python3 tools/make_themes.py --into FOLDER MyTheme.theme ...
+
+makes a pack from each file, puts it in FOLDER and lists it in FOLDER/package.xml. FreeCAD's `SavedPreferencePacks` folder is the usual FOLDER: packs there appear under Preferences and survive OpenTheme updates. They still use this addon's stylesheet, so OpenTheme has to stay installed.
+
 If something is wrong, the script stops and names the file and the line.
