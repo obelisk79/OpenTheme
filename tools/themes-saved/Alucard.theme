@@ -1,0 +1,80 @@
+# Alucard: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Alucard palette (Dracula light)
+mode = light
+
+# ---- Palette: this theme's own colour names ----
+AlucardBackground = #fffbeb
+AlucardForeground = #1f1f1f
+AlucardCurrentLine = #cfcfde
+AlucardComment = #6c664b
+AlucardCyan = #036a96
+AlucardGreen = #14710a
+AlucardOrange = #a34d14
+AlucardPink = #a3144d
+AlucardPurple = #644ac9
+AlucardRed = #cb3a2a
+AlucardYellow = #846e15
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = AlucardForeground
+TextSecondary = AlucardComment
+TextDisabled = blend(AlucardComment, AlucardBackground, 30)
+TextStrong = AlucardForeground
+TextLink = AlucardCyan
+# Surfaces
+SurfaceBase = darken(AlucardBackground, 5)
+SurfaceOverlay = AlucardBackground
+SurfaceOverlayHover = darken(AlucardBackground, 5)
+MenuBarBackground = AlucardBackground
+SurfaceHover = blend(AlucardBackground, AlucardCurrentLine, 55)
+SurfaceDisabled = darken(AlucardBackground, 9)
+# Inputs and controls
+FieldBackground = AlucardBackground
+FieldBorder = blend(AlucardComment, AlucardBackground, 15)
+ControlBackground = blend(AlucardBackground, AlucardCurrentLine, 45)
+ControlBackgroundHover = AlucardCurrentLine
+ControlBorder = blend(AlucardComment, AlucardBackground, 45)
+IndicatorBorder = blend(AlucardComment, AlucardBackground, 15)
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = AlucardPurple
+AccentSubtle = blend(AlucardBackground, AlucardPurple, 14)
+AccentSubtleBorder = blend(AlucardBackground, AlucardPurple, 55)
+TextOnAccentSubtle = AlucardForeground
+AccentStrong = AlucardPurple
+TextOnAccent = AlucardBackground
+# Borders
+BorderSubtle = AlucardCurrentLine
+BorderStrong = blend(AlucardComment, AlucardBackground, 45)
+BorderDisabled = AlucardCurrentLine
+BorderHover = blend(AlucardBackground, AlucardPurple, 60)
+BorderFocus = AlucardPurple
+BorderEmphasis = AlucardPurple
+# Item views
+ViewAlternateRow = darken(AlucardBackground, 5)
+ViewGridLines = AlucardCurrentLine
+ViewHeaderBackground = blend(AlucardBackground, AlucardCurrentLine, 70)
+ViewHeaderBorder = AlucardBackground
+ViewGroupBackground = blend(AlucardBackground, AlucardCurrentLine, 55)
+# Scrollbars, progress, tooltips
+ScrollbarTrack = AlucardBackground
+ScrollbarHandle = AlucardCurrentLine
+ScrollbarHandleHover = blend(AlucardComment, AlucardBackground, 30)
+ProgressBackground = AlucardBackground
+ProgressChunk = blend(AlucardBackground, AlucardPurple, 40)
+ProgressText = AlucardForeground
+TooltipBackground = AlucardForeground
+TooltipText = AlucardBackground
+TooltipBorder = AlucardComment
+# Overlay panels
+OverlayHeaderBackground = darken(AlucardBackground, 5)
+OverlayGroupBackground = blend(AlucardBackground, AlucardCurrentLine, 55)
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = darken(AlucardRed, 8)
+StatusWarning = AlucardOrange
+StatusSuccess = AlucardGreen
+ViewportHighlight = AlucardCyan
+ViewportSelection = AlucardGreen

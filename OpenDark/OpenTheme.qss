@@ -44,6 +44,17 @@ Gui--DoubleSpinBox {
   padding-top: 1px;
   padding-bottom: 0px; }
 
+/* Qt 6.12 collapses the edit field of a styled spin box without buttons;
+   moving the hidden buttons off the right edge avoids it. */
+QStackedWidget > Gui--QuantitySpinBox::up-button,
+QStackedWidget > Gui--QuantitySpinBox::down-button {
+  subcontrol-position: left;
+  width: 0px; }
+
+QStackedWidget > Gui--QuantitySpinBox > QLineEdit {
+  padding-left: 5px;
+  padding-right: 3px; }
+
 QAbstractSpinBox > QLineEdit, QSpinBox > QLineEdit {
   padding: 0px;
   margin: 0px; }

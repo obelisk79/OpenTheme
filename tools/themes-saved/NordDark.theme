@@ -1,0 +1,85 @@
+# NordDark: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Nord palette (Polar Night)
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+Nord0 = #2e3440
+Nord1 = #3b4252
+Nord2 = #434c5e
+Nord3 = #4c566a
+Nord4 = #d8dee9
+Nord5 = #e5e9f0
+Nord6 = #eceff4
+Nord7 = #8fbcbb
+Nord8 = #88c0d0
+Nord9 = #81a1c1
+Nord10 = #5e81ac
+Nord11 = #bf616a
+Nord12 = #d08770
+Nord13 = #ebcb8b
+Nord14 = #a3be8c
+Nord15 = #b48ead
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = Nord4
+TextSecondary = blend(Nord4, Nord3, 30)
+TextDisabled = blend(Nord3, Nord4, 35)
+TextStrong = Nord6
+TextLink = Nord8
+# Surfaces
+SurfaceBase = Nord0
+SurfaceOverlay = darken(Nord0, 18)
+SurfaceOverlayHover = Nord1
+MenuBarBackground = darken(Nord0, 18)
+SurfaceHover = Nord2
+SurfaceDisabled = Nord1
+# Inputs and controls
+FieldBackground = darken(Nord0, 18)
+FieldBorder = blend(Nord3, Nord4, 30)
+ControlBackground = Nord2
+ControlBackgroundHover = Nord1
+ControlBorder = Nord3
+IndicatorBorder = blend(Nord3, Nord4, 30)
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = Nord8
+AccentSubtle = blend(Nord0, Nord8, 22)
+AccentSubtleBorder = blend(Nord0, Nord8, 50)
+TextOnAccentSubtle = Nord6
+AccentStrong = Nord8
+TextOnAccent = Nord0
+# Borders
+BorderSubtle = Nord1
+BorderStrong = Nord3
+BorderDisabled = Nord1
+BorderHover = Nord9
+BorderFocus = Nord8
+BorderEmphasis = Nord8
+# Item views
+ViewAlternateRow = Nord0
+ViewGridLines = Nord2
+ViewHeaderBackground = Nord1
+ViewHeaderBorder = darken(Nord0, 18)
+ViewGroupBackground = Nord2
+# Scrollbars, progress, tooltips
+ScrollbarTrack = darken(Nord0, 18)
+ScrollbarHandle = Nord3
+ScrollbarHandleHover = blend(Nord3, Nord4, 30)
+ProgressBackground = darken(Nord0, 18)
+ProgressChunk = darken(Nord10, 25)
+ProgressText = Nord6
+TooltipBackground = Nord3
+TooltipText = Nord6
+TooltipBorder = Nord9
+# Overlay panels
+OverlayHeaderBackground = Nord1
+OverlayGroupBackground = Nord1
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = lighten(Nord11, 25)
+StatusWarning = Nord13
+StatusSuccess = Nord14
+ViewportHighlight = Nord8
+ViewportSelection = Nord7

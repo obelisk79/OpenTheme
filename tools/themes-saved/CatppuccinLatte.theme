@@ -1,0 +1,95 @@
+# CatppuccinLatte: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Catppuccin Latte palette
+mode = light
+
+# ---- Palette: this theme's own colour names ----
+LatteRosewater = #dc8a78
+LatteFlamingo = #dd7878
+LattePink = #ea76cb
+LatteMauve = #8839ef
+LatteRed = #d20f39
+LatteMaroon = #e64553
+LattePeach = #fe640b
+LatteYellow = #df8e1d
+LatteGreen = #40a02b
+LatteTeal = #179299
+LatteSky = #04a5e5
+LatteSapphire = #209fb5
+LatteBlue = #1e66f5
+LatteLavender = #7287fd
+LatteText = #4c4f69
+LatteSubtext1 = #5c5f77
+LatteSubtext0 = #6c6f85
+LatteOverlay2 = #7c7f93
+LatteOverlay1 = #8c8fa1
+LatteOverlay0 = #9ca0b0
+LatteSurface2 = #acb0be
+LatteSurface1 = #bcc0cc
+LatteSurface0 = #ccd0da
+LatteBase = #eff1f5
+LatteMantle = #e6e9ef
+LatteCrust = #dce0e8
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = LatteText
+TextSecondary = LatteSubtext1
+TextDisabled = LatteOverlay1
+TextStrong = LatteText
+TextLink = darken(LatteBlue, 15)
+# Surfaces
+SurfaceBase = LatteMantle
+SurfaceOverlay = LatteBase
+SurfaceOverlayHover = LatteMantle
+MenuBarBackground = LatteBase
+SurfaceHover = LatteSurface0
+SurfaceDisabled = LatteCrust
+# Inputs and controls
+FieldBackground = LatteBase
+FieldBorder = LatteOverlay2
+ControlBackground = LatteSurface0
+ControlBackgroundHover = LatteSurface1
+ControlBorder = LatteOverlay0
+IndicatorBorder = LatteOverlay2
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = LatteMauve
+AccentSubtle = blend(LatteBase, LatteMauve, 16)
+AccentSubtleBorder = blend(LatteBase, LatteMauve, 50)
+TextOnAccentSubtle = LatteText
+AccentStrong = LatteMauve
+TextOnAccent = LatteBase
+# Borders
+BorderSubtle = LatteSurface1
+BorderStrong = LatteOverlay0
+BorderDisabled = LatteSurface0
+BorderHover = blend(LatteBase, LatteMauve, 60)
+BorderFocus = LatteMauve
+BorderEmphasis = LatteMauve
+# Item views
+ViewAlternateRow = LatteMantle
+ViewGridLines = LatteSurface1
+ViewHeaderBackground = LatteSurface0
+ViewHeaderBorder = LatteBase
+ViewGroupBackground = LatteSurface0
+# Scrollbars, progress, tooltips
+ScrollbarTrack = LatteBase
+ScrollbarHandle = LatteSurface2
+ScrollbarHandleHover = LatteOverlay1
+ProgressBackground = LatteBase
+ProgressChunk = blend(LatteBase, LatteMauve, 30)
+ProgressText = LatteText
+TooltipBackground = LatteText
+TooltipText = LatteBase
+TooltipBorder = LatteOverlay2
+# Overlay panels
+OverlayHeaderBackground = LatteMantle
+OverlayGroupBackground = LatteSurface1
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = darken(LatteRed, 10)
+StatusWarning = darken(LattePeach, 60)
+StatusSuccess = darken(LatteGreen, 40)
+ViewportHighlight = LatteSapphire
+ViewportSelection = LatteTeal

@@ -1,0 +1,88 @@
+# TokyoNight: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Tokyo Night palette
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+TokyoBg = #1a1b26
+TokyoBgDark = #16161e
+TokyoBgHighlight = #292e42
+TokyoTerminalBlack = #414868
+TokyoFg = #c0caf5
+TokyoFgDark = #a9b1d6
+TokyoFgGutter = #3b4261
+TokyoDark3 = #545c7e
+TokyoComment = #565f89
+TokyoDark5 = #737aa2
+TokyoBlue = #7aa2f7
+TokyoCyan = #7dcfff
+TokyoMagenta = #bb9af7
+TokyoPurple = #9d7cd8
+TokyoOrange = #ff9e64
+TokyoYellow = #e0af68
+TokyoGreen = #9ece6a
+TokyoTeal = #1abc9c
+TokyoRed = #f7768e
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = TokyoFg
+TextSecondary = TokyoFgDark
+TextDisabled = TokyoDark5
+TextStrong = TokyoFg
+TextLink = TokyoBlue
+# Surfaces
+SurfaceBase = TokyoBg
+SurfaceOverlay = TokyoBgDark
+SurfaceOverlayHover = TokyoBgHighlight
+MenuBarBackground = TokyoBgDark
+SurfaceHover = TokyoFgGutter
+SurfaceDisabled = TokyoBgHighlight
+# Inputs and controls
+FieldBackground = TokyoBgDark
+FieldBorder = TokyoDark5
+ControlBackground = TokyoFgGutter
+ControlBackgroundHover = TokyoBgHighlight
+ControlBorder = TokyoTerminalBlack
+IndicatorBorder = TokyoDark5
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = TokyoBlue
+AccentSubtle = blend(TokyoBg, TokyoBlue, 22)
+AccentSubtleBorder = blend(TokyoBg, TokyoBlue, 50)
+TextOnAccentSubtle = TokyoFg
+AccentStrong = TokyoBlue
+TextOnAccent = TokyoBgDark
+# Borders
+BorderSubtle = TokyoBgHighlight
+BorderStrong = TokyoTerminalBlack
+BorderDisabled = TokyoBgHighlight
+BorderHover = blend(TokyoBg, TokyoBlue, 60)
+BorderFocus = TokyoBlue
+BorderEmphasis = TokyoBlue
+# Item views
+ViewAlternateRow = TokyoBg
+ViewGridLines = TokyoBgHighlight
+ViewHeaderBackground = TokyoBgHighlight
+ViewHeaderBorder = TokyoBgDark
+ViewGroupBackground = TokyoFgGutter
+# Scrollbars, progress, tooltips
+ScrollbarTrack = TokyoBgDark
+ScrollbarHandle = TokyoTerminalBlack
+ScrollbarHandleHover = TokyoDark5
+ProgressBackground = TokyoBgDark
+ProgressChunk = blend(TokyoBg, TokyoBlue, 32)
+ProgressText = TokyoFg
+TooltipBackground = TokyoBgDark
+TooltipText = TokyoFg
+TooltipBorder = TokyoTerminalBlack
+# Overlay panels
+OverlayHeaderBackground = TokyoBgHighlight
+OverlayGroupBackground = TokyoBgHighlight
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = TokyoRed
+StatusWarning = TokyoOrange
+StatusSuccess = TokyoGreen
+ViewportHighlight = TokyoCyan
+ViewportSelection = TokyoTeal

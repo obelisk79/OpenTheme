@@ -1,0 +1,88 @@
+# TokyoNightDay: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Tokyo Night Day palette
+mode = light
+
+# ---- Palette: this theme's own colour names ----
+TokyoBg = #e1e2e7
+TokyoBgDark = #d0d5e3
+TokyoBgHighlight = #c4c8da
+TokyoTerminalBlack = #a1a6c5
+TokyoFg = #3760bf
+TokyoFgDark = #6172b0
+TokyoFgGutter = #a8aecb
+TokyoDark3 = #8990b3
+TokyoComment = #848cb5
+TokyoDark5 = #68709a
+TokyoBlue = #2e7de9
+TokyoCyan = #007197
+TokyoMagenta = #9854f1
+TokyoPurple = #7847bd
+TokyoOrange = #b15c00
+TokyoYellow = #8c6c3e
+TokyoGreen = #587539
+TokyoTeal = #118c74
+TokyoRed = #f52a65
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = darken(TokyoFg, 35)
+TextSecondary = darken(TokyoFg, 15)
+TextDisabled = TokyoComment
+TextStrong = darken(TokyoFg, 60)
+TextLink = darken(TokyoBlue, 30)
+# Surfaces
+SurfaceBase = TokyoBg
+SurfaceOverlay = lighten(TokyoBg, 5)
+SurfaceOverlayHover = TokyoBg
+MenuBarBackground = lighten(TokyoBg, 5)
+SurfaceHover = TokyoBgHighlight
+SurfaceDisabled = TokyoBgDark
+# Inputs and controls
+FieldBackground = lighten(TokyoBg, 5)
+FieldBorder = TokyoDark5
+ControlBackground = TokyoBgDark
+ControlBackgroundHover = TokyoBgHighlight
+ControlBorder = TokyoTerminalBlack
+IndicatorBorder = TokyoDark5
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = darken(TokyoBlue, 20)
+AccentSubtle = blend(TokyoBg, darken(TokyoBlue, 20), 14)
+AccentSubtleBorder = blend(TokyoBg, darken(TokyoBlue, 20), 50)
+TextOnAccentSubtle = darken(TokyoFg, 35)
+AccentStrong = darken(TokyoBlue, 20)
+TextOnAccent = lighten(TokyoBg, 5)
+# Borders
+BorderSubtle = TokyoBgHighlight
+BorderStrong = TokyoTerminalBlack
+BorderDisabled = TokyoBgHighlight
+BorderHover = blend(TokyoBg, darken(TokyoBlue, 20), 60)
+BorderFocus = darken(TokyoBlue, 20)
+BorderEmphasis = darken(TokyoBlue, 20)
+# Item views
+ViewAlternateRow = TokyoBg
+ViewGridLines = TokyoBgHighlight
+ViewHeaderBackground = TokyoBgHighlight
+ViewHeaderBorder = lighten(TokyoBg, 5)
+ViewGroupBackground = TokyoBgDark
+# Scrollbars, progress, tooltips
+ScrollbarTrack = lighten(TokyoBg, 5)
+ScrollbarHandle = TokyoTerminalBlack
+ScrollbarHandleHover = TokyoComment
+ProgressBackground = lighten(TokyoBg, 5)
+ProgressChunk = blend(TokyoBg, darken(TokyoBlue, 20), 25)
+ProgressText = darken(TokyoFg, 35)
+TooltipBackground = TokyoFg
+TooltipText = TokyoBg
+TooltipBorder = TokyoTerminalBlack
+# Overlay panels
+OverlayHeaderBackground = TokyoBgHighlight
+OverlayGroupBackground = TokyoBgHighlight
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = TokyoRed
+StatusWarning = TokyoOrange
+StatusSuccess = TokyoGreen
+ViewportHighlight = TokyoCyan
+ViewportSelection = TokyoTeal

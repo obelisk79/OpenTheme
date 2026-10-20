@@ -1,0 +1,95 @@
+# CatppuccinMocha: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Catppuccin Mocha palette
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+MochaRosewater = #f5e0dc
+MochaFlamingo = #f2cdcd
+MochaPink = #f5c2e7
+MochaMauve = #cba6f7
+MochaRed = #f38ba8
+MochaMaroon = #eba0ac
+MochaPeach = #fab387
+MochaYellow = #f9e2af
+MochaGreen = #a6e3a1
+MochaTeal = #94e2d5
+MochaSky = #89dceb
+MochaSapphire = #74c7ec
+MochaBlue = #89b4fa
+MochaLavender = #b4befe
+MochaText = #cdd6f4
+MochaSubtext1 = #bac2de
+MochaSubtext0 = #a6adc8
+MochaOverlay2 = #9399b2
+MochaOverlay1 = #7f849c
+MochaOverlay0 = #6c7086
+MochaSurface2 = #585b70
+MochaSurface1 = #45475a
+MochaSurface0 = #313244
+MochaBase = #1e1e2e
+MochaMantle = #181825
+MochaCrust = #11111b
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = MochaText
+TextSecondary = MochaSubtext0
+TextDisabled = MochaOverlay1
+TextStrong = MochaText
+TextLink = MochaBlue
+# Surfaces
+SurfaceBase = MochaBase
+SurfaceOverlay = MochaMantle
+SurfaceOverlayHover = MochaSurface0
+MenuBarBackground = MochaMantle
+SurfaceHover = MochaSurface1
+SurfaceDisabled = MochaSurface0
+# Inputs and controls
+FieldBackground = MochaMantle
+FieldBorder = MochaOverlay1
+ControlBackground = MochaSurface1
+ControlBackgroundHover = MochaSurface0
+ControlBorder = MochaSurface2
+IndicatorBorder = MochaOverlay1
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = MochaMauve
+AccentSubtle = blend(MochaBase, MochaMauve, 22)
+AccentSubtleBorder = blend(MochaBase, MochaMauve, 50)
+TextOnAccentSubtle = MochaText
+AccentStrong = MochaMauve
+TextOnAccent = MochaCrust
+# Borders
+BorderSubtle = MochaSurface0
+BorderStrong = MochaSurface2
+BorderDisabled = MochaSurface0
+BorderHover = blend(MochaBase, MochaMauve, 60)
+BorderFocus = MochaMauve
+BorderEmphasis = MochaMauve
+# Item views
+ViewAlternateRow = MochaBase
+ViewGridLines = MochaSurface1
+ViewHeaderBackground = MochaSurface0
+ViewHeaderBorder = MochaMantle
+ViewGroupBackground = MochaSurface1
+# Scrollbars, progress, tooltips
+ScrollbarTrack = MochaMantle
+ScrollbarHandle = MochaSurface2
+ScrollbarHandleHover = MochaOverlay0
+ProgressBackground = MochaMantle
+ProgressChunk = blend(MochaBase, MochaMauve, 28)
+ProgressText = MochaText
+TooltipBackground = MochaCrust
+TooltipText = MochaText
+TooltipBorder = MochaOverlay0
+# Overlay panels
+OverlayHeaderBackground = MochaSurface0
+OverlayGroupBackground = MochaSurface0
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = MochaRed
+StatusWarning = MochaPeach
+StatusSuccess = MochaGreen
+ViewportHighlight = MochaSky
+ViewportSelection = MochaTeal

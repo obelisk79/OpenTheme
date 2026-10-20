@@ -1,0 +1,95 @@
+# CatppuccinMacchiato: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Catppuccin Macchiato palette
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+MacchiatoRosewater = #f4dbd6
+MacchiatoFlamingo = #f0c6c6
+MacchiatoPink = #f5bde6
+MacchiatoMauve = #c6a0f6
+MacchiatoRed = #ed8796
+MacchiatoMaroon = #ee99a0
+MacchiatoPeach = #f5a97f
+MacchiatoYellow = #eed49f
+MacchiatoGreen = #a6da95
+MacchiatoTeal = #8bd5ca
+MacchiatoSky = #91d7e3
+MacchiatoSapphire = #7dc4e4
+MacchiatoBlue = #8aadf4
+MacchiatoLavender = #b7bdf8
+MacchiatoText = #cad3f5
+MacchiatoSubtext1 = #b8c0e0
+MacchiatoSubtext0 = #a5adcb
+MacchiatoOverlay2 = #939ab7
+MacchiatoOverlay1 = #8087a2
+MacchiatoOverlay0 = #6e738d
+MacchiatoSurface2 = #5b6078
+MacchiatoSurface1 = #494d64
+MacchiatoSurface0 = #363a4f
+MacchiatoBase = #24273a
+MacchiatoMantle = #1e2030
+MacchiatoCrust = #181926
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = MacchiatoText
+TextSecondary = MacchiatoSubtext0
+TextDisabled = MacchiatoOverlay1
+TextStrong = MacchiatoText
+TextLink = MacchiatoBlue
+# Surfaces
+SurfaceBase = MacchiatoBase
+SurfaceOverlay = MacchiatoMantle
+SurfaceOverlayHover = MacchiatoSurface0
+MenuBarBackground = MacchiatoMantle
+SurfaceHover = MacchiatoSurface1
+SurfaceDisabled = MacchiatoSurface0
+# Inputs and controls
+FieldBackground = MacchiatoMantle
+FieldBorder = MacchiatoOverlay1
+ControlBackground = MacchiatoSurface1
+ControlBackgroundHover = MacchiatoSurface0
+ControlBorder = MacchiatoSurface2
+IndicatorBorder = MacchiatoOverlay1
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = MacchiatoMauve
+AccentSubtle = blend(MacchiatoBase, MacchiatoMauve, 22)
+AccentSubtleBorder = blend(MacchiatoBase, MacchiatoMauve, 50)
+TextOnAccentSubtle = MacchiatoText
+AccentStrong = MacchiatoMauve
+TextOnAccent = MacchiatoCrust
+# Borders
+BorderSubtle = MacchiatoSurface0
+BorderStrong = MacchiatoSurface2
+BorderDisabled = MacchiatoSurface0
+BorderHover = blend(MacchiatoBase, MacchiatoMauve, 60)
+BorderFocus = MacchiatoMauve
+BorderEmphasis = MacchiatoMauve
+# Item views
+ViewAlternateRow = MacchiatoBase
+ViewGridLines = MacchiatoSurface1
+ViewHeaderBackground = MacchiatoSurface0
+ViewHeaderBorder = MacchiatoMantle
+ViewGroupBackground = MacchiatoSurface1
+# Scrollbars, progress, tooltips
+ScrollbarTrack = MacchiatoMantle
+ScrollbarHandle = MacchiatoSurface2
+ScrollbarHandleHover = MacchiatoOverlay0
+ProgressBackground = MacchiatoMantle
+ProgressChunk = blend(MacchiatoBase, MacchiatoMauve, 28)
+ProgressText = MacchiatoText
+TooltipBackground = MacchiatoCrust
+TooltipText = MacchiatoText
+TooltipBorder = MacchiatoOverlay0
+# Overlay panels
+OverlayHeaderBackground = MacchiatoSurface0
+OverlayGroupBackground = MacchiatoSurface0
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = MacchiatoRed
+StatusWarning = MacchiatoPeach
+StatusSuccess = MacchiatoGreen
+ViewportHighlight = MacchiatoSky
+ViewportSelection = MacchiatoTeal

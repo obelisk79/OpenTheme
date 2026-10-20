@@ -1,0 +1,95 @@
+# CatppuccinFrappe: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Catppuccin Frappe palette
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+FrappeRosewater = #f2d5cf
+FrappeFlamingo = #eebebe
+FrappePink = #f4b8e4
+FrappeMauve = #ca9ee6
+FrappeRed = #e78284
+FrappeMaroon = #ea999c
+FrappePeach = #ef9f76
+FrappeYellow = #e5c890
+FrappeGreen = #a6d189
+FrappeTeal = #81c8be
+FrappeSky = #99d1db
+FrappeSapphire = #85c1dc
+FrappeBlue = #8caaee
+FrappeLavender = #babbf1
+FrappeText = #c6d0f5
+FrappeSubtext1 = #b5bfe2
+FrappeSubtext0 = #a5adce
+FrappeOverlay2 = #949cbb
+FrappeOverlay1 = #838ba7
+FrappeOverlay0 = #737994
+FrappeSurface2 = #626880
+FrappeSurface1 = #51576d
+FrappeSurface0 = #414559
+FrappeBase = #303446
+FrappeMantle = #292c3c
+FrappeCrust = #232634
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = FrappeText
+TextSecondary = FrappeSubtext0
+TextDisabled = FrappeOverlay1
+TextStrong = FrappeText
+TextLink = FrappeBlue
+# Surfaces
+SurfaceBase = FrappeBase
+SurfaceOverlay = FrappeMantle
+SurfaceOverlayHover = FrappeSurface0
+MenuBarBackground = FrappeMantle
+SurfaceHover = FrappeSurface1
+SurfaceDisabled = FrappeSurface0
+# Inputs and controls
+FieldBackground = FrappeMantle
+FieldBorder = FrappeOverlay1
+ControlBackground = FrappeSurface1
+ControlBackgroundHover = FrappeSurface0
+ControlBorder = FrappeSurface2
+IndicatorBorder = FrappeOverlay1
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = FrappeMauve
+AccentSubtle = blend(FrappeBase, FrappeMauve, 22)
+AccentSubtleBorder = blend(FrappeBase, FrappeMauve, 50)
+TextOnAccentSubtle = FrappeText
+AccentStrong = FrappeMauve
+TextOnAccent = FrappeCrust
+# Borders
+BorderSubtle = FrappeSurface0
+BorderStrong = FrappeSurface2
+BorderDisabled = FrappeSurface0
+BorderHover = blend(FrappeBase, FrappeMauve, 60)
+BorderFocus = FrappeMauve
+BorderEmphasis = FrappeMauve
+# Item views
+ViewAlternateRow = FrappeBase
+ViewGridLines = FrappeSurface1
+ViewHeaderBackground = FrappeSurface0
+ViewHeaderBorder = FrappeMantle
+ViewGroupBackground = FrappeSurface1
+# Scrollbars, progress, tooltips
+ScrollbarTrack = FrappeMantle
+ScrollbarHandle = FrappeSurface2
+ScrollbarHandleHover = FrappeOverlay0
+ProgressBackground = FrappeMantle
+ProgressChunk = blend(FrappeBase, FrappeMauve, 28)
+ProgressText = FrappeText
+TooltipBackground = FrappeCrust
+TooltipText = FrappeText
+TooltipBorder = FrappeOverlay0
+# Overlay panels
+OverlayHeaderBackground = FrappeSurface0
+OverlayGroupBackground = FrappeSurface0
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = FrappeRed
+StatusWarning = FrappePeach
+StatusSuccess = FrappeGreen
+ViewportHighlight = FrappeSky
+ViewportSelection = FrappeTeal

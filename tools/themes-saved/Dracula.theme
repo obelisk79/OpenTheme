@@ -1,0 +1,82 @@
+# Dracula: a theme definition for OpenTheme.
+# One entry per line, written as  Name = colour  or  Name = expression.
+# Lines starting with # are notes. themes/README.md explains every entry.
+
+description = OpenTheme in the Dracula palette
+mode = dark
+
+# ---- Palette: this theme's own colour names ----
+DraculaBackground = #282a36
+DraculaBackgroundDark = #21222c
+DraculaBackgroundDarker = #191a21
+DraculaCurrentLine = #44475a
+DraculaForeground = #f8f8f2
+DraculaComment = #6272a4
+DraculaCyan = #8be9fd
+DraculaGreen = #50fa7b
+DraculaOrange = #ffb86c
+DraculaPink = #ff79c6
+DraculaPurple = #bd93f9
+DraculaRed = #ff5555
+DraculaYellow = #f1fa8c
+
+# ---- Roles: where each colour is used ----
+# Text
+TextPrimary = DraculaForeground
+TextSecondary = blend(DraculaForeground, DraculaComment, 40)
+TextDisabled = lighten(DraculaComment, 10)
+TextStrong = DraculaForeground
+TextLink = DraculaCyan
+# Surfaces
+SurfaceBase = DraculaBackground
+SurfaceOverlay = DraculaBackgroundDark
+SurfaceOverlayHover = DraculaBackground
+MenuBarBackground = DraculaBackgroundDark
+SurfaceHover = DraculaCurrentLine
+SurfaceDisabled = blend(DraculaBackground, DraculaCurrentLine, 40)
+# Inputs and controls
+FieldBackground = DraculaBackgroundDark
+FieldBorder = lighten(DraculaComment, 8)
+ControlBackground = DraculaCurrentLine
+ControlBackgroundHover = blend(DraculaBackground, DraculaCurrentLine, 50)
+ControlBorder = DraculaComment
+IndicatorBorder = lighten(DraculaComment, 8)
+# Accent: Subtle is the hover tint, Strong the selected fill
+AccentColor = DraculaPurple
+AccentSubtle = blend(DraculaBackground, DraculaPurple, 25)
+AccentSubtleBorder = blend(DraculaBackground, DraculaPurple, 55)
+TextOnAccentSubtle = DraculaForeground
+AccentStrong = DraculaPurple
+TextOnAccent = DraculaBackgroundDarker
+# Borders
+BorderSubtle = blend(DraculaBackground, DraculaCurrentLine, 50)
+BorderStrong = DraculaCurrentLine
+BorderDisabled = blend(DraculaBackground, DraculaCurrentLine, 50)
+BorderHover = blend(DraculaBackground, DraculaPurple, 60)
+BorderFocus = DraculaPurple
+BorderEmphasis = DraculaPurple
+# Item views
+ViewAlternateRow = DraculaBackground
+ViewGridLines = DraculaCurrentLine
+ViewHeaderBackground = blend(DraculaBackground, DraculaCurrentLine, 50)
+ViewHeaderBorder = DraculaBackgroundDark
+ViewGroupBackground = DraculaCurrentLine
+# Scrollbars, progress, tooltips
+ScrollbarTrack = DraculaBackgroundDark
+ScrollbarHandle = DraculaCurrentLine
+ScrollbarHandleHover = DraculaComment
+ProgressBackground = DraculaBackgroundDark
+ProgressChunk = blend(DraculaBackground, DraculaPurple, 50)
+ProgressText = DraculaForeground
+TooltipBackground = DraculaBackgroundDarker
+TooltipText = DraculaForeground
+TooltipBorder = DraculaComment
+# Overlay panels
+OverlayHeaderBackground = blend(DraculaBackground, DraculaCurrentLine, 50)
+OverlayGroupBackground = blend(DraculaBackground, DraculaCurrentLine, 50)
+# Status and 3D view (used by the .cfg and the stock Sketcher tokens, not by the stylesheet)
+StatusError = DraculaRed
+StatusWarning = DraculaOrange
+StatusSuccess = DraculaGreen
+ViewportHighlight = DraculaCyan
+ViewportSelection = DraculaGreen
